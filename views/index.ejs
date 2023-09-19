@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Website Name</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: #888 #f1f1f1;
+      }
+
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 5px;
+      }
+      html,
+      body {
+        height: 100%;
+        font-family: "Arial", sans-serif;
+      }
+
+      body {
+        background: rgb(19, 19, 19);
+        background: linear-gradient(
+          157deg,
+          rgba(19, 19, 19, 1) 47%,
+          rgba(58, 58, 58, 1) 100%
+        );
+        background-repeat: no-repeat; /* Prevents background repetition */
+        background-size: cover; /* Ensures the background covers the entire element */
+        background-attachment: fixed; /* Keeps the background fixed during scrolling */
+        margin: 0; /* Reset default margin */
+        scrollbar-base-color: #888;
+        scrollbar-face-color: #888;
+        scrollbar-3dlight-color: #888;
+        scrollbar-highlight-color: #888;
+        scrollbar-track-color: #f1f1f1;
+        scrollbar-arrow-color: #888;
+        scrollbar-shadow-color: #888;
+        scrollbar-darkshadow-color: #888;
+      }
+
+      .youtube-color {
+        color: red;
+      }
+
+      .nav-border {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+
+      .nav-border-bottom {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .nav-border2 {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .text-black {
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .card {
+        margin: 0 auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .navbar {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- header -->
+
+    <div class="container-fluid">
+      <nav class="navbar nav-border fixed-top bg-dark">
+        <div class="container">
+          <!-- <a class="navbar-brand" href="#">
+                    <span class="youtube-color">
+                        <i class="fa-brands fa-youtube fa-2xl"></i> <i>Youtube</i>
+                    </span>
+                </a> -->
+          <form id="searchForm" class="d-block d-md-block mx-auto">
+            <input
+              id="searchInput"
+              class="form-control"
+              type="search"
+              placeholder="Product ID or Name"
+              aria-label="Search"
+            />
+          </form>
+          <!-- <div class="d-flex justify-content-end">
+                    <span class="text-light">Youtube channel name</span>
+                </div> -->
+        </div>
+      </nav>
+      <!-- Search bar for smaller screens
+        <div class="d-block d-md-block bg-dark py-2 nav-border2">
+            <div class="container">
+                <form class="d-block" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <input class="form-control" type="search" placeholder="Product ID" aria-label="Search">
+                </form>
+            </div>
+        </div> -->
+    </div>
+    <br /><br /><br />
+
+    <!-- cards -->
+
+    <div class="container mt-5" id="cont">
+      <div class="row">
+        <% products.forEach((product)=> { %>
+        <div class="col col-lg-4 col-md-6 col-sm-12 mt-5 ml-5">
+          <div
+            class="card"
+            data-product-id="${data[i]['product-id']}"
+            style="width: 18rem"
+          >
+            <div class="card-header text-body-secondary text-center">
+              Product Name: <%= product.product_name%>
+            </div>
+            <img
+              src="https://drive.google.com/uc?export=view&id=<%= product.product_link %>"
+              class="card-img-top"
+              alt="Product Image"
+            />
+            <div class="card-body">
+              <p class="card-text"><%= product.product_description %></p>
+            </div>
+            <div class="card-footer text-body-secondary text-center">
+              Product Id: <%= product.product_id%>
+            </div>
+          </div>
+        </div>
+        <%})%>
+      </div>
+    </div>
+    <!-- <div class="container mt-5" id="searchcont"></div>
+
+    <div id="loadMorePlaceholder" class="text-center my-5">
+      <span>Loading more...</span>
+    </div> -->
+    <br /><br /><br /><br />
+
+    <!-- footer -->
+
+    <div class="container-fluid">
+      <nav class="navbar nav-border fixed-bottom bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <span class="youtube-color">
+              <i class="fa-brands fa-youtube fa-2xl"></i> <i>Youtube</i>
+            </span>
+          </a>
+          <div class="d-flex justify-content-end">
+            <span class="text-light">Youtube channel name</span>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <script>
+      // Handle form submission
+      $("#searchForm").on("submit", (event) => {
+        event.preventDefault();
+        const searchQuery = $("#searchInput").val();
+        if (searchQuery.trim() === "") {
+          location.reload();
+        } else {
+          $.ajax({
+            url: `/search-products`,
+            method: "POST",
+            data: { searchQuery },
+            dataType: "json",
+            success: (results) => {
+              // Clear the existing product cards
+              $("#cont").empty();
+
+              // Loop through the search results and create new product cards
+              results.forEach((product) => {
+                $("#cont").append(`
+                  <div class="col col-lg-4 col-md-6 col-sm-12 mt-5 ml-5">
+                    <div class="card" data-product-id="${product.product_id}" style="width: 18rem">
+                      <div class="card-header text-body-secondary text-center">
+                        Product Name: ${product.product_name}
+                      </div>
+                      <img src="images/${product.product_image}" class="card-img-top" alt="..." />
+                      <div class="card-body">
+                        <p class="card-text">${product.product_description}</p>
+                      </div>
+                      <div class="card-footer text-body-secondary text-center">
+                        Product Id: ${product.product_id}
+                      </div>
+                    </div>
+                  </div>
+                `);
+              });
+            },
+            error: (error) => {
+              console.error("Error searching for products:", error);
+            },
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

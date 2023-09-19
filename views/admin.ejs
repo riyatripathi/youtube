@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+  </head>
+  <style>
+    .delete-button {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    .edit-button {
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div class="container mt-5">
+      <h2>Admin Panel - Manage Products</h2>
+
+      <!-- Button Add Product -->
+      <button
+        class="btn btn-primary my-3"
+        id="addProductButton"
+        data-bs-toggle="modal"
+        data-bs-target="#addProductModal"
+      >
+        Add Product
+      </button>
+
+      <!-- Bootstrap Modal for adding a new product -->
+      <div
+        class="modal fade"
+        id="addProductModal"
+        tabindex="-1"
+        aria-labelledby="addProductModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addProductModalLabel">Add Product</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <!-- Add your form here -->
+              <form id="addProductForm" enctype="multipart/form-data">
+                <div class="col-md-6">
+                  <label for="productName" class="form-label"
+                    >Product Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="productName"
+                    name="productName"
+                  />
+                </div>
+                <div class="col-12">
+                  <label
+                    for="productDescription"
+                    class="form-label"
+                    name="productDescription"
+                    >Description</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="productDescription"
+                    name="productDescription"
+                  />
+                </div>
+
+                <div class="col-12">
+                  <label for="productLink" class="form-label" name="productLink"
+                    >Product Link</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="productLink"
+                    name="productLink"
+                  />
+                </div>
+
+                <div class="col-12">
+                  <label for="youtubeLink" class="form-label" name="youtubeLink"
+                    >Youtube Link</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="youtubeLink"
+                    name="youtubeLink"
+                  />
+                </div>
+                <br />
+                <button type="submit" class="btn btn-primary">
+                  Add Product
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bootstrap Modal for editing a product -->
+      <div
+        class="modal fade"
+        id="editProductModal"
+        tabindex="-1"
+        aria-labelledby="editProductModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal content here... -->
+          </div>
+        </div>
+      </div>
+
+      <table id="productTable" class="display">
+        <thead>
+          <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Product Description</th>
+            <th>Product Link</th>
+            <th>Youtube Link</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Table rows will be populated dynamically using JavaScript -->
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      $(document).ready(() => {
+        // Handle add-product form submission
+        $("#addProductForm").submit((e) => {
+          e.preventDefault();
+          const form = e.currentTarget;
+          const formData = new FormData(form);
+          $.ajax({
+            url: "/add-product",
+            method: "POST",
+            data: formData,
+            contentType: false,
+            processData: false,
+            // Inside the success callback for fetching product data
+            success: (response) => {
+              console.log("Response received from the server:", response);
+
+              if (Array.isArray(response.data)) {
+                const [
+                  productId,
+                  productName,
+                  productDescription,
+                  productLink,
+                  youtubeLink,
+                ] = response.data;
+
+                // Add the product to your DataTable
+                const productTable = $("#productTable").DataTable();
+                productTable.row
+                  .add([
+                    productId,
+                    productName,
+                    productDescription,
+                    productLink,
+                    youtubeLink,
+                    `<button class="edit-product edit-button" id="e${formData.get(
+                      "productId"
+                    )}" data-product-id="${formData.get(
+                      "productId"
+                    )}">Edit</button>`,
+                    `<button class="delete-product delete-button" id="d${formData.get(
+                      "productId"
+                    )}" data-product-id="${formData.get(
+                      "productId"
+                    )}">Delete</button>`,
+                  ])
+                  .draw(false);
+                form.reset();
+                $("#addProductModal").modal("hide");
+              } else {
+                console.error("Response data format is not as expected.");
+              }
+            },
+            error: (error) => {
+              console.error("Error adding product:", error);
+            },
+          });
+        });
+      });
+
+      // Initialize DataTable
+      $(document).ready(() => {
+        const productTable = $("#productTable").DataTable({
+          // Define your DataTables configurations here, e.g., paging, sorting, etc.
+        });
+
+        // display all products
+        $.ajax({
+          url: "/products",
+          method: "GET",
+          dataType: "json",
+          success: (data) => {
+            data.forEach((product) => {
+              productTable.row
+                .add([
+                  product.product_id,
+                  product.product_name,
+                  product.product_description,
+                  product.product_link,
+                  product.youtube_link,
+                  `<button class="edit-product edit-button" id="e${product.product_id}" data-product-id="${product.product_id}">Edit</button>`,
+                  `<button class="delete-product delete-button" id="d${product.product_id}" data-product-id="${product.product_id}">Delete</button>`,
+                ])
+                .draw(false);
+            });
+          },
+          error: function (error) {
+            console.error("Error fetching product data:", error);
+          },
+        });
+
+        // Handle "Edit" button click
+        $("#productTable tbody").on("click", "button.edit-product", (e) => {
+          const productId = e.target.attributes.id.value;
+          console.log(productId);
+          // Make an AJAX request to fetch product details
+          $.ajax({
+            url: `/find-product/${productId}`,
+            method: "POST",
+            dataType: "json",
+            success: (product) => {
+              console.log(product);
+              // Populate the modal form fields with product details
+              $("#editProductModal .modal-content").html(`
+              <div class="modal-header">
+              <h5 class="modal-title" id="editProductModalLabel">Edit Product</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+              <form action="/update-product/${productId}" method="POST" id="editProductForm">
+                  <!-- Populate form fields with product details -->
+                  <div class="form-group">
+                    <label for="editProductName">Product Name</label>
+                    <input type="text" class="form-control" id="editProductName" name="editProductName" value="${product.product_name}">
+
+                    <label for="editProductDescription">Product Description</label>
+                    <input type="text" class="form-control" id="editProductDescription" name="editProductDescription" value="${product.product_description}">
+
+                    <label for="editProductLink">Product Link</label>
+                    <input type="text" class="form-control" id="editProductLink" name="editProductLink" value="${product.product_link}">
+
+                    <label for="editYoutubeLink">Youtube Link</label>
+                    <input type="text" class="form-control" id="editYoutubeLink" name="editYoutubeLink" value="${product.youtube_link}">
+                  </div> <br/>
+                  <button type="submit" class="btn btn-primary" onclick="window.location.reload();">Save Changes</button>
+
+              </form>
+              </div>
+          `);
+
+              // Show the edit product modal
+              $("#editProductModal").modal("show");
+            },
+            error: (error) => {
+              console.error("Error fetching product details:", error);
+            },
+          });
+        });
+
+        // Handle "Delete" button click
+        $("#productTable tbody").on("click", "button.delete-product", (e) => {
+          const productId = e.target.attributes.id.value;
+          const row = $(e.target).closest("tr");
+          if (confirm("Are you sure you want to delete this product?")) {
+            $.ajax({
+              url: `/products/delete/${productId}`,
+              method: "DELETE",
+              success: (response) => {
+                console.log("Product deleted successfully:", response);
+                const productTable = $("#productTable").DataTable();
+                productTable.row(row).remove().draw();
+              },
+              error: (error) => {
+                console.error("Error deleting product:", error);
+              },
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
