@@ -25,20 +25,14 @@ router.get("/products", (req, res) => {
 });
 
 router.post("/add-product", upload.single("productImage"), (req, res) => {
-  let { productName, productDescription, productLink, youtubeLink } =
-    req.body;
+  let { productName, productDescription, productLink, youtubeLink } = req.body;
 
   const image_url = extractFileIdFromDriveLink(productLink);
   if (image_url != null) productLink = image_url;
   console.log(image_url);
   const query =
     "INSERT INTO products ( product_name, product_description, product_link, youtube_link) VALUES (?, ?, ?, ?)";
-  const values = [
-    productName,
-    productDescription,
-    productLink,
-    youtubeLink,
-  ];
+  const values = [productName, productDescription, productLink, youtubeLink];
 
   db.run(query, values, (err) => {
     if (err) {
@@ -135,4 +129,88 @@ router.post("/search-products", (req, res) => {
   });
 });
 
+router.post("/server-side-products", async (req, res) => {
+  try {
+    const draw = req.body.draw || 0;
+    const start = req.body.start || 0;
+    const length = req.body.length || 0;
+    const searchValue = req.body.search ? req.body.search.value || "" : "";
+
+    // Calculate the total records in the database (without filtering)
+    const totalRecords = await getTotalRecords();
+
+    // Calculate the total records after filtering
+    const filteredRecords = await getFilteredRecords(searchValue);
+
+    // Fetch data from the database
+    const products = await getProducts(searchValue, start, length);
+
+    // Send the response to DataTables
+    const response = {
+      draw: draw,
+      recordsTotal: totalRecords,
+      recordsFiltered: filteredRecords,
+      data: products,
+    };
+
+    res.json(response);
+  } catch (error) {
+    console.error("Error processing server-side request:", error);
+    res.status(500).json({ error: "Server error" });
+  }
+});
+
+// Function to get the total number of records in the database
+function getTotalRecords() {
+  return new Promise((resolve, reject) => {
+    db.get("SELECT COUNT(*) as count FROM products", (err, row) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(row.count);
+      }
+    });
+  });
+}
+
+// Function to get the total number of filtered records
+function getFilteredRecords(searchValue) {
+  return new Promise((resolve, reject) => {
+    const searchQuery = `%${searchValue}%`;
+    const query = `
+      SELECT COUNT(*) as count
+      FROM products
+      WHERE product_name LIKE ? OR product_description LIKE ?
+    `;
+
+    db.get(query, [searchQuery, searchQuery], (err, row) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(row.count);
+      }
+    });
+  });
+}
+
+// Function to get product data based on DataTables request
+function getProducts(searchValue, start, length) {
+  return new Promise((resolve, reject) => {
+    const searchQuery = `%${searchValue}%`;
+    const query = `
+      SELECT *
+      FROM products
+      WHERE product_name LIKE ? OR product_description LIKE ?
+      LIMIT ?, ?
+    `;
+
+    db.all(query, [searchQuery, searchQuery, start, length], (err, rows) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(rows);
+      }
+    });
+  });
+}
 module.exports = router;

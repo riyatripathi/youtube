@@ -4,18 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Panel</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css"
-    />
+    <!-- Add Bootstrap CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Add DataTables CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css"
+    />
+
+    <!-- Add DataTables Responsive CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css"
+    />
+
+    <!-- Add jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Add Bootstrap JavaScript (including Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Add DataTables JavaScript -->
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+
+    <!-- Add DataTables Responsive JavaScript -->
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
   </head>
+
   <style>
     .delete-button {
       background-color: red;
@@ -173,7 +192,6 @@
             data: formData,
             contentType: false,
             processData: false,
-            // Inside the success callback for fetching product data
             success: (response) => {
               console.log("Response received from the server:", response);
 
@@ -186,7 +204,7 @@
                   youtubeLink,
                 ] = response.data;
 
-                // Add the product to your DataTable
+                // Add the product to DataTable
                 const productTable = $("#productTable").DataTable();
                 productTable.row
                   .add([
@@ -223,32 +241,33 @@
       // Initialize DataTable
       $(document).ready(() => {
         const productTable = $("#productTable").DataTable({
-          // Define your DataTables configurations here, e.g., paging, sorting, etc.
-        });
-
-        // display all products
-        $.ajax({
-          url: "/products",
-          method: "GET",
-          dataType: "json",
-          success: (data) => {
-            data.forEach((product) => {
-              productTable.row
-                .add([
-                  product.product_id,
-                  product.product_name,
-                  product.product_description,
-                  product.product_link,
-                  product.youtube_link,
-                  `<button class="edit-product edit-button" id="e${product.product_id}" data-product-id="${product.product_id}">Edit</button>`,
-                  `<button class="delete-product delete-button" id="d${product.product_id}" data-product-id="${product.product_id}">Delete</button>`,
-                ])
-                .draw(false);
-            });
+          // Enable server-side processing
+          processing: true,
+          serverSide: true,
+          responsive: true,
+          ajax: {
+            url: "/server-side-products",
+            type: "POST",
           },
-          error: function (error) {
-            console.error("Error fetching product data:", error);
-          },
+          columns: [
+            { data: "product_id" },
+            { data: "product_name" },
+            { data: "product_description" },
+            { data: "product_link" },
+            { data: "youtube_link" },
+            {
+              data: null,
+              render: function (data, type, row) {
+                return `<button class="edit-product edit-button" id="e${data.product_id}" data-product-id="${data.product_id}">Edit</button>`;
+              },
+            },
+            {
+              data: null,
+              render: function (data, type, row) {
+                return `<button class="delete-product delete-button" id="d${data.product_id}" data-product-id="${data.product_id}">Delete</button>`;
+              },
+            },
+          ],
         });
 
         // Handle "Edit" button click
