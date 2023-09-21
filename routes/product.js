@@ -160,6 +160,30 @@ router.post("/server-side-products", async (req, res) => {
   }
 });
 
+const productsPerPage = 10;
+router.get("/load-more-products", (req, res) => {
+  const page = req.query.page || 1;
+  console.log(page);
+  const offset = (page - 1) * productsPerPage;
+  console.log(offset);
+
+  // Query the database for the next set of products
+  db.all(
+    "SELECT * FROM products LIMIT ? OFFSET ?",
+    [productsPerPage, offset],
+    (err, data) => {
+      if (err) {
+        console.error(err.message);
+        res.status(500).send("Internal Server Error");
+        return;
+      }
+
+      // Return the list of products as JSON
+      res.json(data);
+    }
+  );
+});
+
 // Function to get the total number of records in the database
 function getTotalRecords() {
   return new Promise((resolve, reject) => {

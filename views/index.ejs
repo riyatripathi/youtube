@@ -22,6 +22,7 @@
       href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css"
     />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
     <style>
       * {
         scrollbar-width: thin;
@@ -199,7 +200,63 @@
     </div>
 
     <script>
-      // Handle form submission
+      let isLoading = false;
+      let page = 1;
+
+      function loadMoreProducts() {
+        if (isLoading) return;
+        isLoading = true;
+
+        $.ajax({
+          url: `/load-more-products?page=${page}`,
+          method: "GET",
+          dataType: "json",
+          success: (data) => {
+            if (data.length > 0) {
+              data.forEach((product) => {
+                // Create and append HTML elements for the product
+                const productElement = `
+                                <div class="col col-lg-4 col-md-6 col-sm-12 mt-5 ml-5">
+                                    <div class="card" data-product-id="${product.product_id}">
+                                        <div class="card-header text-body-secondary text-center">
+                                            Product Name: ${product.product_name}
+                                        </div>
+                                        <img src="https://drive.google.com/uc?export=view&id=${product.product_link}" class="card-img-top" alt="Product Image" />
+                                        <div class="card-body">
+                                            <p class="card-text">${product.product_description}</p>
+                                        </div>
+                                        <div class="card-footer text-body-secondary text-center">
+                                            Product Id: ${product.product_id}
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                $("#cont").append(productElement);
+              });
+
+              page++; // Increment the page number
+            }
+            isLoading = false;
+          },
+          error: (error) => {
+            console.error("Error fetching more products:", error);
+            isLoading = false;
+          },
+        });
+      }
+
+      $(window).scroll(() => {
+        if (
+          $(window).scrollTop() + $(window).height() >=
+          $(document).height() - 100
+        ) {
+          loadMoreProducts();
+        }
+      });
+
+      // Initial load
+      loadMoreProducts();
+      // Handle search button  submission
       $("#searchForm").on("submit", (event) => {
         event.preventDefault();
         const searchQuery = $("#searchInput").val();
