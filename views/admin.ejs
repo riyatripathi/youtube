@@ -50,20 +50,42 @@
       padding: 5px 10px;
       cursor: pointer;
     }
+
+    .heading-background {
+      background-color: #ff6464;
+      height:80px;
+    }
+
   </style>
   <body>
+    <div class="container-fluid text-center jumbotron heading-background text-light">
+      <h2 class="py-3">Admin Panel - Manage Products</h2>
+    </div>
+    
     <div class="container mt-5">
-      <h2>Admin Panel - Manage Products</h2>
-
+      <div class="d-flex">
+        <form class="ms-auto" method="GET" action="/logout">
+          <br />
+          <button type="submit" class="btn btn-danger">
+            Logout
+          </button>
+        </form>
+      </div>
+      <div>
+        <!-- Add your form here -->
+        
+      </div>
       <!-- Button Add Product -->
+      <div class="d-flex">
       <button
-        class="btn btn-primary my-3"
+        class="btn btn-primary my-3 me-auto"
         id="addProductButton"
         data-bs-toggle="modal"
         data-bs-target="#addProductModal"
       >
         Add Product
       </button>
+    </div>
 
       <!-- Bootstrap Modal for adding a new product -->
       <div
@@ -144,7 +166,9 @@
             </div>
           </div>
         </div>
+        
       </div>
+      
 
       <!-- Bootstrap Modal for editing a product -->
       <div
@@ -160,9 +184,9 @@
           </div>
         </div>
       </div>
-
-      <table id="productTable" class="display">
-        <thead>
+      <div class="table-responsive">
+      <table id="productTable" class="table table-hover table-striped table-borderless display">
+        <thead class="table-light">
           <tr>
             <th>Product ID</th>
             <th>Product Name</th>
@@ -177,70 +201,15 @@
           <!-- Table rows will be populated dynamically using JavaScript -->
         </tbody>
       </table>
+      </div>
     </div>
 
     <script>
-      $(document).ready(() => {
-        // Handle add-product form submission
-        $("#addProductForm").submit((e) => {
-          e.preventDefault();
-          const form = e.currentTarget;
-          const formData = new FormData(form);
-          $.ajax({
-            url: "/add-product",
-            method: "POST",
-            data: formData,
-            contentType: false,
-            processData: false,
-            success: (response) => {
-              console.log("Response received from the server:", response);
-
-              if (Array.isArray(response.data)) {
-                const [
-                  productId,
-                  productName,
-                  productDescription,
-                  productLink,
-                  youtubeLink,
-                ] = response.data;
-
-                // Add the product to DataTable
-                const productTable = $("#productTable").DataTable();
-                productTable.row
-                  .add([
-                    productId,
-                    productName,
-                    productDescription,
-                    productLink,
-                    youtubeLink,
-                    `<button class="edit-product edit-button" id="e${formData.get(
-                      "productId"
-                    )}" data-product-id="${formData.get(
-                      "productId"
-                    )}">Edit</button>`,
-                    `<button class="delete-product delete-button" id="d${formData.get(
-                      "productId"
-                    )}" data-product-id="${formData.get(
-                      "productId"
-                    )}">Delete</button>`,
-                  ])
-                  .draw(false);
-                form.reset();
-                $("#addProductModal").modal("hide");
-              } else {
-                console.error("Response data format is not as expected.");
-              }
-            },
-            error: (error) => {
-              console.error("Error adding product:", error);
-            },
-          });
-        });
-      });
+      let productTable = null;
 
       // Initialize DataTable
       $(document).ready(() => {
-        const productTable = $("#productTable").DataTable({
+        productTable = $("#productTable").DataTable({
           // Enable server-side processing
           processing: true,
           serverSide: true,
@@ -258,6 +227,7 @@
             {
               data: null,
               render: function (data, type, row) {
+                console.log(data);
                 return `<button class="edit-product edit-button" id="e${data.product_id}" data-product-id="${data.product_id}">Edit</button>`;
               },
             },
@@ -314,6 +284,34 @@
             },
             error: (error) => {
               console.error("Error fetching product details:", error);
+            },
+          });
+        });
+
+        $("#addProductForm").submit((e) => {
+          e.preventDefault();
+          const form = e.currentTarget;
+          const formData = new FormData(form);
+          $.ajax({
+            url: "/add-product",
+            method: "POST",
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: (response) => {
+              console.log("Response received from the server:", response);
+
+              if (Array.isArray(response.data)) {
+                // Add the product to DataTable
+                productTable.ajax.reload();
+                form.reset();
+                $("#addProductModal").modal("hide");
+              } else {
+                console.error("Response data format is not as expected.");
+              }
+            },
+            error: (error) => {
+              console.error("Error adding product:", error);
             },
           });
         });

@@ -34,11 +34,12 @@ router.post("/add-product", upload.single("productImage"), (req, res) => {
     "INSERT INTO products ( product_name, product_description, product_link, youtube_link) VALUES (?, ?, ?, ?)";
   const values = [productName, productDescription, productLink, youtubeLink];
 
-  db.run(query, values, (err) => {
+  db.run(query, values, function (err) {
     if (err) {
       console.error("Error adding product to the database:", err);
       return res.status(500).json({ error: "Internal Server Error" });
     }
+    values.unshift(this.lastID);
     res.json({
       message: "Product added successfully",
       data: values,
@@ -90,7 +91,6 @@ router.post("/update-product/:productId", (req, res) => {
   } = req.body;
   const image_url = extractFileIdFromDriveLink(editProductLink);
   if (image_url != null) editProductLink = image_url;
-  console.log(image_url);
   const query =
     "UPDATE products SET product_name = ?, product_description = ?, product_link = ?, youtube_link = ? WHERE product_id = ?";
   const values = [
@@ -144,7 +144,6 @@ router.post("/server-side-products", async (req, res) => {
 
     // Fetch data from the database
     const products = await getProducts(searchValue, start, length);
-
     // Send the response to DataTables
     const response = {
       draw: draw,
