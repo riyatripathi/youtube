@@ -94,17 +94,42 @@
 
       .card {
         margin: 0 auto;
+        width: 100%;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
 
       .card-img-top {
-        height: 200px;
+        height: 100%;
+        width:100%;
         object-fit: cover;
       }
 
       .navbar {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
+
+      .card {
+    margin: 0 auto;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;  /* Added this */
+}
+
+.card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.card-content img {
+    height: 50%;  /* Adjusted this */
+    width: 100%;
+    object-fit: cover;
+}
+
+
     </style>
   </head>
 
@@ -128,6 +153,8 @@
               aria-label="Search"
             />
           </form>
+          <!-- reset button call load more data -->
+          <button class="btn btn-light" id="resetBtn">Reset</button>
           <!-- <div class="d-flex justify-content-end">
                     <span class="text-light">Youtube channel name</span>
                 </div> -->
@@ -146,39 +173,16 @@
 
     <!-- cards -->
 
-    <div class="container mt-5" id="cont">
-      <div class="row">
-        <% products.forEach((product)=> { %>
-        <div class="col col-lg-4 col-md-6 col-sm-12 mt-5 ml-5">
-          <div
-            class="card"
-            data-product-id="${data[i]['product-id']}"
-            style="width: 18rem"
-          >
-            <div class="card-header text-body-secondary text-center">
-              Product Name: <%= product.product_name%>
-            </div>
-            <img
-              src="https://drive.google.com/uc?export=view&id=<%= product.product_link %>"
-              class="card-img-top"
-              alt="Product Image"
-            />
-            <div class="card-body">
-              <p class="card-text"><%= product.product_description %></p>
-            </div>
-            <div class="card-footer text-body-secondary text-center">
-              Product Id: <%= product.product_id%>
-            </div>
-          </div>
-        </div>
-        <%})%>
+    <div class="container mt-5">
+      <div class="row" id="cont">
+        
       </div>
     </div>
-    <!-- <div class="container mt-5" id="searchcont"></div>
+    <!-- <div class="container mt-5" id="searchcont"></div> -->
 
     <div id="loadMorePlaceholder" class="text-center my-5">
-      <span>Loading more...</span>
-    </div> -->
+      <button class="btn btn-light" id="loadMore">Click (Load More)</button>
+    </div>
     <br /><br /><br /><br />
 
     <!-- footer -->
@@ -199,6 +203,63 @@
     </div>
 
     <script>
+
+let currentPage = 0;
+
+$('#resetBtn').click(() => {
+  $("#cont").empty();
+    currentPage = 0;
+    loadMoreData();
+});
+
+$('#loadMore').click(() => {
+    loadMoreData();
+});
+
+const loadMoreData = () => {
+    // $("#loadMorePlaceholder").show();
+    currentPage++;
+
+    $.ajax({
+        url: `/products?page=${currentPage}`,
+        method: "GET",
+        dataType: "json",
+        success: (results) => {
+            if (results.length) {
+                results.forEach((product) => {
+                    $("#cont").append(`
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 mt-5">
+                        <div class="card" data-product-id="${product.product_id}">
+                          <img src="https://drive.google.com/uc?export=view&id=${product.product_link}" class="card-img-top" alt="..." />
+                          <div class="card-footer text-body-secondary text-center">
+                            Product Id: ${product.product_id}
+                          </div>
+                        </div>
+                      </div>
+                    `);
+                });
+            } else {
+                // If no more data to load, hide the "Loading more..." placeholder.
+                $("#loadMorePlaceholder").hide();
+            }
+        },
+        error: (error) => {
+            console.error("Error loading more products:", error);
+        }
+    });
+};
+
+// When the user scrolls to the bottom of the document, load more data.
+$(window).scroll(function() {
+    if ($(window).scrollTop() + $(window).height() >= $(document).height() - 100) {
+        loadMoreData();
+    }
+});
+
+// Initial data load
+loadMoreData();
+
+
       // Handle form submission
       $("#searchForm").on("submit", (event) => {
         event.preventDefault();
@@ -218,20 +279,14 @@
               // Loop through the search results and create new product cards
               results.forEach((product) => {
                 $("#cont").append(`
-                  <div class="col col-lg-4 col-md-6 col-sm-12 mt-5 ml-5">
-                    <div class="card" data-product-id="${product.product_id}" style="width: 18rem">
-                      <div class="card-header text-body-secondary text-center">
-                        Product Name: ${product.product_name}
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
+                        <div class="card" data-product-id="${product.product_id}" style="width: 18rem">
+                          <img src="https://drive.google.com/uc?export=view&id=${product.product_link}" class="card-img-top" alt="..." />
+                          <div class="card-footer text-body-secondary text-center">
+                            Product Id: ${product.product_id}
+                          </div>
+                        </div>
                       </div>
-                      <img src="images/${product.product_image}" class="card-img-top" alt="..." />
-                      <div class="card-body">
-                        <p class="card-text">${product.product_description}</p>
-                      </div>
-                      <div class="card-footer text-body-secondary text-center">
-                        Product Id: ${product.product_id}
-                      </div>
-                    </div>
-                  </div>
                 `);
               });
             },

@@ -14,8 +14,13 @@ function extractFileIdFromDriveLink(driveLink) {
 
 // Define a GET route to fetch products list
 router.get("/products", (req, res) => {
-  const query = "SELECT * FROM products";
-  db.all(query, [], (err, rows) => {
+  const limit = 2;
+  const page = parseInt(req.query.page, 10) || 0;
+  const offset = page * limit;
+  console.log("PAGE:", page);
+  const query = `SELECT * FROM products LIMIT ? OFFSET ?`;
+  db.all(query, [limit, offset], (err, rows) => {
+    console.log(query, rows);
     if (err) {
       console.error("Error fetching products:", err);
       return res.status(500).json({ error: "Internal Server Error" });
