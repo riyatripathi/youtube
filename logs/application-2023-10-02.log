@@ -989,3 +989,41 @@
 [2023-10-02 11:42:07] [DEBUG]: Total number of records: 5
 [2023-10-02 11:42:47] [DEBUG]: Request for searching products
 [2023-10-02 11:42:47] [DEBUG]: Fetching Product from ID: {productId}
+[2023-10-02 11:47:47] [INFO]: Server is running on port 5000
+[2023-10-02 11:47:47] [INFO]: Connected to database
+[2023-10-02 11:47:47] [INFO]: Connected to Redis
+[2023-10-02 11:47:48] [DEBUG]: Request for fetching all products from cache
+[2023-10-02 11:47:48] [DEBUG]: Fetching total number of records
+[2023-10-02 11:47:48] [DEBUG]: Total number of records: 5
+[2023-10-02 11:47:48] [DEBUG]: Fetching all products (Page: 0, Limit: 2)
+[2023-10-02 11:47:48] [INFO]: Fetched Products from Cache
+[2023-10-02 11:49:14] [DEBUG]: Request for fetching all products from cache
+[2023-10-02 11:49:14] [DEBUG]: Fetching total number of records
+[2023-10-02 11:49:14] [DEBUG]: Total number of records: 5
+[2023-10-02 11:49:14] [DEBUG]: Fetching all products (Page: 0, Limit: 2)
+[2023-10-02 11:49:14] [INFO]: Fetched Products from Cache
+[2023-10-02 11:49:54] [DEBUG]: Request for fetching all products from cache
+[2023-10-02 11:49:54] [DEBUG]: Fetching total number of records
+[2023-10-02 11:49:54] [DEBUG]: Total number of records: 5
+[2023-10-02 11:49:54] [DEBUG]: Fetching all products (Page: 0, Limit: 2)
+[2023-10-02 11:49:54] [INFO]: Fetched Products from Cache
+[2023-10-02 11:50:29] [DEBUG]: Request for fetching all products from cache
+[2023-10-02 11:50:29] [DEBUG]: Fetching total number of records
+[2023-10-02 11:50:29] [DEBUG]: Total number of records: 5
+[2023-10-02 11:50:29] [DEBUG]: Fetching all products (Page: 0, Limit: 2)
+[2023-10-02 11:50:29] [INFO]: Fetched Products from Cache
+[2023-10-02 11:50:43] [DEBUG]: Request for fetching all products from cache
+[2023-10-02 11:50:43] [DEBUG]: Fetching total number of records
+[2023-10-02 11:50:43] [DEBUG]: Total number of records: 5
+[2023-10-02 11:50:43] [DEBUG]: Fetching all products (Page: 0, Limit: 2)
+[2023-10-02 11:50:43] [INFO]: Fetched Products from Cache
+[2023-10-02 11:50:51] [DEBUG]: Request for fetching all products from cache
+[2023-10-02 11:50:51] [DEBUG]: Fetching total number of records
+[2023-10-02 11:50:51] [DEBUG]: Total number of records: 5
+[2023-10-02 11:50:51] [DEBUG]: Fetching all products (Page: 0, Limit: 2)
+[2023-10-02 11:50:51] [INFO]: Fetched Products from Cache
+[2023-10-02 11:51:00] [DEBUG]: Request for fetching all products from cache
+[2023-10-02 11:51:00] [DEBUG]: Fetching total number of records
+[2023-10-02 11:51:00] [DEBUG]: Total number of records: 5
+[2023-10-02 11:51:00] [DEBUG]: Fetching all products (Page: 1, Limit: 2)
+[2023-10-02 11:51:00] [INFO]: Fetched Products from Cache

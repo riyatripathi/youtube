@@ -283,7 +283,7 @@ router.post("/server-side-products", async (req, res) => {
 });
 
 function getProductById(productId) {
-  logger.debug("Fetching Product from ID: {productId}");
+  logger.debug(`Fetching Product from ID: ${productId}`);
   const query = "SELECT * FROM products WHERE product_id = ?";
   return new Promise((resolve, reject) => {
     db.get(query, [productId], (err, row) => {
