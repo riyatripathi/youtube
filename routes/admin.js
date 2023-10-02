@@ -16,26 +16,26 @@ passport.use(
       [username],
       (err, user) => {
         if (err) {
-          logger.error("Error during authentication:", err);
+          logger.error(`Error during authentication: ${err}`);
           return done(err);
         }
 
         if (!user) {
-          logger.warn("Incorrect username:", username);
+          logger.warn(`Incorrect username ${username}`);
           return done(null, false, { message: "Incorrect username." });
         }
 
         bcrypt.compare(password, user.password, (err, isMatch) => {
           if (err) {
-            logger.error("Error during password comparison:", err);
+            logger.error(`Error during password comparison: ${err}`);
             return done(err);
           }
 
           if (isMatch) {
-            logger.info("User authenticated successfully:", user.username);
+            logger.info(`User authenticated successfully: ${user.username}`);
             return done(null, user);
           } else {
-            logger.warn("Incorrect password for user:", user.username);
+            logger.warn(`Incorrect password for user: ${user.username}`);
             return done(null, false, { message: "Incorrect password." });
           }
         });
@@ -70,7 +70,7 @@ function ensureAuthenticated(req, res, next) {
 
 // Route for the admin panel
 router.get("/", ensureAuthenticated, (req, res) => {
-  logger.info("Rendering admin panel for user:", req.user.username);
+  logger.info(`Rendering admin panel for user: ${req.user.username}`);
   res.render("admin");
 });
 
