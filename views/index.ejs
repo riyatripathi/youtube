@@ -149,7 +149,7 @@
               id="searchInput"
               class="form-control"
               type="search"
-              placeholder="Product ID or Name"
+              placeholder="Product ID"
               aria-label="Search"
             />
           </form>
@@ -210,6 +210,7 @@ $('#resetBtn').click(() => {
   $("#cont").empty();
     currentPage = 0;
     loadMoreData();
+    $("#loadMorePlaceholder").show();
 });
 
 $('#loadMore').click(() => {
@@ -218,8 +219,6 @@ $('#loadMore').click(() => {
 
 const loadMoreData = () => {
     // $("#loadMorePlaceholder").show();
-    currentPage++;
-
     $.ajax({
         url: `/products?page=${currentPage}`,
         method: "GET",
@@ -228,22 +227,28 @@ const loadMoreData = () => {
             if (results.length) {
                 results.forEach((product) => {
                     $("#cont").append(`
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 mt-5">
+                      <div class="col-6 col-sm-6 col-md-6 col-lg-3 mt-5">
+                        <a href="${product.affiliate_link}" target="_blank" style="text-decoration: none;">
                         <div class="card" data-product-id="${product.product_id}">
                           <img src="https://drive.google.com/uc?export=view&id=${product.product_link}" class="card-img-top" alt="..." />
                           <div class="card-footer text-body-secondary text-center">
                             Product Id: ${product.product_id}
                           </div>
                         </div>
+                      </a>
                       </div>
+                    
                     `);
                 });
             } else {
                 // If no more data to load, hide the "Loading more..." placeholder.
                 $("#loadMorePlaceholder").hide();
             }
+            currentPage++;
         },
         error: (error) => {
+           // if status code is not 200, hide the "Loading more..." placeholder.
+            $("#loadMorePlaceholder").hide();
             console.error("Error loading more products:", error);
         }
     });
@@ -267,6 +272,7 @@ loadMoreData();
         if (searchQuery.trim() === "") {
           location.reload();
         } else {
+          $("#loadMorePlaceholder").hide();
           $.ajax({
             url: `/search-products`,
             method: "POST",
@@ -275,17 +281,19 @@ loadMoreData();
             success: (results) => {
               // Clear the existing product cards
               $("#cont").empty();
-
+              
               // Loop through the search results and create new product cards
               results.forEach((product) => {
                 $("#cont").append(`
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
+                    <a href="${product.affiliate_link}" target="_blank" style="text-decoration: none;">
                         <div class="card" data-product-id="${product.product_id}" style="width: 18rem">
                           <img src="https://drive.google.com/uc?export=view&id=${product.product_link}" class="card-img-top" alt="..." />
                           <div class="card-footer text-body-secondary text-center">
                             Product Id: ${product.product_id}
                           </div>
                         </div>
+                        </a>
                       </div>
                 `);
               });

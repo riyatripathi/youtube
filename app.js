@@ -4,16 +4,19 @@ const db = require("./database/db"); // Import the database module
 const expressSession = require("express-session");
 const passport = require("passport");
 const flash = require("connect-flash");
+const logger = require("./logger");
+require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.use(flash());
 app.use(
   expressSession({
-    secret: "sanheensethi", // Change this to a secret phrase for encoding session ID
+    secret: process.env.SESSION_SECRET, // Change this to a secret phrase for encoding session ID
     resave: false,
     saveUninitialized: false,
   })
@@ -36,5 +39,5 @@ app.use("/login", loginRoutes);
 app.use("/logout", logoutRoutes);
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  logger.info(`Server is running on port ${port}`);
 });

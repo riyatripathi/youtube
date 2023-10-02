@@ -4,6 +4,7 @@ const sqlite3 = require("sqlite3").verbose();
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const bcrypt = require("bcryptjs");
+const logger = require("../logger");
 
 const db = new sqlite3.Database("database.db");
 
@@ -14,18 +15,27 @@ passport.use(
       "SELECT id, username, password FROM admin_users WHERE username = ?",
       [username],
       (err, user) => {
-        if (err) return done(err);
+        if (err) {
+          logger.error("Error during authentication:", err);
+          return done(err);
+        }
 
         if (!user) {
+          logger.warn("Incorrect username:", username);
           return done(null, false, { message: "Incorrect username." });
         }
 
         bcrypt.compare(password, user.password, (err, isMatch) => {
-          if (err) return done(err);
+          if (err) {
+            logger.error("Error during password comparison:", err);
+            return done(err);
+          }
 
           if (isMatch) {
+            logger.info("User authenticated successfully:", user.username);
             return done(null, user);
           } else {
+            logger.warn("Incorrect password for user:", user.username);
             return done(null, false, { message: "Incorrect password." });
           }
         });
@@ -50,15 +60,17 @@ passport.deserializeUser((id, done) => {
 
 // Middleware to ensure the user is authenticated
 function ensureAuthenticated(req, res, next) {
-  console.log("req.isAuthenticated()", req.isAuthenticated());
+  logger.debug("Checking authentication status");
   if (req.isAuthenticated()) {
     return next();
   }
+  logger.warn("User is not authenticated, redirecting to /login");
   res.redirect("/login");
 }
 
 // Route for the admin panel
 router.get("/", ensureAuthenticated, (req, res) => {
+  logger.info("Rendering admin panel for user:", req.user.username);
   res.render("admin");
 });
 

@@ -1,0 +1,49 @@
+config:
+  target: 'http://64.227.141.40/' # Replace with your website's URL
+  phases:
+    - duration: 60 # Duration of the test in seconds (5 minutes)
+      arrivalRate: 20 # Number of new virtual users to start per second
+      maxVUs: 100 # Maximum number of virtual users
+
+# Configuration for the first phase
+# config1:
+#   target: 'http://localhost:5000'
+#   phases:
+#     - duration: 300 # Duration of the test in seconds (5 minutes)
+#       arrivalRate: 20 # Number of new virtual users to start per second
+#       maxVUs: 1000 # Maximum number of virtual users
+
+# # Configuration for the second phase
+# config2:
+#   phases:
+#     - duration: 300 # Duration of the test in seconds (5 minutes)
+#       arrivalRate: 50 # Gradually increase to 50 new virtual users per second
+#       maxVUs: 2000 # Increase the maximum number of virtual users
+
+# # Configuration for the third phase
+# config3:
+#   phases:
+#     - duration: 300 # Duration of the test in seconds (5 minutes)
+#       arrivalRate: 100 # Gradually increase to 100 new virtual users per second
+#       maxVUs: 5000 # Further increase the maximum number of virtual users
+
+# # Configuration for the third phase
+# config4:
+#   phases:
+#     - duration: 300 # Duration of the test in seconds (5 minutes)
+#       arrivalRate: 100 # Gradually increase to 100 new virtual users per second
+#       maxVUs: 10000 # Further increase the maximum number of virtual users
+
+# # Configuration for the third phase
+# config5:
+#   phases:
+#     - duration: 400 # Duration of the test in seconds (5 minutes)
+#       arrivalRate: 100 # Gradually increase to 100 new virtual users per second
+#       maxVUs: 20000 # Further increase the maximum number of virtual users
+
+# # Configuration for the third phase
+# config6:
+#   phases:
+#     - duration: 300 # Duration of the test in seconds (5 minutes)
+#       arrivalRate: 100 # Gradually increase to 100 new virtual users per second
+#       maxVUs: 25000 # Further increase the maximum number of virtual users

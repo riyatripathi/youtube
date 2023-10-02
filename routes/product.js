@@ -1,50 +1,135 @@
 const express = require("express");
 const router = express.Router();
-const multer = require("multer");
+// const multer = require("multer");
 const db = require("./../database/db");
 const upload = require("../config/multer");
+const logger = require("../logger");
+const redis = require("redis");
+const client = redis.createClient();
+client.on("error", (err) => {
+  logger.error("Redis Error:", err);
+});
+
+client.connect().then((res) => {
+  logger.info("Connected to Redis");
+});
+
+const FETCH_LIMIT = 2;
 
 function extractFileIdFromDriveLink(driveLink) {
   const match = /\/d\/([a-zA-Z0-9_-]+)/.exec(driveLink);
+  logger.info(
+    `Extracting Drive Link -> ID, RegEx Match Found for drive Link: ${driveLink}`
+  );
   if (match && match[1]) {
+    logger.info("Extracting Drive Link -> ID: ", match[1]);
     return match[1];
   }
   return null;
 }
 
 // Define a GET route to fetch products list
-router.get("/products", (req, res) => {
+// router.get("/products", async (req, res) => {
+//   logger.debug("Request for fetching products");
+//   const limit = 2;
+//   const page = parseInt(req.query.page, 10) || 0;
+//   const offset = page * limit;
+//   const totalRecords = await getTotalRecords();
+//   if (offset > totalRecords) {
+//     return res.status(404).json({ status: 404, error: "No products found" });
+//   }
+//   logger.debug(`Fetching products (Page: ${page}, Limit: ${limit})`);
+//   const query = `SELECT * FROM products LIMIT ? OFFSET ?`;
+//   db.all(query, [limit, offset], (err, rows) => {
+//     if (err) {
+//       logger.error("Error fetching products:", err);
+//       return res
+//         .status(500)
+//         .json({ status: 500, error: "Internal Server Error" });
+//     }
+//     res.json(rows);
+//   });
+// });
+
+router.get("/products", async (req, res) => {
+  logger.debug("Request for fetching all products from cache");
   const limit = 2;
   const page = parseInt(req.query.page, 10) || 0;
   const offset = page * limit;
-  console.log("PAGE:", page);
-  const query = `SELECT * FROM products LIMIT ? OFFSET ?`;
-  db.all(query, [limit, offset], (err, rows) => {
-    console.log(query, rows);
-    if (err) {
-      console.error("Error fetching products:", err);
-      return res.status(500).json({ error: "Internal Server Error" });
-    }
-    res.json(rows);
-  });
+  const totalRecords = await getTotalRecords();
+  if (offset > totalRecords) {
+    return res.status(404).json({ status: 404, error: "No products found" });
+  }
+  logger.debug(`Fetching all products (Page: ${page}, Limit: ${limit})`);
+  const products = await getCachedProducts(offset, limit);
+  res.json(products);
 });
 
+async function getCachedProducts(start, length) {
+  const cacheKey = `products_${start}_${length}`;
+  return new Promise(async (resolve, reject) => {
+    const products = await client.get(cacheKey);
+    if (products) {
+      logger.info("Fetched Products from Cache");
+      resolve(JSON.parse(products));
+    } else {
+      const products = await getAllProducts(start, length);
+      if (products.length != FETCH_LIMIT) {
+        resolve(products);
+      } else {
+        client.set(cacheKey, JSON.stringify(products), {
+          EX: 3600,
+        }); // cache for 1 hour
+        resolve(products);
+      }
+    }
+  });
+}
+
+function getAllProducts(start, length) {
+  query = `SELECT * FROM products LIMIT ? OFFSET ?`;
+  console.log(query);
+  return new Promise((resolve, reject) => {
+    db.all(query, [length, start], (err, rows) => {
+      if (err) {
+        logger.error("Error fetching products:", err);
+        reject(err);
+      }
+      console.log(rows);
+      resolve(rows);
+    });
+  });
+}
+
 router.post("/add-product", upload.single("productImage"), (req, res) => {
-  let { productName, productDescription, productLink, youtubeLink } = req.body;
+  logger.debug("Request for adding product");
+  let {
+    productName,
+    productDescription,
+    productLink,
+    affiliateLink,
+    youtubeLink,
+  } = req.body;
 
   const image_url = extractFileIdFromDriveLink(productLink);
   if (image_url != null) productLink = image_url;
-  console.log(image_url);
   const query =
-    "INSERT INTO products ( product_name, product_description, product_link, youtube_link) VALUES (?, ?, ?, ?)";
-  const values = [productName, productDescription, productLink, youtubeLink];
+    "INSERT INTO products ( product_name, product_description, product_link, affiliate_link, youtube_link) VALUES (?, ?, ?, ?, ?)";
+  const values = [
+    productName,
+    productDescription,
+    productLink,
+    affiliateLink,
+    youtubeLink,
+  ];
 
   db.run(query, values, function (err) {
     if (err) {
-      console.error("Error adding product to the database:", err);
+      logger.error("Error adding product to the database:", err);
       return res.status(500).json({ error: "Internal Server Error" });
     }
     values.unshift(this.lastID);
+    logger.info("Product added successfully:", values);
     res.json({
       message: "Product added successfully",
       data: values,
@@ -53,15 +138,17 @@ router.post("/add-product", upload.single("productImage"), (req, res) => {
 });
 
 router.delete("/products/delete/:productId", (req, res) => {
+  logger.debug("Request for deleting product");
   let productId = req.params.productId;
   if (productId && productId.length > 0) {
     productId = productId.substring(1);
   }
   db.run("DELETE FROM products WHERE product_id = ?", [productId], (err) => {
     if (err) {
-      console.error("Error deleting product:", err);
+      logger.error("Error deleting product:", err);
       res.status(500).json({ error: "Internal server error" });
     } else {
+      logger.info("Product deleted successfully");
       res.json({ message: "Product deleted successfully" });
     }
   });
@@ -69,13 +156,14 @@ router.delete("/products/delete/:productId", (req, res) => {
 
 // edit changes route having product id specified
 router.post("/find-product/:productId", (req, res) => {
+  logger.debug("Request for fetching product /find-product/:productId");
   let productId = req.params.productId;
   productId = productId.substring(1);
   const query = "SELECT * FROM products WHERE product_id = ?";
 
   db.get(query, [productId], (err, product) => {
     if (err) {
-      console.error("Error fetching product:", err);
+      logger.error("Error fetching product:", err);
       return res.status(500).json({ error: "Internal Server Error" });
     }
     if (!product) {
@@ -86,55 +174,85 @@ router.post("/find-product/:productId", (req, res) => {
 });
 
 router.post("/update-product/:productId", (req, res) => {
+  logger.debug("Request for updating product, update-product/:productId");
   let productId = req.params.productId;
   productId = productId.substring(1);
   let {
     editProductName,
     editProductDescription,
-    editProductLink,
+    editProductLink, // drive image id or link
+    editAffiliateLink,
     editYoutubeLink,
   } = req.body;
   const image_url = extractFileIdFromDriveLink(editProductLink);
   if (image_url != null) editProductLink = image_url;
   const query =
-    "UPDATE products SET product_name = ?, product_description = ?, product_link = ?, youtube_link = ? WHERE product_id = ?";
+    "UPDATE products SET product_name = ?, product_description = ?, product_link = ?, youtube_link = ?, affiliate_link = ? WHERE product_id = ?";
   const values = [
     editProductName,
     editProductDescription,
     editProductLink,
     editYoutubeLink,
+    editAffiliateLink,
     productId,
   ];
   db.run(query, values, (err) => {
     if (err) {
-      console.error("Error updating product:", err);
+      logger.error("Error updating product:", err);
       return res.status(500).json({ error: "Internal Server Error" });
     }
-    console.log("updated successfully");
+    logger.info("Product updated successfully");
     res.redirect("/admin");
   });
 });
 
 // Server-side route for searching products
-router.post("/search-products", (req, res) => {
+router.post("/search-products", async (req, res) => {
+  logger.debug("Request for searching products");
   const searchQuery = req.body.searchQuery;
-
-  // Use the searchQuery to search for products in your database
-  const query = `
-      SELECT * FROM products 
-      WHERE product_id = ? OR product_name = ?`;
-
-  db.all(query, [searchQuery, searchQuery], (err, results) => {
-    if (err) {
-      console.error("Error searching for products:", err);
-      res.status(500).json({ error: "Internal Server Error" });
-    } else {
-      res.json(results);
+  const cacheKey = `search_product_${searchQuery}`;
+  const products = await client.get(cacheKey);
+  if (products) {
+    logger.info("Product found in cache");
+    res.json(JSON.parse(products));
+  } else {
+    const products = await getProductById(searchQuery);
+    if (!products) {
+      return res.status(404).json({ error: "Product not found" });
     }
-  });
+    client.set(cacheKey, JSON.stringify(products), {
+      EX: 3600,
+    }); // // cache for 1 hour
+    // if products is array then return products else if it is dict then add in array then return that product array
+    if (Array.isArray(products)) {
+      res.json(products);
+    } else {
+      res.json([products]);
+    }
+  }
+  // client.get(cacheKey, async (err, cachedProduct) => {
+  //   if (err) {
+  //     logger.error("Error fetching product from cache:", err);
+  //   }
+
+  //   if (cachedProduct) {
+  //     logger.info("Product found in cache");
+  //     res.json(JSON.parse(cachedProduct));
+  //   } else {
+  //     const product = await getProductById(searchQuery);
+  //     if (!product) {
+  //       return res.status(404).json({ error: "Product not found" });
+  //     }
+
+  //     client.setex(cacheKey, 3600, JSON.stringify(product)); // cache for 1 hour
+  //     console.log(product);
+  //     res.json(product);
+  //   }
+  // });
 });
 
 router.post("/server-side-products", async (req, res) => {
+  logger.debug("Request for server-side products");
   try {
     const draw = req.body.draw || 0;
     const start = req.body.start || 0;
@@ -159,18 +277,37 @@ router.post("/server-side-products", async (req, res) => {
 
     res.json(response);
   } catch (error) {
-    console.error("Error processing server-side request:", error);
+    logger.error("Error processing server-side request:", error);
     res.status(500).json({ error: "Server error" });
   }
 });
 
+function getProductById(productId) {
+  logger.debug("Fetching Product from ID: {productId}");
+  const query = "SELECT * FROM products WHERE product_id = ?";
+  return new Promise((resolve, reject) => {
+    db.get(query, [productId], (err, row) => {
+      if (err) {
+        logger.error("Error fetching product:", err);
+        reject(err);
+      } else {
+        resolve(row);
+      }
+    });
+  });
+}
+
 // Function to get the total number of records in the database
 function getTotalRecords() {
+  // Get the total number of records
+  logger.debug("Fetching total number of records");
   return new Promise((resolve, reject) => {
     db.get("SELECT COUNT(*) as count FROM products", (err, row) => {
       if (err) {
+        logger.error("Error fetching total number of records:", err);
         reject(err);
       } else {
+        logger.debug(`Total number of records: ${row.count}`);
         resolve(row.count);
       }
     });
@@ -199,6 +336,7 @@ function getFilteredRecords(searchValue) {
 
 // Function to get product data based on DataTables request
 function getProducts(searchValue, start, length) {
+  logger.info("Fetching products based on DataTables request");
   return new Promise((resolve, reject) => {
     const searchQuery = `%${searchValue}%`;
     const query = `
@@ -210,8 +348,10 @@ function getProducts(searchValue, start, length) {
 
     db.all(query, [searchQuery, searchQuery, start, length], (err, rows) => {
       if (err) {
+        logger.error("Error fetching products:", err);
         reject(err);
       } else {
+        logger.info("Fetched products:", rows.length);
         resolve(rows);
       }
     });

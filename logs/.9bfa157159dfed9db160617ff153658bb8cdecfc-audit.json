@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 7
+    },
+    "auditLog": "D:\\WebDevelopment\\Rajat\\youtube\\logs\\.9bfa157159dfed9db160617ff153658bb8cdecfc-audit.json",
+    "files": [
+        {
+            "date": 1696174484417,
+            "name": "D:\\WebDevelopment\\Rajat\\youtube\\logs\\application-2023-10-01.log",
+            "hash": "23f9fa83acd50190b012d31d18434a2483cce8135f3c0a004d8dd19a7504f01e"
+        },
+        {
+            "date": 1696222489679,
+            "name": "D:\\WebDevelopment\\Rajat\\youtube\\logs\\application-2023-10-02.log",
+            "hash": "3bf7befc7d7e64bc40ecdcae4560932f643f46c822e5d1e3731f7e1fd5e0f16b"
+        }
+    ],
+    "hashType": "sha256"
+}
