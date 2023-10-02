@@ -214,7 +214,11 @@ router.post("/search-products", async (req, res) => {
   const products = await client.get(cacheKey);
   if (products) {
     logger.info("Product found in cache");
-    res.json(JSON.parse(products));
+    if(Array.isArray(products)){
+        res.json(JSON.parse(products));
+    }else{
+        res.json([JSON.parse(products)]);
+    }
   } else {
     const products = await getProductById(searchQuery);
     if (!products) {
