@@ -70,7 +70,7 @@ async function getCachedProducts(start, length) {
   return new Promise(async (resolve, reject) => {
     const products = await client.get(cacheKey);
     if (products) {
-      logger.info("Fetched Products from Cache");
+      logger.debug("Fetched Products from Cache");
       resolve(JSON.parse(products));
     } else {
       const products = await getAllProducts(start, length);
@@ -213,7 +213,7 @@ router.post("/search-products", async (req, res) => {
   const cacheKey = `search_product_${searchQuery}`;
   const products = await client.get(cacheKey);
   if (products) {
-    logger.info("Product found in cache");
+    logger.debug("Product found in cache");
     if(Array.isArray(products)){
         res.json(JSON.parse(products));
     }else{

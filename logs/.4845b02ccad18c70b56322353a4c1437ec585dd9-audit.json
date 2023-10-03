@@ -9,6 +9,11 @@
             "date": 1696228466821,
             "name": "/root/youtube/logs/application-2023-10-02.log",
             "hash": "87f9b80be1986b2504f872993470c4836b76cceead3e7ddee44a4a8173402ecd"
+        },
+        {
+            "date": 1696274045893,
+            "name": "/root/youtube/logs/application-2023-10-03.log",
+            "hash": "25733b166d35954bd5000cb1d74d30d388e99569dd6fa8221e1721706f3601a9"
         }
     ],
     "hashType": "sha256"
