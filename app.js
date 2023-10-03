@@ -5,10 +5,17 @@ const expressSession = require("express-session");
 const passport = require("passport");
 const flash = require("connect-flash");
 const logger = require("./logger");
+const rateLimit = require("express-rate-limit");
 require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 5000;
-
+/* const limiter = rateLimit({
+	windowMs: 60 * 1000, // 1 minute
+	max: 50, // Max request per minute
+	message: "Too many requests from this IP, please try again later."
+});
+*/
+// app.use(limiter);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static("public"));

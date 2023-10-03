@@ -14,7 +14,7 @@ client.connect().then((res) => {
   logger.info("Connected to Redis");
 });
 
-const FETCH_LIMIT = 2;
+const FETCH_LIMIT = 4;
 
 function extractFileIdFromDriveLink(driveLink) {
   const match = /\/d\/([a-zA-Z0-9_-]+)/.exec(driveLink);
@@ -53,7 +53,7 @@ function extractFileIdFromDriveLink(driveLink) {
 
 router.get("/products", async (req, res) => {
   logger.debug("Request for fetching all products from cache");
-  const limit = 2;
+  const limit = FETCH_LIMIT;
   const page = parseInt(req.query.page, 10) || 0;
   const offset = page * limit;
   const totalRecords = await getTotalRecords();
@@ -70,7 +70,7 @@ async function getCachedProducts(start, length) {
   return new Promise(async (resolve, reject) => {
     const products = await client.get(cacheKey);
     if (products) {
-      logger.info("Fetched Products from Cache");
+      logger.debug("Fetched Products from Cache");
       resolve(JSON.parse(products));
     } else {
       const products = await getAllProducts(start, length);
