@@ -45,6 +45,14 @@ if (cluster.isMaster) {
   );
   app.use(passport.initialize());
   app.use(passport.session());
+
+  app.use((req, res, next) => {
+    logger.info(
+      `Request received on port ${port}: ${req.method} ${req.originalUrl}`
+    );
+    next();
+  });
+
   // Include the route modules
   const indexRoutes = require("./routes/index");
   const adminRoutes = require("./routes/admin");
