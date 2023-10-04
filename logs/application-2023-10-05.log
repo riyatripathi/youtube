@@ -15327,3 +15327,77 @@
 [2023-10-05 05:24:42] [INFO]: Request received on port 5001: DELETE /admin
 [2023-10-05 05:26:09] [INFO]: Number of CPUs: 12
 [2023-10-05 05:26:09] [INFO]: Connected to database
+[2023-10-05 05:26:10] [INFO]: Number of CPUs: 12
+[2023-10-05 05:26:10] [INFO]: Connected to database
+[2023-10-05 05:26:10] [INFO]: Server is running on port 5001
+[2023-10-05 05:26:10] [INFO]: Connected to Redis
+[2023-10-05 05:26:10] [INFO]: Connected to Redis
+[2023-10-05 05:26:10] [INFO]: Request received on port 5001: GET /admin?editProductName=bottle&editProductDescription=&editAffiliateLink=https%3A%2F%2Famazon.in&editYoutubeLink=https%3A%2F%2Fyoutube.com&editProductLink=1696463633078_pexels-math-90946.jpg&productImage=64c590c754d6bc13ebd90cbc_ai_product_photo_styles.webp
+[2023-10-05 05:26:10] [DEBUG]: Checking authentication status
+[2023-10-05 05:26:10] [WARN]: User is not authenticated, redirecting to /login
+[2023-10-05 05:26:10] [INFO]: Request received on port 5001: GET /login
+[2023-10-05 05:26:10] [INFO]: Rendering login page
+[2023-10-05 05:26:14] [INFO]: Request received on port 5001: POST /login
+[2023-10-05 05:26:14] [INFO]: User authenticated successfully: admin
+[2023-10-05 05:26:14] [INFO]: User authenticated successfully: admin
+[2023-10-05 05:26:14] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 05:26:14] [DEBUG]: Checking authentication status
+[2023-10-05 05:26:14] [INFO]: Rendering admin panel for user: admin
+[2023-10-05 05:26:14] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 05:26:14] [DEBUG]: Request for server-side products
+[2023-10-05 05:26:14] [DEBUG]: Fetching total number of records
+[2023-10-05 05:26:14] [DEBUG]: Total number of records: 0
+[2023-10-05 05:26:14] [INFO]: Fetching products based on DataTables request
+[2023-10-05 05:26:14] [INFO]: Fetched products:
+[2023-10-05 05:26:33] [INFO]: Request received on port 5001: POST /add-product
+[2023-10-05 05:26:33] [DEBUG]: Request for adding product
+[2023-10-05 05:26:33] [INFO]: Product added successfully:
+[2023-10-05 05:26:33] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 05:26:33] [DEBUG]: Request for server-side products
+[2023-10-05 05:26:33] [DEBUG]: Fetching total number of records
+[2023-10-05 05:26:33] [DEBUG]: Total number of records: 1
+[2023-10-05 05:26:33] [INFO]: Fetching products based on DataTables request
+[2023-10-05 05:26:33] [INFO]: Fetched products:
+[2023-10-05 05:26:36] [INFO]: Request received on port 5001: GET /admin/pin-product/37
+[2023-10-05 05:26:36] [DEBUG]: Checking authentication status
+[2023-10-05 05:26:36] [DEBUG]: Request for pinning product
+[2023-10-05 05:26:36] [DEBUG]: Fetching Product from ID: 37
+[2023-10-05 05:26:36] [INFO]: Product pinned successfully in database
+[2023-10-05 05:26:36] [DEBUG]: Product pinned successfully in Cache
+[2023-10-05 05:26:36] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 05:26:36] [DEBUG]: Request for server-side products
+[2023-10-05 05:26:36] [DEBUG]: Fetching total number of records
+[2023-10-05 05:26:36] [DEBUG]: Total number of records: 1
+[2023-10-05 05:26:36] [INFO]: Fetching products based on DataTables request
+[2023-10-05 05:26:36] [INFO]: Fetched products:
+[2023-10-05 05:26:38] [INFO]: Request received on port 5001: GET /
+[2023-10-05 05:26:38] [DEBUG]: Request for Index Page
+[2023-10-05 05:26:38] [INFO]: Request received on port 5001: GET /pin-products
+[2023-10-05 05:26:38] [DEBUG]: Request for pinning products
+[2023-10-05 05:26:38] [DEBUG]: Fetching pin products
+[2023-10-05 05:26:38] [INFO]: Request received on port 5001: GET /products?page=0
+[2023-10-05 05:26:38] [DEBUG]: Request for fetching all products from cache
+[2023-10-05 05:26:38] [DEBUG]: Fetching total number of records
+[2023-10-05 05:26:38] [DEBUG]: Total number of records: 1
+[2023-10-05 05:26:38] [DEBUG]: Fetching all products (Page: 0, Limit: 4)
+[2023-10-05 05:26:41] [INFO]: Request received on port 5001: DELETE /products/delete/d37
+[2023-10-05 05:26:41] [DEBUG]: Request for deleting product d37
+[2023-10-05 05:26:41] [DEBUG]: Fetching Product from ID: 37
+[2023-10-05 05:26:41] [INFO]: Product deleted successfully from Cache 37
+[2023-10-05 05:26:41] [INFO]: Product deleted successfully from Database 37
+[2023-10-05 05:26:41] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 05:26:41] [DEBUG]: Request for server-side products
+[2023-10-05 05:26:41] [DEBUG]: Fetching total number of records
+[2023-10-05 05:26:41] [DEBUG]: Total number of records: 0
+[2023-10-05 05:26:41] [INFO]: Fetching products based on DataTables request
+[2023-10-05 05:26:41] [INFO]: Fetched products:
+[2023-10-05 05:26:45] [INFO]: Request received on port 5001: GET /
+[2023-10-05 05:26:45] [DEBUG]: Request for Index Page
+[2023-10-05 05:26:45] [INFO]: Request received on port 5001: GET /pin-products
+[2023-10-05 05:26:45] [DEBUG]: Request for pinning products
+[2023-10-05 05:26:45] [DEBUG]: Fetching pin products
+[2023-10-05 05:26:45] [INFO]: Request received on port 5001: GET /products?page=0
+[2023-10-05 05:26:45] [DEBUG]: Request for fetching all products from cache
+[2023-10-05 05:26:45] [DEBUG]: Fetching total number of records
+[2023-10-05 05:26:45] [DEBUG]: Total number of records: 0
+[2023-10-05 05:26:45] [DEBUG]: Fetching all products (Page: 0, Limit: 4)
