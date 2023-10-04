@@ -235,6 +235,20 @@ router.post("/search-products", async (req, res) => {
   }
 });
 
+router.get("/click-on-product/:id", async (req, res) => {
+  logger.debug("Request for clicking on product");
+  const productId = req.params.id;
+  const query = "UPDATE products SET clicks = clicks + 1 WHERE product_id = ?";
+  const values = [productId];
+  db.run(query, values, (err) => {
+    if (err) {
+      logger.error("Error updating product:", err);
+      return res.status(500).json({ error: "Internal Server Error" });
+    }
+    logger.info("Product clicked successfully");
+  });
+});
+
 router.post("/server-side-products", async (req, res) => {
   logger.debug("Request for server-side products");
   try {

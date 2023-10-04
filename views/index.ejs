@@ -225,7 +225,7 @@ $.ajax({
       results.forEach((product) => {
         $("#pinprod").append(`
           <div class="col-6 col-sm-6 col-md-6 col-lg-3 mt-5">
-            <a href="${product.affiliate_link}" target="_blank" style="text-decoration: none;">
+            <a href="${product.affiliate_link}" onclick="clickCount(${product.product_id})" target="_blank" style="text-decoration: none;">
             <div class="card" data-product-id="${product.product_id}">
               <img src="https://drive.google.com/uc?export=view&id=${product.product_link}" class="card-img-top" alt="..." />
               <div class="card-footer text-body-secondary text-center">
@@ -255,7 +255,7 @@ const loadMoreData = () => {
                 results.forEach((product) => {
                     $("#cont").append(`
                       <div class="col-6 col-sm-6 col-md-6 col-lg-3 mt-5">
-                        <a href="${product.affiliate_link}" target="_blank" style="text-decoration: none;">
+                        <a href="${product.affiliate_link}" onclick="clickCount(${product.product_id})" target="_blank" style="text-decoration: none;">
                         <div class="card" data-product-id="${product.product_id}">
                           <img src="https://drive.google.com/uc?export=view&id=${product.product_link}" class="card-img-top" alt="..." />
                           <div class="card-footer text-body-secondary text-center">
@@ -312,7 +312,7 @@ loadMoreData();
               results.forEach((product) => {
                 $("#cont").append(`
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
-                    <a href="${product.affiliate_link}" target="_blank" style="text-decoration: none;">
+                    <a href="${product.affiliate_link}" target="_blank" onclick="clickCount(${product.product_id})" style="text-decoration: none;">
                         <div class="card" data-product-id="${product.product_id}" style="width: 18rem">
                           <img src="https://drive.google.com/uc?export=view&id=${product.product_link}" class="card-img-top" alt="..." />
                           <div class="card-footer text-body-secondary text-center">
@@ -330,6 +330,20 @@ loadMoreData();
           });
         }
       });
+
+      function clickCount(id) {
+        $.ajax({
+          url: `/click-on-product/${id}`,
+          method: "GET",
+          dataType: "json",
+          success: (results) => {
+            console.log(results);
+          },
+          error: (error) => {
+            console.error("Error clicking on product:", error);
+          }
+        })
+      }
     </script>
   </body>
 </html>

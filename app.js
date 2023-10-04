@@ -12,7 +12,7 @@ require("dotenv").config();
 const numCPUs = require("os").cpus().length;
 logger.info(`Number of CPUs: ${numCPUs}`);
 if (cluster.isMaster) {
-  for (let i = 0; i < numCPUs; i++) {
+  for (let i = 0; i < 1; i++) {
     cluster.fork();
   }
 

@@ -2884,3 +2884,539 @@
 [2023-10-05 01:21:30] [DEBUG]: Total number of records: 4
 [2023-10-05 01:21:30] [DEBUG]: Fetching all products (Page: 0, Limit: 4)
 [2023-10-05 01:21:30] [DEBUG]: Fetched Products from Cache
+[2023-10-05 01:23:26] [INFO]: Number of CPUs: 12
+[2023-10-05 01:23:26] [INFO]: Connected to database
+[2023-10-05 01:23:27] [INFO]: Number of CPUs: 12
+[2023-10-05 01:23:29] [INFO]: Connected to database
+[2023-10-05 01:23:29] [INFO]: Server is running on port 5002
+[2023-10-05 01:23:29] [INFO]: Connected to Redis
+[2023-10-05 01:23:29] [INFO]: Connected to Redis
+[2023-10-05 01:23:27] [INFO]: Number of CPUs: 12
+[2023-10-05 01:23:29] [INFO]: Connected to database
+[2023-10-05 01:23:27] [INFO]: Number of CPUs: 12
+[2023-10-05 01:23:29] [INFO]: Connected to database
+[2023-10-05 01:23:29] [INFO]: Server is running on port 5001
+[2023-10-05 01:23:29] [INFO]: Connected to Redis
+[2023-10-05 01:23:29] [INFO]: Connected to Redis
+[2023-10-05 01:23:29] [INFO]: Server is running on port 5006
+[2023-10-05 01:23:29] [INFO]: Connected to Redis
+[2023-10-05 01:23:29] [INFO]: Connected to Redis
+[2023-10-05 01:23:27] [INFO]: Number of CPUs: 12
+[2023-10-05 01:23:29] [INFO]: Connected to database
+[2023-10-05 01:23:27] [INFO]: Number of CPUs: 12
+[2023-10-05 01:23:29] [INFO]: Connected to database
+[2023-10-05 01:23:29] [INFO]: Server is running on port 5007
+[2023-10-05 01:23:29] [INFO]: Connected to Redis
+[2023-10-05 01:23:29] [INFO]: Connected to Redis
+[2023-10-05 01:23:29] [INFO]: Server is running on port 5003
+[2023-10-05 01:23:29] [INFO]: Connected to Redis
+[2023-10-05 01:23:29] [INFO]: Connected to Redis
+[2023-10-05 01:23:27] [INFO]: Number of CPUs: 12
+[2023-10-05 01:23:29] [INFO]: Connected to database
+[2023-10-05 01:23:27] [INFO]: Number of CPUs: 12
+[2023-10-05 01:23:29] [INFO]: Connected to database
+[2023-10-05 01:23:29] [INFO]: Server is running on port 5004
+[2023-10-05 01:23:29] [INFO]: Connected to Redis
+[2023-10-05 01:23:29] [INFO]: Connected to Redis
+[2023-10-05 01:23:29] [INFO]: Server is running on port 5012
+[2023-10-05 01:23:29] [INFO]: Connected to Redis
+[2023-10-05 01:23:29] [INFO]: Connected to Redis
+[2023-10-05 01:23:27] [INFO]: Number of CPUs: 12
+[2023-10-05 01:23:29] [INFO]: Connected to database
+[2023-10-05 01:23:29] [INFO]: Server is running on port 5008
+[2023-10-05 01:23:29] [INFO]: Connected to Redis
+[2023-10-05 01:23:29] [INFO]: Connected to Redis
+[2023-10-05 01:23:27] [INFO]: Number of CPUs: 12
+[2023-10-05 01:23:29] [INFO]: Connected to database
+[2023-10-05 01:23:27] [INFO]: Number of CPUs: 12
+[2023-10-05 01:23:29] [INFO]: Connected to database
+[2023-10-05 01:23:28] [INFO]: Number of CPUs: 12
+[2023-10-05 01:23:29] [INFO]: Connected to database
+[2023-10-05 01:23:29] [INFO]: Server is running on port 5009
+[2023-10-05 01:23:29] [INFO]: Connected to Redis
+[2023-10-05 01:23:29] [INFO]: Connected to Redis
+[2023-10-05 01:23:29] [INFO]: Server is running on port 5005
+[2023-10-05 01:23:29] [INFO]: Connected to Redis
+[2023-10-05 01:23:29] [INFO]: Connected to Redis
+[2023-10-05 01:23:29] [INFO]: Server is running on port 5010
+[2023-10-05 01:23:29] [INFO]: Connected to Redis
+[2023-10-05 01:23:29] [INFO]: Connected to Redis
+[2023-10-05 01:23:28] [INFO]: Number of CPUs: 12
+[2023-10-05 01:23:29] [INFO]: Connected to database
+[2023-10-05 01:23:29] [INFO]: Server is running on port 5011
+[2023-10-05 01:23:29] [INFO]: Connected to Redis
+[2023-10-05 01:23:29] [INFO]: Connected to Redis
+[2023-10-05 01:24:13] [ERROR]: Worker 4672 died. Restarting...
+[2023-10-05 01:24:13] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:13] [INFO]: Connected to database
+[2023-10-05 01:24:14] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:15] [INFO]: Connected to database
+[2023-10-05 01:24:14] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:15] [INFO]: Connected to database
+[2023-10-05 01:24:15] [INFO]: Server is running on port 5002
+[2023-10-05 01:24:15] [INFO]: Connected to Redis
+[2023-10-05 01:24:15] [INFO]: Connected to Redis
+[2023-10-05 01:24:15] [INFO]: Server is running on port 5001
+[2023-10-05 01:24:15] [INFO]: Connected to Redis
+[2023-10-05 01:24:15] [INFO]: Connected to Redis
+[2023-10-05 01:24:14] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:15] [INFO]: Connected to database
+[2023-10-05 01:24:14] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:15] [INFO]: Connected to database
+[2023-10-05 01:24:15] [INFO]: Server is running on port 5006
+[2023-10-05 01:24:15] [INFO]: Connected to Redis
+[2023-10-05 01:24:15] [INFO]: Connected to Redis
+[2023-10-05 01:24:15] [INFO]: Server is running on port 5004
+[2023-10-05 01:24:15] [INFO]: Connected to Redis
+[2023-10-05 01:24:15] [INFO]: Connected to Redis
+[2023-10-05 01:24:14] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:15] [INFO]: Connected to database
+[2023-10-05 01:24:15] [INFO]: Server is running on port 5003
+[2023-10-05 01:24:15] [INFO]: Connected to Redis
+[2023-10-05 01:24:15] [INFO]: Connected to Redis
+[2023-10-05 01:24:14] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:15] [INFO]: Connected to database
+[2023-10-05 01:24:15] [INFO]: Server is running on port 5008
+[2023-10-05 01:24:15] [INFO]: Connected to Redis
+[2023-10-05 01:24:15] [INFO]: Connected to Redis
+[2023-10-05 01:24:14] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:15] [INFO]: Connected to database
+[2023-10-05 01:24:14] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:15] [INFO]: Connected to database
+[2023-10-05 01:24:15] [INFO]: Server is running on port 5005
+[2023-10-05 01:24:15] [INFO]: Connected to Redis
+[2023-10-05 01:24:15] [INFO]: Connected to Redis
+[2023-10-05 01:24:15] [INFO]: Server is running on port 5012
+[2023-10-05 01:24:15] [INFO]: Connected to Redis
+[2023-10-05 01:24:15] [INFO]: Connected to Redis
+[2023-10-05 01:24:14] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:15] [INFO]: Connected to database
+[2023-10-05 01:24:15] [INFO]: Server is running on port 5007
+[2023-10-05 01:24:15] [INFO]: Connected to Redis
+[2023-10-05 01:24:15] [INFO]: Connected to Redis
+[2023-10-05 01:24:14] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:15] [INFO]: Connected to database
+[2023-10-05 01:24:15] [INFO]: Server is running on port 5009
+[2023-10-05 01:24:15] [INFO]: Connected to Redis
+[2023-10-05 01:24:15] [INFO]: Connected to Redis
+[2023-10-05 01:24:14] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:14] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:15] [INFO]: Connected to database
+[2023-10-05 01:24:15] [INFO]: Connected to database
+[2023-10-05 01:24:15] [INFO]: Server is running on port 5011
+[2023-10-05 01:24:15] [INFO]: Connected to Redis
+[2023-10-05 01:24:15] [INFO]: Connected to Redis
+[2023-10-05 01:24:15] [INFO]: Server is running on port 5010
+[2023-10-05 01:24:15] [INFO]: Connected to Redis
+[2023-10-05 01:24:15] [INFO]: Connected to Redis
+[2023-10-05 01:24:23] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:23] [INFO]: Connected to database
+[2023-10-05 01:24:24] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:25] [INFO]: Connected to database
+[2023-10-05 01:24:25] [INFO]: Server is running on port 5002
+[2023-10-05 01:24:25] [INFO]: Connected to Redis
+[2023-10-05 01:24:25] [INFO]: Connected to Redis
+[2023-10-05 01:24:24] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:26] [INFO]: Connected to database
+[2023-10-05 01:24:26] [INFO]: Server is running on port 5003
+[2023-10-05 01:24:26] [INFO]: Connected to Redis
+[2023-10-05 01:24:26] [INFO]: Connected to Redis
+[2023-10-05 01:24:24] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:26] [INFO]: Connected to database
+[2023-10-05 01:24:24] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:26] [INFO]: Connected to database
+[2023-10-05 01:24:26] [INFO]: Server is running on port 5005
+[2023-10-05 01:24:26] [INFO]: Connected to Redis
+[2023-10-05 01:24:26] [INFO]: Connected to Redis
+[2023-10-05 01:24:26] [INFO]: Server is running on port 5004
+[2023-10-05 01:24:26] [INFO]: Connected to Redis
+[2023-10-05 01:24:26] [INFO]: Connected to Redis
+[2023-10-05 01:24:24] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:26] [INFO]: Connected to database
+[2023-10-05 01:24:26] [INFO]: Server is running on port 5009
+[2023-10-05 01:24:26] [INFO]: Connected to Redis
+[2023-10-05 01:24:26] [INFO]: Connected to Redis
+[2023-10-05 01:24:24] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:26] [INFO]: Connected to database
+[2023-10-05 01:24:26] [INFO]: Server is running on port 5001
+[2023-10-05 01:24:26] [INFO]: Connected to Redis
+[2023-10-05 01:24:26] [INFO]: Connected to Redis
+[2023-10-05 01:24:24] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:26] [INFO]: Connected to database
+[2023-10-05 01:24:26] [INFO]: Server is running on port 5006
+[2023-10-05 01:24:26] [INFO]: Connected to Redis
+[2023-10-05 01:24:26] [INFO]: Connected to Redis
+[2023-10-05 01:24:24] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:26] [INFO]: Connected to database
+[2023-10-05 01:24:24] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:26] [INFO]: Connected to database
+[2023-10-05 01:24:26] [INFO]: Server is running on port 5012
+[2023-10-05 01:24:26] [INFO]: Connected to Redis
+[2023-10-05 01:24:26] [INFO]: Connected to Redis
+[2023-10-05 01:24:26] [INFO]: Server is running on port 5010
+[2023-10-05 01:24:26] [INFO]: Connected to Redis
+[2023-10-05 01:24:26] [INFO]: Connected to Redis
+[2023-10-05 01:24:24] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:26] [INFO]: Connected to database
+[2023-10-05 01:24:26] [INFO]: Server is running on port 5008
+[2023-10-05 01:24:26] [INFO]: Connected to Redis
+[2023-10-05 01:24:26] [INFO]: Connected to Redis
+[2023-10-05 01:24:24] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:24] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:26] [INFO]: Connected to database
+[2023-10-05 01:24:26] [INFO]: Connected to database
+[2023-10-05 01:24:26] [INFO]: Server is running on port 5007
+[2023-10-05 01:24:26] [INFO]: Connected to Redis
+[2023-10-05 01:24:26] [INFO]: Connected to Redis
+[2023-10-05 01:24:26] [INFO]: Server is running on port 5011
+[2023-10-05 01:24:26] [INFO]: Connected to Redis
+[2023-10-05 01:24:26] [INFO]: Connected to Redis
+[2023-10-05 01:24:33] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:33] [INFO]: Connected to database
+[2023-10-05 01:24:34] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:35] [INFO]: Connected to database
+[2023-10-05 01:24:35] [INFO]: Server is running on port 5003
+[2023-10-05 01:24:35] [INFO]: Connected to Redis
+[2023-10-05 01:24:35] [INFO]: Connected to Redis
+[2023-10-05 01:24:34] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:35] [INFO]: Connected to database
+[2023-10-05 01:24:35] [INFO]: Server is running on port 5005
+[2023-10-05 01:24:35] [INFO]: Connected to Redis
+[2023-10-05 01:24:35] [INFO]: Connected to Redis
+[2023-10-05 01:24:34] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:35] [INFO]: Connected to database
+[2023-10-05 01:24:35] [INFO]: Server is running on port 5004
+[2023-10-05 01:24:35] [INFO]: Connected to Redis
+[2023-10-05 01:24:35] [INFO]: Connected to Redis
+[2023-10-05 01:24:34] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:35] [INFO]: Connected to database
+[2023-10-05 01:24:35] [INFO]: Server is running on port 5001
+[2023-10-05 01:24:35] [INFO]: Connected to Redis
+[2023-10-05 01:24:35] [INFO]: Connected to Redis
+[2023-10-05 01:24:34] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:35] [INFO]: Connected to database
+[2023-10-05 01:24:35] [INFO]: Server is running on port 5002
+[2023-10-05 01:24:35] [INFO]: Connected to Redis
+[2023-10-05 01:24:35] [INFO]: Connected to Redis
+[2023-10-05 01:24:34] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:35] [INFO]: Connected to database
+[2023-10-05 01:24:34] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:35] [INFO]: Connected to database
+[2023-10-05 01:24:35] [INFO]: Server is running on port 5006
+[2023-10-05 01:24:35] [INFO]: Connected to Redis
+[2023-10-05 01:24:35] [INFO]: Connected to Redis
+[2023-10-05 01:24:35] [INFO]: Server is running on port 5012
+[2023-10-05 01:24:35] [INFO]: Connected to Redis
+[2023-10-05 01:24:35] [INFO]: Connected to Redis
+[2023-10-05 01:24:34] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:35] [INFO]: Connected to database
+[2023-10-05 01:24:35] [INFO]: Server is running on port 5011
+[2023-10-05 01:24:35] [INFO]: Connected to Redis
+[2023-10-05 01:24:35] [INFO]: Connected to Redis
+[2023-10-05 01:24:34] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:35] [INFO]: Connected to database
+[2023-10-05 01:24:34] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:35] [INFO]: Connected to database
+[2023-10-05 01:24:34] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:35] [INFO]: Connected to database
+[2023-10-05 01:24:34] [INFO]: Number of CPUs: 12
+[2023-10-05 01:24:35] [INFO]: Connected to database
+[2023-10-05 01:24:35] [INFO]: Server is running on port 5010
+[2023-10-05 01:24:35] [INFO]: Connected to Redis
+[2023-10-05 01:24:35] [INFO]: Connected to Redis
+[2023-10-05 01:24:35] [INFO]: Server is running on port 5009
+[2023-10-05 01:24:35] [INFO]: Connected to Redis
+[2023-10-05 01:24:35] [INFO]: Connected to Redis
+[2023-10-05 01:24:35] [INFO]: Server is running on port 5007
+[2023-10-05 01:24:35] [INFO]: Connected to Redis
+[2023-10-05 01:24:35] [INFO]: Connected to Redis
+[2023-10-05 01:24:35] [INFO]: Server is running on port 5008
+[2023-10-05 01:24:35] [INFO]: Connected to Redis
+[2023-10-05 01:24:35] [INFO]: Connected to Redis
+[2023-10-05 01:29:51] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:29:51] [DEBUG]: Checking authentication status
+[2023-10-05 01:29:51] [WARN]: User is not authenticated, redirecting to /login
+[2023-10-05 01:29:51] [INFO]: Request received on port 5001: GET /login
+[2023-10-05 01:29:51] [INFO]: Rendering login page
+[2023-10-05 01:30:01] [INFO]: Request received on port 5001: GET /login
+[2023-10-05 01:30:01] [INFO]: Rendering login page
+[2023-10-05 01:30:05] [INFO]: Request received on port 5001: POST /login
+[2023-10-05 01:30:05] [INFO]: User authenticated successfully: admin
+[2023-10-05 01:30:05] [INFO]: User authenticated successfully: admin
+[2023-10-05 01:30:05] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:30:05] [DEBUG]: Checking authentication status
+[2023-10-05 01:30:05] [INFO]: Rendering admin panel for user: admin
+[2023-10-05 01:30:24] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:30:24] [DEBUG]: Checking authentication status
+[2023-10-05 01:30:24] [INFO]: Rendering admin panel for user: admin
+[2023-10-05 01:30:25] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:30:25] [DEBUG]: Request for server-side products
+[2023-10-05 01:30:25] [DEBUG]: Fetching total number of records
+[2023-10-05 01:30:25] [DEBUG]: Total number of records: 4
+[2023-10-05 01:30:25] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:30:25] [INFO]: Fetched products:
+[2023-10-05 01:30:30] [INFO]: Request received on port 5001: GET /
+[2023-10-05 01:30:30] [DEBUG]: Request for Index Page
+[2023-10-05 01:30:30] [INFO]: Request received on port 5001: GET /products?page=0
+[2023-10-05 01:30:30] [DEBUG]: Request for fetching all products from cache
+[2023-10-05 01:30:30] [DEBUG]: Fetching total number of records
+[2023-10-05 01:30:30] [INFO]: Request received on port 5001: GET /pin-products
+[2023-10-05 01:30:30] [DEBUG]: Request for pinning products
+[2023-10-05 01:30:30] [DEBUG]: Fetching pin products
+[2023-10-05 01:30:30] [DEBUG]: Total number of records: 4
+[2023-10-05 01:30:30] [DEBUG]: Fetching all products (Page: 0, Limit: 4)
+[2023-10-05 01:30:30] [DEBUG]: Fetched Products from Cache
+[2023-10-05 01:30:34] [INFO]: Request received on port 5001: GET /click-on-product/1
+[2023-10-05 01:30:34] [DEBUG]: Request for clicking on product
+[2023-10-05 01:30:34] [INFO]: Product clicked successfully
+[2023-10-05 01:30:37] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:30:37] [DEBUG]: Checking authentication status
+[2023-10-05 01:30:37] [INFO]: Rendering admin panel for user: admin
+[2023-10-05 01:30:37] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:30:37] [DEBUG]: Request for server-side products
+[2023-10-05 01:30:37] [DEBUG]: Fetching total number of records
+[2023-10-05 01:30:37] [DEBUG]: Total number of records: 4
+[2023-10-05 01:30:37] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:30:37] [INFO]: Fetched products:
+[2023-10-05 01:30:50] [INFO]: Request received on port 5001: GET /click-on-product/3
+[2023-10-05 01:30:50] [DEBUG]: Request for clicking on product
+[2023-10-05 01:30:50] [INFO]: Product clicked successfully
+[2023-10-05 01:30:53] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:30:53] [DEBUG]: Checking authentication status
+[2023-10-05 01:30:53] [INFO]: Rendering admin panel for user: admin
+[2023-10-05 01:30:53] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:30:53] [DEBUG]: Request for server-side products
+[2023-10-05 01:30:53] [DEBUG]: Fetching total number of records
+[2023-10-05 01:30:53] [DEBUG]: Total number of records: 4
+[2023-10-05 01:30:53] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:30:53] [INFO]: Fetched products:
+[2023-10-05 01:31:02] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:31:02] [DEBUG]: Checking authentication status
+[2023-10-05 01:31:02] [INFO]: Rendering admin panel for user: admin
+[2023-10-05 01:31:02] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:31:02] [DEBUG]: Request for server-side products
+[2023-10-05 01:31:02] [DEBUG]: Fetching total number of records
+[2023-10-05 01:31:02] [DEBUG]: Total number of records: 4
+[2023-10-05 01:31:02] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:31:02] [INFO]: Fetched products:
+[2023-10-05 01:31:04] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:31:04] [DEBUG]: Checking authentication status
+[2023-10-05 01:31:04] [INFO]: Rendering admin panel for user: admin
+[2023-10-05 01:31:04] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:31:04] [DEBUG]: Request for server-side products
+[2023-10-05 01:31:04] [DEBUG]: Fetching total number of records
+[2023-10-05 01:31:04] [DEBUG]: Total number of records: 4
+[2023-10-05 01:31:04] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:31:04] [INFO]: Fetched products:
+[2023-10-05 01:31:06] [INFO]: Request received on port 5001: GET /click-on-product/2
+[2023-10-05 01:31:06] [DEBUG]: Request for clicking on product
+[2023-10-05 01:31:06] [INFO]: Product clicked successfully
+[2023-10-05 01:31:09] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:31:09] [DEBUG]: Checking authentication status
+[2023-10-05 01:31:09] [INFO]: Rendering admin panel for user: admin
+[2023-10-05 01:31:09] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:31:09] [DEBUG]: Request for server-side products
+[2023-10-05 01:31:09] [DEBUG]: Fetching total number of records
+[2023-10-05 01:31:09] [DEBUG]: Total number of records: 4
+[2023-10-05 01:31:09] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:31:09] [INFO]: Fetched products:
+[2023-10-05 01:31:14] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:31:14] [DEBUG]: Checking authentication status
+[2023-10-05 01:31:14] [INFO]: Rendering admin panel for user: admin
+[2023-10-05 01:31:14] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:31:14] [DEBUG]: Request for server-side products
+[2023-10-05 01:31:14] [DEBUG]: Fetching total number of records
+[2023-10-05 01:31:14] [DEBUG]: Total number of records: 4
+[2023-10-05 01:31:14] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:31:14] [INFO]: Fetched products:
+[2023-10-05 01:31:15] [INFO]: Request received on port 5001: GET /click-on-product/3
+[2023-10-05 01:31:15] [DEBUG]: Request for clicking on product
+[2023-10-05 01:31:15] [INFO]: Product clicked successfully
+[2023-10-05 01:31:17] [INFO]: Request received on port 5001: GET /click-on-product/3
+[2023-10-05 01:31:17] [DEBUG]: Request for clicking on product
+[2023-10-05 01:31:17] [INFO]: Product clicked successfully
+[2023-10-05 01:31:19] [INFO]: Request received on port 5001: GET /click-on-product/3
+[2023-10-05 01:31:19] [DEBUG]: Request for clicking on product
+[2023-10-05 01:31:19] [INFO]: Product clicked successfully
+[2023-10-05 01:32:16] [INFO]: Number of CPUs: 12
+[2023-10-05 01:32:16] [INFO]: Connected to database
+[2023-10-05 01:32:17] [INFO]: Number of CPUs: 12
+[2023-10-05 01:32:18] [INFO]: Connected to database
+[2023-10-05 01:32:18] [INFO]: Server is running on port 5002
+[2023-10-05 01:32:18] [INFO]: Connected to Redis
+[2023-10-05 01:32:18] [INFO]: Connected to Redis
+[2023-10-05 01:32:17] [INFO]: Number of CPUs: 12
+[2023-10-05 01:32:18] [INFO]: Connected to database
+[2023-10-05 01:32:18] [INFO]: Server is running on port 5003
+[2023-10-05 01:32:18] [INFO]: Connected to Redis
+[2023-10-05 01:32:18] [INFO]: Connected to Redis
+[2023-10-05 01:32:17] [INFO]: Number of CPUs: 12
+[2023-10-05 01:32:18] [INFO]: Connected to database
+[2023-10-05 01:32:18] [INFO]: Server is running on port 5001
+[2023-10-05 01:32:18] [INFO]: Connected to Redis
+[2023-10-05 01:32:18] [INFO]: Connected to Redis
+[2023-10-05 01:32:18] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:32:18] [DEBUG]: Checking authentication status
+[2023-10-05 01:32:18] [WARN]: User is not authenticated, redirecting to /login
+[2023-10-05 01:32:18] [INFO]: Request received on port 5001: GET /login
+[2023-10-05 01:32:17] [INFO]: Number of CPUs: 12
+[2023-10-05 01:32:18] [INFO]: Connected to database
+[2023-10-05 01:32:18] [INFO]: Server is running on port 5004
+[2023-10-05 01:32:18] [INFO]: Connected to Redis
+[2023-10-05 01:32:18] [INFO]: Connected to Redis
+[2023-10-05 01:32:18] [INFO]: Rendering login page
+[2023-10-05 01:32:17] [INFO]: Number of CPUs: 12
+[2023-10-05 01:32:18] [INFO]: Connected to database
+[2023-10-05 01:32:18] [INFO]: Server is running on port 5008
+[2023-10-05 01:32:18] [INFO]: Connected to Redis
+[2023-10-05 01:32:18] [INFO]: Connected to Redis
+[2023-10-05 01:32:17] [INFO]: Number of CPUs: 12
+[2023-10-05 01:32:18] [INFO]: Connected to database
+[2023-10-05 01:32:17] [INFO]: Number of CPUs: 12
+[2023-10-05 01:32:18] [INFO]: Connected to database
+[2023-10-05 01:32:17] [INFO]: Number of CPUs: 12
+[2023-10-05 01:32:18] [INFO]: Connected to database
+[2023-10-05 01:32:18] [INFO]: Server is running on port 5007
+[2023-10-05 01:32:18] [INFO]: Connected to Redis
+[2023-10-05 01:32:18] [INFO]: Connected to Redis
+[2023-10-05 01:32:18] [INFO]: Server is running on port 5006
+[2023-10-05 01:32:18] [INFO]: Connected to Redis
+[2023-10-05 01:32:18] [INFO]: Connected to Redis
+[2023-10-05 01:32:18] [INFO]: Server is running on port 5005
+[2023-10-05 01:32:18] [INFO]: Connected to Redis
+[2023-10-05 01:32:18] [INFO]: Connected to Redis
+[2023-10-05 01:32:17] [INFO]: Number of CPUs: 12
+[2023-10-05 01:32:18] [INFO]: Connected to database
+[2023-10-05 01:32:18] [INFO]: Server is running on port 5011
+[2023-10-05 01:32:18] [INFO]: Connected to Redis
+[2023-10-05 01:32:18] [INFO]: Connected to Redis
+[2023-10-05 01:32:17] [INFO]: Number of CPUs: 12
+[2023-10-05 01:32:18] [INFO]: Connected to database
+[2023-10-05 01:32:17] [INFO]: Number of CPUs: 12
+[2023-10-05 01:32:18] [INFO]: Connected to database
+[2023-10-05 01:32:17] [INFO]: Number of CPUs: 12
+[2023-10-05 01:32:18] [INFO]: Connected to database
+[2023-10-05 01:32:18] [INFO]: Server is running on port 5012
+[2023-10-05 01:32:18] [INFO]: Connected to Redis
+[2023-10-05 01:32:18] [INFO]: Connected to Redis
+[2023-10-05 01:32:18] [INFO]: Server is running on port 5010
+[2023-10-05 01:32:18] [INFO]: Connected to Redis
+[2023-10-05 01:32:18] [INFO]: Connected to Redis
+[2023-10-05 01:32:18] [INFO]: Server is running on port 5009
+[2023-10-05 01:32:18] [INFO]: Connected to Redis
+[2023-10-05 01:32:18] [INFO]: Connected to Redis
+[2023-10-05 01:32:18] [INFO]: Request received on port 5001: GET /
+[2023-10-05 01:32:18] [DEBUG]: Request for Index Page
+[2023-10-05 01:32:19] [INFO]: Request received on port 5001: GET /pin-products
+[2023-10-05 01:32:19] [DEBUG]: Request for pinning products
+[2023-10-05 01:32:19] [DEBUG]: Fetching pin products
+[2023-10-05 01:32:19] [INFO]: Request received on port 5001: GET /products?page=0
+[2023-10-05 01:32:19] [DEBUG]: Request for fetching all products from cache
+[2023-10-05 01:32:19] [DEBUG]: Fetching total number of records
+[2023-10-05 01:32:19] [DEBUG]: Total number of records: 4
+[2023-10-05 01:32:19] [DEBUG]: Fetching all products (Page: 0, Limit: 4)
+[2023-10-05 01:32:19] [DEBUG]: Fetched Products from Cache
+[2023-10-05 01:32:23] [INFO]: Request received on port 5001: POST /login
+[2023-10-05 01:32:23] [INFO]: User authenticated successfully: admin
+[2023-10-05 01:32:23] [INFO]: User authenticated successfully: admin
+[2023-10-05 01:32:23] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:32:23] [DEBUG]: Checking authentication status
+[2023-10-05 01:32:23] [INFO]: Rendering admin panel for user: admin
+[2023-10-05 01:32:24] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:32:24] [DEBUG]: Request for server-side products
+[2023-10-05 01:32:24] [DEBUG]: Fetching total number of records
+[2023-10-05 01:32:24] [DEBUG]: Total number of records: 4
+[2023-10-05 01:32:24] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:32:24] [INFO]: Fetched products:
+[2023-10-05 01:32:36] [INFO]: Request received on port 5001: GET /admin/pin-product/1
+[2023-10-05 01:32:36] [DEBUG]: Checking authentication status
+[2023-10-05 01:32:36] [DEBUG]: Request for pinning product
+[2023-10-05 01:32:36] [DEBUG]: Fetching Product from ID: 1
+[2023-10-05 01:32:36] [INFO]: Product pinned successfully in database
+[2023-10-05 01:32:36] [DEBUG]: Product pinned successfully in Cache
+[2023-10-05 01:32:36] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:32:36] [DEBUG]: Request for server-side products
+[2023-10-05 01:32:36] [DEBUG]: Fetching total number of records
+[2023-10-05 01:32:36] [DEBUG]: Total number of records: 4
+[2023-10-05 01:32:36] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:32:36] [INFO]: Fetched products:
+[2023-10-05 01:32:38] [INFO]: Request received on port 5001: GET /admin/unpin-product/1
+[2023-10-05 01:32:38] [DEBUG]: Checking authentication status
+[2023-10-05 01:32:38] [DEBUG]: Request for unpinning product
+[2023-10-05 01:32:38] [DEBUG]: Fetching Product from ID: 1
+[2023-10-05 01:32:38] [INFO]: Product unpinned successfully in database
+[2023-10-05 01:32:38] [DEBUG]: Product unpinned successfully in Database and Cache
+[2023-10-05 01:32:38] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:32:38] [DEBUG]: Request for server-side products
+[2023-10-05 01:32:38] [DEBUG]: Fetching total number of records
+[2023-10-05 01:32:38] [DEBUG]: Total number of records: 4
+[2023-10-05 01:32:38] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:32:38] [INFO]: Fetched products:
+[2023-10-05 01:32:39] [INFO]: Request received on port 5001: GET /admin/pin-product/3
+[2023-10-05 01:32:39] [DEBUG]: Checking authentication status
+[2023-10-05 01:32:39] [DEBUG]: Request for pinning product
+[2023-10-05 01:32:39] [DEBUG]: Fetching Product from ID: 3
+[2023-10-05 01:32:39] [INFO]: Product pinned successfully in database
+[2023-10-05 01:32:39] [DEBUG]: Product pinned successfully in Cache
+[2023-10-05 01:32:39] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:32:39] [DEBUG]: Request for server-side products
+[2023-10-05 01:32:39] [DEBUG]: Fetching total number of records
+[2023-10-05 01:32:39] [DEBUG]: Total number of records: 4
+[2023-10-05 01:32:39] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:32:39] [INFO]: Fetched products:
+[2023-10-05 01:32:41] [INFO]: Request received on port 5001: GET /
+[2023-10-05 01:32:41] [DEBUG]: Request for Index Page
+[2023-10-05 01:32:41] [INFO]: Request received on port 5001: GET /pin-products
+[2023-10-05 01:32:41] [DEBUG]: Request for pinning products
+[2023-10-05 01:32:41] [DEBUG]: Fetching pin products
+[2023-10-05 01:32:41] [INFO]: Request received on port 5001: GET /products?page=0
+[2023-10-05 01:32:41] [DEBUG]: Request for fetching all products from cache
+[2023-10-05 01:32:41] [DEBUG]: Fetching total number of records
+[2023-10-05 01:32:41] [DEBUG]: Total number of records: 4
+[2023-10-05 01:32:41] [DEBUG]: Fetching all products (Page: 0, Limit: 4)
+[2023-10-05 01:32:41] [DEBUG]: Fetched Products from Cache
+[2023-10-05 01:32:46] [INFO]: Request received on port 5001: GET /click-on-product/3
+[2023-10-05 01:32:46] [DEBUG]: Request for clicking on product
+[2023-10-05 01:32:46] [INFO]: Product clicked successfully
+[2023-10-05 01:32:49] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:32:49] [DEBUG]: Checking authentication status
+[2023-10-05 01:32:49] [INFO]: Rendering admin panel for user: admin
+[2023-10-05 01:32:49] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:32:49] [DEBUG]: Request for server-side products
+[2023-10-05 01:32:49] [DEBUG]: Fetching total number of records
+[2023-10-05 01:32:49] [DEBUG]: Total number of records: 4
+[2023-10-05 01:32:49] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:32:49] [INFO]: Fetched products:
+[2023-10-05 01:32:54] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:32:54] [DEBUG]: Checking authentication status
+[2023-10-05 01:32:54] [INFO]: Rendering admin panel for user: admin
+[2023-10-05 01:32:54] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:32:54] [DEBUG]: Request for server-side products
+[2023-10-05 01:32:54] [DEBUG]: Fetching total number of records
+[2023-10-05 01:32:54] [DEBUG]: Total number of records: 4
+[2023-10-05 01:32:54] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:32:54] [INFO]: Fetched products:
+[2023-10-05 01:32:58] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:32:58] [DEBUG]: Checking authentication status
+[2023-10-05 01:32:58] [INFO]: Rendering admin panel for user: admin
+[2023-10-05 01:32:58] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:32:58] [DEBUG]: Request for server-side products
+[2023-10-05 01:32:58] [DEBUG]: Fetching total number of records
+[2023-10-05 01:32:58] [DEBUG]: Total number of records: 4
+[2023-10-05 01:32:58] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:32:58] [INFO]: Fetched products:
+[2023-10-05 01:32:59] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:32:59] [DEBUG]: Checking authentication status
+[2023-10-05 01:32:59] [INFO]: Rendering admin panel for user: admin
+[2023-10-05 01:32:59] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:32:59] [DEBUG]: Request for server-side products
+[2023-10-05 01:32:59] [DEBUG]: Fetching total number of records
+[2023-10-05 01:32:59] [DEBUG]: Total number of records: 4
+[2023-10-05 01:32:59] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:32:59] [INFO]: Fetched products:
+[2023-10-05 01:33:11] [INFO]: Request received on port 5001: GET /click-on-product/3
+[2023-10-05 01:33:11] [DEBUG]: Request for clicking on product
+[2023-10-05 01:33:11] [INFO]: Product clicked successfully
+[2023-10-05 01:33:27] [ERROR]: Worker 7852 died. Restarting...
+[2023-10-05 01:33:27] [INFO]: Number of CPUs: 12
+[2023-10-05 01:33:27] [INFO]: Connected to database

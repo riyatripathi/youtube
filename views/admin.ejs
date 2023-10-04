@@ -214,6 +214,7 @@
             <th>Drive Image ID</th>
             <th>Affiliate Link</th>
             <th>Youtube Link</th>
+            <th>Views</th>
             <th>PIN-TO-TOP</th>
             <th>Edit</th>
             <th>Delete</th>
@@ -260,6 +261,13 @@
             { data: null,
               render: function (data, type, row) {
                 return `<a href="${data.youtube_link}" target="_blank" title="${data.youtube_link}">Link</a>`;
+              }
+            },
+            {
+              data: null,
+              render: function (data,type,row){
+                viewsData = parseInt(data.clicks);
+                return viewsData;
               }
             },
             {
