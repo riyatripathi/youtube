@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
-// const multer = require("multer");
+const fs = require("fs");
+const multer = require("multer");
 const db = require("./../database/db");
 const upload = require("../config/multer");
 const logger = require("../logger");
@@ -100,18 +101,63 @@ function getAllProducts(start, length) {
   });
 }
 
+// router.post("/add-product", upload.single("productImage"), (req, res) => {
+//   logger.debug("Request for adding product");
+//   let {
+//     productName,
+//     productDescription,
+//     productLink,
+//     affiliateLink,
+//     youtubeLink,
+//   } = req.body;
+
+//   const image_url = extractFileIdFromDriveLink(productLink);
+//   if (image_url != null) productLink = image_url;
+//   const query =
+//     "INSERT INTO products ( product_name, product_description, product_link, affiliate_link, youtube_link) VALUES (?, ?, ?, ?, ?)";
+//   const values = [
+//     productName,
+//     productDescription,
+//     productLink,
+//     affiliateLink,
+//     youtubeLink,
+//   ];
+
+//   db.run(query, values, function (err) {
+//     if (err) {
+//       logger.error("Error adding product to the database:", err);
+//       return res.status(500).json({ error: "Internal Server Error" });
+//     }
+//     values.unshift(this.lastID);
+//     logger.info("Product added successfully:", values);
+//     res.json({
+//       message: "Product added successfully",
+//       data: values,
+//     });
+//   });
+// });
+
 router.post("/add-product", upload.single("productImage"), (req, res) => {
   logger.debug("Request for adding product");
   let {
     productName,
     productDescription,
-    productLink,
+    // productLink, image linkn removing it adding upload direct from admin panel
     affiliateLink,
     youtubeLink,
   } = req.body;
 
-  const image_url = extractFileIdFromDriveLink(productLink);
-  if (image_url != null) productLink = image_url;
+  if (!req.file) {
+    // Handle the case where no file was uploaded
+    return res.status(400).json({ error: "No image uploaded" });
+  }
+
+  // const { image_url, path } = req.file;
+  filename = req.file.filename;
+  // console.log(req.file);
+  // const image_url = extractFileIdFromDriveLink(productLink);
+  if (filename != null) productLink = filename;
+  // console.log(image_url);
   const query =
     "INSERT INTO products ( product_name, product_description, product_link, affiliate_link, youtube_link) VALUES (?, ?, ?, ?, ?)";
   const values = [
@@ -136,21 +182,83 @@ router.post("/add-product", upload.single("productImage"), (req, res) => {
   });
 });
 
-router.delete("/products/delete/:productId", (req, res) => {
-  logger.debug("Request for deleting product");
+router.delete("/products/delete/:productId", async (req, res) => {
   let productId = req.params.productId;
+  logger.debug(`Request for deleting product ${productId}`);
   if (productId && productId.length > 0) {
     productId = productId.substring(1);
   }
+  console.log(productId);
+  // get product from product id
+  const product = await getProductById(productId);
+  // get product product_link attribute
+  const productLink = product.product_link;
   db.run("DELETE FROM products WHERE product_id = ?", [productId], (err) => {
     if (err) {
       logger.error("Error deleting product:", err);
       res.status(500).json({ error: "Internal server error" });
     } else {
-      logger.info("Product deleted successfully");
-      res.json({ message: "Product deleted successfully" });
+      logger.info(`Product deleted successfully from Database ${productId}`);
     }
   });
+
+  // check product exists in cache of key pin_products if yes then delete it
+  let cacheKey = `pin_products`;
+
+  // get products from cache
+  let products = await client.get(cacheKey);
+  if (products) {
+    // pin_products exits in cache, get the data
+    products = JSON.parse(products);
+    // remove the product from products whose product id is equal to product id
+    products = products.filter((product) => {
+      return product.product_id != productId;
+    });
+    client.set(cacheKey, JSON.stringify(products), {
+      EX: 3600, // cache for 1 hour
+    });
+  }
+
+  cacheKey = `search_product_${productId}`;
+  // delete product from cache
+  // delete the cache
+  await client.del(cacheKey);
+
+  try {
+    // liner search the all cache keys for id, if product id found delete that key's value from cache
+    const pattern = `products_*_${FETCH_LIMIT}`;
+    const keys = await client.keys(pattern);
+    for (const key of keys) {
+      const value = await client.get(key);
+      // if product id found in the value which is array of dictionary
+      let product = null;
+      if (value) {
+        products = JSON.parse(value);
+        // find productID exists in products
+        products = products.filter((product) => {
+          return product.product_id == productId;
+        });
+        if (products.length > 0) {
+          // delete key
+          client.del(key);
+          break;
+        }
+      }
+    }
+    logger.info(`Product deleted successfully from Cache ${productId}`);
+    // delete the image from public/images
+    const imagePath = `public/images/${productLink}`;
+    fs.unlink(imagePath, (err) => {
+      if (err) {
+        logger.error(`Error deleting product image: ${err}`);
+      }
+    });
+    res.status(200).json({ message: "Product deleted successfully" });
+    // res.status(200).redirect("/admin");
+  } catch (err) {
+    logger.error(`Error deleting product: ${err}`);
+    res.status(500).json({ error: "Internal server error" });
+  }
 });
 
 // edit changes route having product id specified
@@ -162,7 +270,7 @@ router.post("/find-product/:productId", (req, res) => {
 
   db.get(query, [productId], (err, product) => {
     if (err) {
-      logger.error("Error fetching product:", err);
+      logger.error(`Error fetching product: ${err}`);
       return res.status(500).json({ error: "Internal Server Error" });
     }
     if (!product) {
@@ -172,38 +280,129 @@ router.post("/find-product/:productId", (req, res) => {
   });
 });
 
-router.post("/update-product/:productId", (req, res) => {
-  logger.debug("Request for updating product, update-product/:productId");
-  let productId = req.params.productId;
-  productId = productId.substring(1);
-  let {
-    editProductName,
-    editProductDescription,
-    editProductLink, // drive image id or link
-    editAffiliateLink,
-    editYoutubeLink,
-  } = req.body;
-  const image_url = extractFileIdFromDriveLink(editProductLink);
-  if (image_url != null) editProductLink = image_url;
-  const query =
-    "UPDATE products SET product_name = ?, product_description = ?, product_link = ?, youtube_link = ?, affiliate_link = ? WHERE product_id = ?";
-  const values = [
-    editProductName,
-    editProductDescription,
-    editProductLink,
-    editYoutubeLink,
-    editAffiliateLink,
-    productId,
-  ];
-  db.run(query, values, (err) => {
-    if (err) {
-      logger.error("Error updating product:", err);
-      return res.status(500).json({ error: "Internal Server Error" });
+router.post(
+  "/update-product/:productId",
+  upload.single("productImage"),
+  async (req, res) => {
+    let productId = req.params.productId.replace("e", "");
+    logger.debug(`Request for updating product, update-product/${productId}`);
+    let {
+      editProductName,
+      editProductDescription,
+      editAffiliateLink,
+      editYoutubeLink,
+      editProductLink,
+    } = req.body;
+    if (req.file) {
+      ImagePath = `public/images/${editProductLink}`;
+      fs.unlinkSync(ImagePath);
+      editProductLink = req.file.filename;
     }
-    logger.info("Product updated successfully");
-    res.redirect("/admin");
-  });
-});
+
+    // const image_url = extractFileIdFromDriveLink(editProductLink);
+    // if (image_url != null) editProductLink = image_url;
+    const query =
+      "UPDATE products SET product_name = ?, product_description = ?, product_link = ?, youtube_link = ?, affiliate_link = ? WHERE product_id = ?";
+    values = [
+      editProductName,
+      editProductDescription,
+      editProductLink,
+      editYoutubeLink,
+      editAffiliateLink,
+      productId.replace("e", ""),
+    ];
+    console.log(values);
+    db.run(query, values, (err) => {
+      if (err) {
+        logger.error("Error updating product:", err);
+        return res.status(500).json({ error: "Internal Server Error" });
+      }
+      logger.info("Product updated successfully");
+    });
+
+    // check product exists in cache of key pin_products if yes then delete it
+    let cacheKey = `pin_products`;
+    // get products from cache
+    let products = await client.get(cacheKey);
+    if (products) {
+      // pin_products exits in cache, get the data
+      products = JSON.parse(products);
+      // update the dict whose product_id is ProductId
+      products = products.map((product) => {
+        if (product.product_id == productId) {
+          product.product_name = editProductName;
+          product.product_description = editProductDescription;
+          product.product_link = editProductLink;
+          product.youtube_link = editYoutubeLink;
+          product.affiliate_link = editAffiliateLink;
+        }
+        return product;
+      });
+
+      client.set(cacheKey, JSON.stringify(products), {
+        EX: 86400, // cache for 1 day
+      });
+    }
+
+    cacheKey = `search_product_${productId}`;
+    // get the product if exists and update
+    products = await client.get(cacheKey);
+    if (products) {
+      if (Array.isArray(products)) {
+        products = JSON.parse(products);
+      } else {
+        products = [JSON.parse(products)];
+      }
+      // update the dict whose product_id is ProductId
+      products = products.map((product) => {
+        if (product.product_id == productId) {
+          product.product_name = editProductName;
+          product.product_description = editProductDescription;
+          product.product_link = editProductLink;
+          product.youtube_link = editYoutubeLink;
+          product.affiliate_link = editAffiliateLink;
+        }
+        return product;
+      });
+
+      client.set(cacheKey, JSON.stringify(products), {
+        EX: 86400, // cache for 1 day
+      });
+    }
+
+    try {
+      // liner search the all cache keys for id, if product id found delete that key's value from cache
+      const pattern = `products_*_${FETCH_LIMIT}`;
+      const keys = await client.keys(pattern);
+      for (const key of keys) {
+        const value = await client.get(key);
+        // if product id found in the value which is array of dictionary
+        let product = null;
+        if (value) {
+          products = JSON.parse(value);
+          // find productID exists in products
+          products = products.map((product) => {
+            if (product.product_id == productId) {
+              product.product_name = editProductName;
+              product.product_description = editProductDescription;
+              product.product_link = editProductLink;
+              product.youtube_link = editYoutubeLink;
+              product.affiliate_link = editAffiliateLink;
+            }
+            return product;
+          });
+          client.set(key, JSON.stringify(products), {
+            EX: 3600, // cache for 1 hour
+          });
+        }
+      }
+    } catch (err) {
+      logger.error(`Error deleting product: ${err}`);
+      res.status(500).json({ error: "Internal server error" });
+    }
+    res.status(200).redirect("/admin");
+  }
+);
 
 // Server-side route for searching products
 router.post("/search-products", async (req, res) => {

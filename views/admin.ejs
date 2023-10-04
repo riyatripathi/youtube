@@ -116,7 +116,8 @@
             </div>
             <div class="modal-body">
               <!-- Add your form here -->
-              <form id="addProductForm">
+              <!-- upload file also -->
+              <form id="addProductForm" enctype="multipart/form-data">
                 <div class="col-md-6">
                   <label for="productName" class="form-label"
                     >Product Name</label
@@ -143,7 +144,7 @@
                   />
                 </div>
 
-                <div class="col-12">
+                <!-- <div class="col-12">
                   <label for="productLink" class="form-label" name="productLink"
                     >Drive Image Link / ID</label
                   >
@@ -153,7 +154,7 @@
                     id="productLink"
                     name="productLink"
                   />
-                </div>
+                </div> -->
 
                 <div>
                   <label for="affiliateLink" class="form-label" name="affiliateLink">
@@ -178,6 +179,12 @@
                     name="youtubeLink"
                   />
                 </div>
+
+                <div class="col-12">
+                  <label for="productImage" class="form-label">Product Image</label>
+                  <input type="file" class="form-control" id="productImage" name="productImage" accept="image/*" />
+                </div>
+
                 <br />
                 <button type="submit" class="btn btn-primary">
                   Add Product
@@ -302,7 +309,6 @@
         // Handle "Edit" button click
         $("#productTable tbody").on("click", "button.edit-product", (e) => {
           const productId = e.target.attributes.id.value;
-          console.log(productId);
           // Make an AJAX request to fetch product details
           $.ajax({
             url: `/find-product/${productId}`,
@@ -317,25 +323,30 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-              <form action="/update-product/${productId}" method="POST" id="editProductForm">
+              <form id="editProductForm" data-id="${productId}" onsubmit="submitEditProduct(this)">
                   <!-- Populate form fields with product details -->
                   <div class="form-group">
+                    <label for ="editProductID">Product ID</label>
+                    <input type="text" class="form-control" id="editProductID" name="editProductID" value="${product.product_id}" disabled>
                     <label for="editProductName">Product Name</label>
                     <input type="text" class="form-control" id="editProductName" name="editProductName" value="${product.product_name}">
-
                     <label for="editProductDescription">Product Description</label>
                     <input type="text" class="form-control" id="editProductDescription" name="editProductDescription" value="${product.product_description}">
-
-                    <label for="editProductLink">Image ID / Link</label>
-                    <input type="text" class="form-control" id="editProductLink" name="editProductLink" value="${product.product_link}">
-
+                    
                     <label for="editAffiliateLink">Affiliate Link</label>
                     <input type="text" class="form-control" id="editAffiliateLink" name="editAffiliateLink" value="${product.affiliate_link}">
-
+                    
                     <label for="editYoutubeLink">Youtube Link</label>
                     <input type="text" class="form-control" id="editYoutubeLink" name="editYoutubeLink" value="${product.youtube_link}">
-                  </div> <br/>
-                  <button type="submit" class="btn btn-primary" onclick="window.location.reload();">Save Changes</button>
+                    
+                    <label for="editProductLink"><a href="/images/${product.product_link}" target="_blank">Current Image</a></label>
+                    <input type="text" class="form-control" id="editProductLink" name="editProductLink" value="${product.product_link}">
+                  </div>
+                  <label for="productImage" class="form-label">Product Image</label>
+                  <input type="file" class="form-control" id="productImage" name="productImage" accept="image/*" />
+                
+                  <br/>
+                  <button type="submit" class="btn btn-primary">Save Changes</button>
 
               </form>
               </div>
@@ -343,12 +354,45 @@
 
               // Show the edit product modal
               $("#editProductModal").modal("show");
+              productTable.ajax.reload();
             },
             error: (error) => {
               console.error("Error fetching product details:", error);
             },
           });
         });
+
+        // $("#editProductForm").submit((e) => {
+        //   e.preventDefault();
+        //   // get attribute data-id 
+        //   const productId = e.currentTarget.getAttribute("data-id");
+        //   const formData = new FormData(e.currentTarget);
+        //   // print values of form data
+        //   const data = Object.fromEntries(formData);
+        //   console.log(data)
+  
+        //   $.ajax({
+        //     url: `/update-product/e${productId}`,
+        //     method: "POST",
+        //     data: formData,
+        //     contentType: false,
+        //     processData: false,
+        //     success: (response) => {
+        //       console.log("Response received from the server:", response);
+
+        //       if (Array.isArray(response.data)) {
+        //         productTable.ajax.reload();
+        //         e.currentTarget.reset();
+        //         $("#editProductForm").modal("hide");
+        //       } else {
+        //         console.error("Response data format is not as expected.");
+        //       }
+        //     },
+        //     error: (error) => {
+        //       console.error("Error adding product:", error);
+        //     },
+        //   });
+        // });
 
         $("#addProductForm").submit((e) => {
           e.preventDefault();
@@ -390,7 +434,7 @@
               success: (response) => {
                 console.log("Product deleted successfully:", response);
                 const productTable = $("#productTable").DataTable();
-                productTable.row(row).remove().draw();
+                productTable.ajax.reload();
               },
               error: (error) => {
                 console.error("Error deleting product:", error);
@@ -420,6 +464,26 @@
               productTable.ajax.reload();
             },
           });
+        }
+
+        function submitEditProduct(form) {
+          // get attribute from form
+          const productID = form.getAttribute("data-id");
+          const formData = new FormData(form);
+          $.ajax({
+            url: `/update-product/${productID}`,
+            method: "POST",
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: (response) => {
+              console.log("Response received from the server:", response);
+              productTable.ajax.reload();
+            },
+            error: (error) => {
+              console.error("Error updating product:", error);
+            },
+          })
         }
     </script>
   </body>

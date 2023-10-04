@@ -154,7 +154,7 @@
             />
           </form>
           <!-- reset button call load more data -->
-          <button class="btn btn-light" id="resetBtn">Reset</button>
+          <button class="btn btn-light" id="resetBtn">Refresh</button>
           <!-- <div class="d-flex justify-content-end">
                     <span class="text-light">Youtube channel name</span>
                 </div> -->
@@ -227,9 +227,9 @@ $.ajax({
           <div class="col-6 col-sm-6 col-md-6 col-lg-3 mt-5">
             <a href="${product.affiliate_link}" onclick="clickCount(${product.product_id})" target="_blank" style="text-decoration: none;">
             <div class="card" data-product-id="${product.product_id}">
-              <img src="https://drive.google.com/uc?export=view&id=${product.product_link}" class="card-img-top" alt="..." />
+              <img src="images/${product.product_link}" class="card-img-top" alt="..." />
               <div class="card-footer text-body-secondary text-center">
-                Product Id: ${product.product_id} PINNED
+                <i class="fa-solid fa-thumbtack" style="font-size: 20px;color: #70066e; transform:rotate(40deg)"></i> &nbsp; Product Id: ${product.product_id}
               </div>
             </div>
           </a>
@@ -257,7 +257,7 @@ const loadMoreData = () => {
                       <div class="col-6 col-sm-6 col-md-6 col-lg-3 mt-5">
                         <a href="${product.affiliate_link}" onclick="clickCount(${product.product_id})" target="_blank" style="text-decoration: none;">
                         <div class="card" data-product-id="${product.product_id}">
-                          <img src="https://drive.google.com/uc?export=view&id=${product.product_link}" class="card-img-top" alt="..." />
+                          <img src="images/${product.product_link}" class="card-img-top" alt="..." />
                           <div class="card-footer text-body-secondary text-center">
                             Product Id: ${product.product_id}
                           </div>
@@ -314,7 +314,7 @@ loadMoreData();
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
                     <a href="${product.affiliate_link}" target="_blank" onclick="clickCount(${product.product_id})" style="text-decoration: none;">
                         <div class="card" data-product-id="${product.product_id}" style="width: 18rem">
-                          <img src="https://drive.google.com/uc?export=view&id=${product.product_link}" class="card-img-top" alt="..." />
+                          <img src="images/${product.product_link}" class="card-img-top" alt="..." />
                           <div class="card-footer text-body-secondary text-center">
                             Product Id: ${product.product_id}
                           </div>

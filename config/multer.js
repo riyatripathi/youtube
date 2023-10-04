@@ -5,8 +5,8 @@ const storage = multer.diskStorage({
     cb(null, "public/images");
   },
   filename: (req, file, cb) => {
-    const date = new Date().toISOString().slice(0, 10); // Get only the date (YYYY-MM-DD)
-    const filename = `${date}-${file.originalname}`;
+    const timestamp = Date.now(); // Get only the date (YYYY-MM-DD)
+    const filename = `${timestamp}_${file.originalname}`;
     cb(null, filename);
   },
 });
@@ -14,9 +14,10 @@ const storage = multer.diskStorage({
 const fileFilter = (req, file, cb) => {
   if (
     file.mimetype === "image/png" ||
-    file.mimetype === "application/pdf" ||
     file.mimetype === "image/jpg" ||
-    file.mimetype === "image/jpeg"
+    file.mimetype === "image/jpeg" ||
+    file.mimetype === "image/gif" ||
+    file.mimetype === "image/webp"
   ) {
     cb(null, true);
   } else {
