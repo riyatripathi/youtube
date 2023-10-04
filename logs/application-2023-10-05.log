@@ -4250,3 +4250,84 @@
 [2023-10-05 01:45:05] [DEBUG]: Fetched Products from Cache
 [2023-10-05 01:45:28] [INFO]: Number of CPUs: 12
 [2023-10-05 01:45:28] [INFO]: Connected to database
+[2023-10-05 01:45:29] [INFO]: Number of CPUs: 12
+[2023-10-05 01:45:30] [INFO]: Connected to database
+[2023-10-05 01:45:29] [INFO]: Number of CPUs: 12
+[2023-10-05 01:45:30] [INFO]: Connected to database
+[2023-10-05 01:45:30] [INFO]: Server is running on port 5003
+[2023-10-05 01:45:30] [INFO]: Connected to Redis
+[2023-10-05 01:45:30] [INFO]: Connected to Redis
+[2023-10-05 01:45:30] [INFO]: Server is running on port 5004
+[2023-10-05 01:45:30] [INFO]: Connected to Redis
+[2023-10-05 01:45:30] [INFO]: Connected to Redis
+[2023-10-05 01:45:29] [INFO]: Number of CPUs: 12
+[2023-10-05 01:45:30] [INFO]: Connected to database
+[2023-10-05 01:45:30] [INFO]: Server is running on port 5006
+[2023-10-05 01:45:30] [INFO]: Connected to Redis
+[2023-10-05 01:45:30] [INFO]: Connected to Redis
+[2023-10-05 01:45:29] [INFO]: Number of CPUs: 12
+[2023-10-05 01:45:30] [INFO]: Connected to database
+[2023-10-05 01:45:30] [INFO]: Server is running on port 5007
+[2023-10-05 01:45:30] [INFO]: Connected to Redis
+[2023-10-05 01:45:30] [INFO]: Connected to Redis
+[2023-10-05 01:45:29] [INFO]: Number of CPUs: 12
+[2023-10-05 01:45:30] [INFO]: Connected to database
+[2023-10-05 01:45:29] [INFO]: Number of CPUs: 12
+[2023-10-05 01:45:30] [INFO]: Connected to database
+[2023-10-05 01:45:30] [INFO]: Server is running on port 5001
+[2023-10-05 01:45:30] [INFO]: Connected to Redis
+[2023-10-05 01:45:30] [INFO]: Connected to Redis
+[2023-10-05 01:45:29] [INFO]: Number of CPUs: 12
+[2023-10-05 01:45:30] [INFO]: Connected to database
+[2023-10-05 01:45:30] [INFO]: Server is running on port 5002
+[2023-10-05 01:45:30] [INFO]: Connected to Redis
+[2023-10-05 01:45:31] [INFO]: Connected to Redis
+[2023-10-05 01:45:31] [INFO]: Request received on port 5001: GET /click-on-product/3
+[2023-10-05 01:45:31] [DEBUG]: Request for clicking on product
+[2023-10-05 01:45:31] [INFO]: Server is running on port 5005
+[2023-10-05 01:45:31] [INFO]: Connected to Redis
+[2023-10-05 01:45:31] [INFO]: Connected to Redis
+[2023-10-05 01:45:31] [INFO]: Product clicked successfully
+[2023-10-05 01:45:29] [INFO]: Number of CPUs: 12
+[2023-10-05 01:45:31] [INFO]: Connected to database
+[2023-10-05 01:45:31] [INFO]: Server is running on port 5012
+[2023-10-05 01:45:31] [INFO]: Connected to Redis
+[2023-10-05 01:45:31] [INFO]: Connected to Redis
+[2023-10-05 01:45:29] [INFO]: Number of CPUs: 12
+[2023-10-05 01:45:31] [INFO]: Connected to database
+[2023-10-05 01:45:31] [INFO]: Server is running on port 5008
+[2023-10-05 01:45:31] [INFO]: Connected to Redis
+[2023-10-05 01:45:31] [INFO]: Connected to Redis
+[2023-10-05 01:45:29] [INFO]: Number of CPUs: 12
+[2023-10-05 01:45:31] [INFO]: Connected to database
+[2023-10-05 01:45:29] [INFO]: Number of CPUs: 12
+[2023-10-05 01:45:31] [INFO]: Connected to database
+[2023-10-05 01:45:29] [INFO]: Number of CPUs: 12
+[2023-10-05 01:45:31] [INFO]: Connected to database
+[2023-10-05 01:45:31] [INFO]: Server is running on port 5009
+[2023-10-05 01:45:31] [INFO]: Connected to Redis
+[2023-10-05 01:45:31] [INFO]: Connected to Redis
+[2023-10-05 01:45:31] [INFO]: Server is running on port 5011
+[2023-10-05 01:45:31] [INFO]: Connected to Redis
+[2023-10-05 01:45:31] [INFO]: Connected to Redis
+[2023-10-05 01:45:31] [INFO]: Server is running on port 5010
+[2023-10-05 01:45:31] [INFO]: Connected to Redis
+[2023-10-05 01:45:31] [INFO]: Connected to Redis
+[2023-10-05 01:45:48] [INFO]: Request received on port 5001: GET /click-on-product/2
+[2023-10-05 01:45:48] [DEBUG]: Request for clicking on product
+[2023-10-05 01:45:48] [INFO]: Product clicked successfully
+[2023-10-05 01:45:52] [INFO]: Request received on port 5001: GET /click-on-product/1
+[2023-10-05 01:45:52] [DEBUG]: Request for clicking on product
+[2023-10-05 01:45:52] [INFO]: Product clicked successfully
+[2023-10-05 01:46:11] [INFO]: Request received on port 5001: GET /click-on-product/2
+[2023-10-05 01:46:11] [DEBUG]: Request for clicking on product
+[2023-10-05 01:46:11] [INFO]: Product clicked successfully
+[2023-10-05 01:46:15] [INFO]: Request received on port 5001: GET /click-on-product/3
+[2023-10-05 01:46:15] [DEBUG]: Request for clicking on product
+[2023-10-05 01:46:15] [INFO]: Product clicked successfully
+[2023-10-05 01:46:16] [INFO]: Request received on port 5001: POST /find-product/e1
+[2023-10-05 01:46:16] [DEBUG]: Request for fetching product /find-product/:productId
+[2023-10-05 01:46:21] [INFO]: Request received on port 5001: POST /find-product/e3
+[2023-10-05 01:46:21] [DEBUG]: Request for fetching product /find-product/:productId
+[2023-10-05 01:46:24] [INFO]: Request received on port 5001: POST /find-product/e4
+[2023-10-05 01:46:24] [DEBUG]: Request for fetching product /find-product/:productId
