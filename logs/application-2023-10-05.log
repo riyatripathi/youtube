@@ -2561,3 +2561,326 @@
 [2023-10-05 01:19:28] [INFO]: Connected to database
 [2023-10-05 01:19:34] [INFO]: Number of CPUs: 12
 [2023-10-05 01:19:34] [INFO]: Connected to database
+[2023-10-05 01:19:35] [INFO]: Number of CPUs: 12
+[2023-10-05 01:19:36] [INFO]: Connected to database
+[2023-10-05 01:19:36] [INFO]: Server is running on port 5003
+[2023-10-05 01:19:36] [INFO]: Connected to Redis
+[2023-10-05 01:19:36] [INFO]: Connected to Redis
+[2023-10-05 01:19:35] [INFO]: Number of CPUs: 12
+[2023-10-05 01:19:36] [INFO]: Connected to database
+[2023-10-05 01:19:36] [INFO]: Server is running on port 5001
+[2023-10-05 01:19:36] [INFO]: Connected to Redis
+[2023-10-05 01:19:36] [INFO]: Connected to Redis
+[2023-10-05 01:19:35] [INFO]: Number of CPUs: 12
+[2023-10-05 01:19:36] [INFO]: Connected to database
+[2023-10-05 01:19:36] [INFO]: Server is running on port 5005
+[2023-10-05 01:19:36] [INFO]: Connected to Redis
+[2023-10-05 01:19:36] [INFO]: Connected to Redis
+[2023-10-05 01:19:35] [INFO]: Number of CPUs: 12
+[2023-10-05 01:19:36] [INFO]: Connected to database
+[2023-10-05 01:19:36] [INFO]: Server is running on port 5004
+[2023-10-05 01:19:36] [INFO]: Connected to Redis
+[2023-10-05 01:19:36] [INFO]: Connected to Redis
+[2023-10-05 01:19:35] [INFO]: Number of CPUs: 12
+[2023-10-05 01:19:36] [INFO]: Connected to database
+[2023-10-05 01:19:36] [INFO]: Server is running on port 5002
+[2023-10-05 01:19:36] [INFO]: Connected to Redis
+[2023-10-05 01:19:36] [INFO]: Connected to Redis
+[2023-10-05 01:19:35] [INFO]: Number of CPUs: 12
+[2023-10-05 01:19:36] [INFO]: Connected to database
+[2023-10-05 01:19:35] [INFO]: Number of CPUs: 12
+[2023-10-05 01:19:36] [INFO]: Connected to database
+[2023-10-05 01:19:36] [INFO]: Server is running on port 5007
+[2023-10-05 01:19:36] [INFO]: Connected to Redis
+[2023-10-05 01:19:36] [INFO]: Connected to Redis
+[2023-10-05 01:19:36] [INFO]: Server is running on port 5006
+[2023-10-05 01:19:36] [INFO]: Connected to Redis
+[2023-10-05 01:19:36] [INFO]: Connected to Redis
+[2023-10-05 01:19:35] [INFO]: Number of CPUs: 12
+[2023-10-05 01:19:36] [INFO]: Connected to database
+[2023-10-05 01:19:36] [INFO]: Server is running on port 5008
+[2023-10-05 01:19:36] [INFO]: Connected to Redis
+[2023-10-05 01:19:36] [INFO]: Connected to Redis
+[2023-10-05 01:19:35] [INFO]: Number of CPUs: 12
+[2023-10-05 01:19:36] [INFO]: Connected to database
+[2023-10-05 01:19:35] [INFO]: Number of CPUs: 12
+[2023-10-05 01:19:36] [INFO]: Connected to database
+[2023-10-05 01:19:36] [INFO]: Server is running on port 5010
+[2023-10-05 01:19:36] [INFO]: Connected to Redis
+[2023-10-05 01:19:36] [INFO]: Connected to Redis
+[2023-10-05 01:19:36] [INFO]: Server is running on port 5011
+[2023-10-05 01:19:36] [INFO]: Connected to Redis
+[2023-10-05 01:19:36] [INFO]: Connected to Redis
+[2023-10-05 01:19:35] [INFO]: Number of CPUs: 12
+[2023-10-05 01:19:36] [INFO]: Connected to database
+[2023-10-05 01:19:35] [INFO]: Number of CPUs: 12
+[2023-10-05 01:19:36] [INFO]: Connected to database
+[2023-10-05 01:19:36] [INFO]: Server is running on port 5012
+[2023-10-05 01:19:36] [INFO]: Connected to Redis
+[2023-10-05 01:19:36] [INFO]: Connected to Redis
+[2023-10-05 01:19:36] [INFO]: Server is running on port 5009
+[2023-10-05 01:19:36] [INFO]: Connected to Redis
+[2023-10-05 01:19:36] [INFO]: Connected to Redis
+[2023-10-05 01:19:44] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:19:44] [DEBUG]: Checking authentication status
+[2023-10-05 01:19:44] [WARN]: User is not authenticated, redirecting to /login
+[2023-10-05 01:19:44] [INFO]: Request received on port 5001: GET /login
+[2023-10-05 01:19:44] [INFO]: Rendering login page
+[2023-10-05 01:19:49] [INFO]: Request received on port 5001: POST /login
+[2023-10-05 01:19:49] [WARN]: Incorrect password for user: admin
+[2023-10-05 01:19:49] [WARN]: User authentication failed
+[2023-10-05 01:19:49] [INFO]: Request received on port 5001: GET /login
+[2023-10-05 01:19:49] [INFO]: Rendering login page
+[2023-10-05 01:19:53] [INFO]: Request received on port 5001: POST /login
+[2023-10-05 01:19:53] [INFO]: User authenticated successfully: admin
+[2023-10-05 01:19:53] [INFO]: User authenticated successfully: admin
+[2023-10-05 01:19:53] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:19:53] [DEBUG]: Checking authentication status
+[2023-10-05 01:19:53] [INFO]: Rendering admin panel for user: admin
+[2023-10-05 01:19:53] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:19:53] [DEBUG]: Request for server-side products
+[2023-10-05 01:19:53] [DEBUG]: Fetching total number of records
+[2023-10-05 01:19:53] [DEBUG]: Total number of records: 4
+[2023-10-05 01:19:53] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:19:53] [INFO]: Fetched products:
+[2023-10-05 01:20:00] [INFO]: Request received on port 5001: GET /admin/unpin-product/1
+[2023-10-05 01:20:00] [DEBUG]: Checking authentication status
+[2023-10-05 01:20:00] [DEBUG]: Request for unpinning product
+[2023-10-05 01:20:00] [DEBUG]: Fetching Product from ID: 1
+[2023-10-05 01:20:00] [INFO]: Product unpinned successfully in database
+[2023-10-05 01:20:00] [DEBUG]: Product unpinned successfully in Database and Cache
+[2023-10-05 01:20:00] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:20:00] [DEBUG]: Request for server-side products
+[2023-10-05 01:20:00] [DEBUG]: Fetching total number of records
+[2023-10-05 01:20:00] [DEBUG]: Total number of records: 4
+[2023-10-05 01:20:00] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:20:00] [INFO]: Fetched products:
+[2023-10-05 01:20:01] [INFO]: Request received on port 5001: GET /admin/unpin-product/2
+[2023-10-05 01:20:01] [DEBUG]: Checking authentication status
+[2023-10-05 01:20:01] [DEBUG]: Request for unpinning product
+[2023-10-05 01:20:01] [DEBUG]: Fetching Product from ID: 2
+[2023-10-05 01:20:01] [INFO]: Product unpinned successfully in database
+[2023-10-05 01:20:01] [DEBUG]: Product unpinned successfully in Database and Cache
+[2023-10-05 01:20:01] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:20:01] [DEBUG]: Request for server-side products
+[2023-10-05 01:20:01] [DEBUG]: Fetching total number of records
+[2023-10-05 01:20:01] [DEBUG]: Total number of records: 4
+[2023-10-05 01:20:01] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:20:01] [INFO]: Fetched products:
+[2023-10-05 01:20:02] [INFO]: Request received on port 5001: GET /admin/unpin-product/3
+[2023-10-05 01:20:02] [DEBUG]: Checking authentication status
+[2023-10-05 01:20:02] [DEBUG]: Request for unpinning product
+[2023-10-05 01:20:02] [DEBUG]: Fetching Product from ID: 3
+[2023-10-05 01:20:02] [INFO]: Product unpinned successfully in database
+[2023-10-05 01:20:02] [DEBUG]: Product unpinned successfully in Database and Cache
+[2023-10-05 01:20:02] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:20:02] [DEBUG]: Request for server-side products
+[2023-10-05 01:20:02] [DEBUG]: Fetching total number of records
+[2023-10-05 01:20:02] [DEBUG]: Total number of records: 4
+[2023-10-05 01:20:02] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:20:02] [INFO]: Fetched products:
+[2023-10-05 01:20:15] [INFO]: Request received on port 5001: GET /admin/pin-product/1
+[2023-10-05 01:20:15] [DEBUG]: Checking authentication status
+[2023-10-05 01:20:15] [DEBUG]: Request for pinning product
+[2023-10-05 01:20:15] [DEBUG]: Fetching Product from ID: 1
+[2023-10-05 01:20:15] [INFO]: Product pinned successfully in database
+[2023-10-05 01:20:15] [DEBUG]: Product pinned successfully in Cache
+[2023-10-05 01:20:20] [INFO]: Request received on port 5001: GET /admin/pin-product/1
+[2023-10-05 01:20:20] [DEBUG]: Checking authentication status
+[2023-10-05 01:20:20] [DEBUG]: Request for pinning product
+[2023-10-05 01:20:20] [DEBUG]: Fetching Product from ID: 1
+[2023-10-05 01:20:20] [INFO]: Product pinned successfully in database
+[2023-10-05 01:20:20] [DEBUG]: Product pinned successfully in Cache
+[2023-10-05 01:20:20] [INFO]: Request received on port 5001: GET /favicon.ico
+[2023-10-05 01:20:21] [INFO]: Request received on port 5001: GET /admin/pin-product/1
+[2023-10-05 01:20:21] [DEBUG]: Checking authentication status
+[2023-10-05 01:20:21] [DEBUG]: Request for pinning product
+[2023-10-05 01:20:21] [DEBUG]: Fetching Product from ID: 1
+[2023-10-05 01:20:21] [INFO]: Product pinned successfully in database
+[2023-10-05 01:20:21] [DEBUG]: Product pinned successfully in Cache
+[2023-10-05 01:20:21] [INFO]: Request received on port 5001: GET /favicon.ico
+[2023-10-05 01:20:25] [INFO]: Request received on port 5001: GET /logout?
+[2023-10-05 01:20:25] [INFO]: Request for LOGOUT
+[2023-10-05 01:20:25] [INFO]: USER AUTHENTICATED ?: true
+[2023-10-05 01:20:25] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:20:25] [DEBUG]: Checking authentication status
+[2023-10-05 01:20:25] [WARN]: User is not authenticated, redirecting to /login
+[2023-10-05 01:20:25] [INFO]: Request received on port 5001: GET /login
+[2023-10-05 01:20:25] [INFO]: Rendering login page
+[2023-10-05 01:20:26] [INFO]: Request received on port 5001: GET /admin/pin-product/1
+[2023-10-05 01:20:26] [DEBUG]: Checking authentication status
+[2023-10-05 01:20:26] [WARN]: User is not authenticated, redirecting to /login
+[2023-10-05 01:20:26] [INFO]: Request received on port 5001: GET /login
+[2023-10-05 01:20:26] [INFO]: Rendering login page
+[2023-10-05 01:20:26] [INFO]: Request received on port 5001: GET /favicon.ico
+[2023-10-05 01:20:31] [INFO]: Request received on port 5001: POST /login
+[2023-10-05 01:20:32] [INFO]: User authenticated successfully: admin
+[2023-10-05 01:20:32] [INFO]: User authenticated successfully: admin
+[2023-10-05 01:20:32] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:20:32] [DEBUG]: Checking authentication status
+[2023-10-05 01:20:32] [INFO]: Rendering admin panel for user: admin
+[2023-10-05 01:20:32] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:20:32] [DEBUG]: Request for server-side products
+[2023-10-05 01:20:32] [DEBUG]: Fetching total number of records
+[2023-10-05 01:20:32] [DEBUG]: Total number of records: 4
+[2023-10-05 01:20:32] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:20:32] [INFO]: Fetched products:
+[2023-10-05 01:20:46] [INFO]: Request received on port 5001: GET /
+[2023-10-05 01:20:46] [DEBUG]: Request for Index Page
+[2023-10-05 01:20:46] [INFO]: Request received on port 5001: GET /pin-products
+[2023-10-05 01:20:46] [DEBUG]: Request for pinning products
+[2023-10-05 01:20:46] [DEBUG]: Fetching pin products
+[2023-10-05 01:20:46] [INFO]: Request received on port 5001: GET /products?page=0
+[2023-10-05 01:20:46] [DEBUG]: Request for fetching all products from cache
+[2023-10-05 01:20:46] [DEBUG]: Fetching total number of records
+[2023-10-05 01:20:46] [DEBUG]: Total number of records: 4
+[2023-10-05 01:20:46] [DEBUG]: Fetching all products (Page: 0, Limit: 4)
+[2023-10-05 01:20:46] [DEBUG]: Fetched Products from Cache
+[2023-10-05 01:21:00] [INFO]: Request received on port 5001: GET /pin-product/1
+[2023-10-05 01:21:00] [INFO]: Request received on port 5001: GET /pin-product/1
+[2023-10-05 01:21:02] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:21:02] [DEBUG]: Checking authentication status
+[2023-10-05 01:21:02] [INFO]: Rendering admin panel for user: admin
+[2023-10-05 01:21:02] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:21:02] [DEBUG]: Request for server-side products
+[2023-10-05 01:21:02] [DEBUG]: Fetching total number of records
+[2023-10-05 01:21:02] [DEBUG]: Total number of records: 4
+[2023-10-05 01:21:02] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:21:02] [INFO]: Fetched products:
+[2023-10-05 01:21:03] [INFO]: Request received on port 5001: GET /admin/unpin-product/1
+[2023-10-05 01:21:03] [DEBUG]: Checking authentication status
+[2023-10-05 01:21:03] [DEBUG]: Request for unpinning product
+[2023-10-05 01:21:03] [DEBUG]: Fetching Product from ID: 1
+[2023-10-05 01:21:03] [INFO]: Product unpinned successfully in database
+[2023-10-05 01:21:03] [DEBUG]: Product unpinned successfully in Database and Cache
+[2023-10-05 01:21:03] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:21:03] [DEBUG]: Request for server-side products
+[2023-10-05 01:21:03] [DEBUG]: Fetching total number of records
+[2023-10-05 01:21:03] [DEBUG]: Total number of records: 4
+[2023-10-05 01:21:03] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:21:03] [INFO]: Fetched products:
+[2023-10-05 01:21:05] [INFO]: Request received on port 5001: GET /
+[2023-10-05 01:21:05] [DEBUG]: Request for Index Page
+[2023-10-05 01:21:05] [INFO]: Request received on port 5001: GET /pin-products
+[2023-10-05 01:21:05] [DEBUG]: Request for pinning products
+[2023-10-05 01:21:05] [DEBUG]: Fetching pin products
+[2023-10-05 01:21:05] [INFO]: Request received on port 5001: GET /products?page=0
+[2023-10-05 01:21:05] [DEBUG]: Request for fetching all products from cache
+[2023-10-05 01:21:05] [DEBUG]: Fetching total number of records
+[2023-10-05 01:21:05] [DEBUG]: Total number of records: 4
+[2023-10-05 01:21:05] [DEBUG]: Fetching all products (Page: 0, Limit: 4)
+[2023-10-05 01:21:05] [DEBUG]: Fetched Products from Cache
+[2023-10-05 01:21:07] [INFO]: Request received on port 5001: GET /admin/pin-product/1
+[2023-10-05 01:21:07] [DEBUG]: Checking authentication status
+[2023-10-05 01:21:07] [DEBUG]: Request for pinning product
+[2023-10-05 01:21:07] [DEBUG]: Fetching Product from ID: 1
+[2023-10-05 01:21:07] [INFO]: Product pinned successfully in database
+[2023-10-05 01:21:07] [DEBUG]: Product pinned successfully in Cache
+[2023-10-05 01:21:07] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:21:07] [DEBUG]: Request for server-side products
+[2023-10-05 01:21:07] [DEBUG]: Fetching total number of records
+[2023-10-05 01:21:07] [DEBUG]: Total number of records: 4
+[2023-10-05 01:21:07] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:21:07] [INFO]: Fetched products:
+[2023-10-05 01:21:10] [INFO]: Request received on port 5001: GET /
+[2023-10-05 01:21:10] [DEBUG]: Request for Index Page
+[2023-10-05 01:21:10] [INFO]: Request received on port 5001: GET /pin-products
+[2023-10-05 01:21:10] [DEBUG]: Request for pinning products
+[2023-10-05 01:21:10] [DEBUG]: Fetching pin products
+[2023-10-05 01:21:10] [INFO]: Request received on port 5001: GET /products?page=0
+[2023-10-05 01:21:10] [DEBUG]: Request for fetching all products from cache
+[2023-10-05 01:21:10] [DEBUG]: Fetching total number of records
+[2023-10-05 01:21:10] [DEBUG]: Total number of records: 4
+[2023-10-05 01:21:10] [DEBUG]: Fetching all products (Page: 0, Limit: 4)
+[2023-10-05 01:21:10] [DEBUG]: Fetched Products from Cache
+[2023-10-05 01:21:11] [INFO]: Request received on port 5001: GET /admin/pin-product/2
+[2023-10-05 01:21:11] [DEBUG]: Checking authentication status
+[2023-10-05 01:21:11] [DEBUG]: Request for pinning product
+[2023-10-05 01:21:11] [DEBUG]: Fetching Product from ID: 2
+[2023-10-05 01:21:11] [INFO]: Product pinned successfully in database
+[2023-10-05 01:21:11] [DEBUG]: Product pinned successfully in Cache
+[2023-10-05 01:21:11] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:21:11] [DEBUG]: Request for server-side products
+[2023-10-05 01:21:11] [DEBUG]: Fetching total number of records
+[2023-10-05 01:21:11] [DEBUG]: Total number of records: 4
+[2023-10-05 01:21:11] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:21:11] [INFO]: Fetched products:
+[2023-10-05 01:21:12] [INFO]: Request received on port 5001: GET /admin/pin-product/3
+[2023-10-05 01:21:12] [DEBUG]: Checking authentication status
+[2023-10-05 01:21:12] [DEBUG]: Request for pinning product
+[2023-10-05 01:21:12] [DEBUG]: Fetching Product from ID: 3
+[2023-10-05 01:21:12] [INFO]: Product pinned successfully in database
+[2023-10-05 01:21:12] [DEBUG]: Product pinned successfully in Cache
+[2023-10-05 01:21:12] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:21:12] [DEBUG]: Request for server-side products
+[2023-10-05 01:21:12] [DEBUG]: Fetching total number of records
+[2023-10-05 01:21:12] [DEBUG]: Total number of records: 4
+[2023-10-05 01:21:12] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:21:12] [INFO]: Fetched products:
+[2023-10-05 01:21:13] [INFO]: Request received on port 5001: GET /products?page=1
+[2023-10-05 01:21:13] [DEBUG]: Request for fetching all products from cache
+[2023-10-05 01:21:13] [DEBUG]: Fetching total number of records
+[2023-10-05 01:21:13] [DEBUG]: Total number of records: 4
+[2023-10-05 01:21:13] [DEBUG]: Fetching all products (Page: 1, Limit: 4)
+[2023-10-05 01:21:13] [INFO]: Request received on port 5001: GET /products?page=2
+[2023-10-05 01:21:13] [DEBUG]: Request for fetching all products from cache
+[2023-10-05 01:21:13] [DEBUG]: Fetching total number of records
+[2023-10-05 01:21:13] [DEBUG]: Total number of records: 4
+[2023-10-05 01:21:13] [INFO]: Request received on port 5001: GET /
+[2023-10-05 01:21:13] [DEBUG]: Request for Index Page
+[2023-10-05 01:21:14] [INFO]: Request received on port 5001: GET /pin-products
+[2023-10-05 01:21:14] [DEBUG]: Request for pinning products
+[2023-10-05 01:21:14] [DEBUG]: Fetching pin products
+[2023-10-05 01:21:14] [INFO]: Request received on port 5001: GET /products?page=0
+[2023-10-05 01:21:14] [DEBUG]: Request for fetching all products from cache
+[2023-10-05 01:21:14] [DEBUG]: Fetching total number of records
+[2023-10-05 01:21:14] [DEBUG]: Total number of records: 4
+[2023-10-05 01:21:14] [DEBUG]: Fetching all products (Page: 0, Limit: 4)
+[2023-10-05 01:21:14] [DEBUG]: Fetched Products from Cache
+[2023-10-05 01:21:19] [INFO]: Request received on port 5001: GET /admin/unpin-product/1
+[2023-10-05 01:21:19] [DEBUG]: Checking authentication status
+[2023-10-05 01:21:19] [DEBUG]: Request for unpinning product
+[2023-10-05 01:21:19] [DEBUG]: Fetching Product from ID: 1
+[2023-10-05 01:21:19] [INFO]: Product unpinned successfully in database
+[2023-10-05 01:21:19] [DEBUG]: Product unpinned successfully in Database and Cache
+[2023-10-05 01:21:19] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:21:19] [DEBUG]: Request for server-side products
+[2023-10-05 01:21:19] [DEBUG]: Fetching total number of records
+[2023-10-05 01:21:19] [DEBUG]: Total number of records: 4
+[2023-10-05 01:21:19] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:21:19] [INFO]: Fetched products:
+[2023-10-05 01:21:20] [INFO]: Request received on port 5001: GET /admin/unpin-product/2
+[2023-10-05 01:21:20] [DEBUG]: Checking authentication status
+[2023-10-05 01:21:20] [DEBUG]: Request for unpinning product
+[2023-10-05 01:21:20] [DEBUG]: Fetching Product from ID: 2
+[2023-10-05 01:21:20] [INFO]: Product unpinned successfully in database
+[2023-10-05 01:21:20] [DEBUG]: Product unpinned successfully in Database and Cache
+[2023-10-05 01:21:20] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:21:20] [DEBUG]: Request for server-side products
+[2023-10-05 01:21:20] [DEBUG]: Fetching total number of records
+[2023-10-05 01:21:20] [DEBUG]: Total number of records: 4
+[2023-10-05 01:21:20] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:21:20] [INFO]: Fetched products:
+[2023-10-05 01:21:20] [INFO]: Request received on port 5001: GET /admin/unpin-product/3
+[2023-10-05 01:21:20] [DEBUG]: Checking authentication status
+[2023-10-05 01:21:20] [DEBUG]: Request for unpinning product
+[2023-10-05 01:21:20] [DEBUG]: Fetching Product from ID: 3
+[2023-10-05 01:21:20] [INFO]: Product unpinned successfully in database
+[2023-10-05 01:21:20] [DEBUG]: Product unpinned successfully in Database and Cache
+[2023-10-05 01:21:20] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:21:20] [DEBUG]: Request for server-side products
+[2023-10-05 01:21:20] [DEBUG]: Fetching total number of records
+[2023-10-05 01:21:20] [DEBUG]: Total number of records: 4
+[2023-10-05 01:21:20] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:21:20] [INFO]: Fetched products:
+[2023-10-05 01:21:30] [INFO]: Request received on port 5001: GET /
+[2023-10-05 01:21:30] [DEBUG]: Request for Index Page
+[2023-10-05 01:21:30] [INFO]: Request received on port 5001: GET /pin-products
+[2023-10-05 01:21:30] [DEBUG]: Request for pinning products
+[2023-10-05 01:21:30] [DEBUG]: Fetching pin products
+[2023-10-05 01:21:30] [INFO]: Request received on port 5001: GET /products?page=0
+[2023-10-05 01:21:30] [DEBUG]: Request for fetching all products from cache
+[2023-10-05 01:21:30] [DEBUG]: Fetching total number of records
+[2023-10-05 01:21:30] [DEBUG]: Total number of records: 4
+[2023-10-05 01:21:30] [DEBUG]: Fetching all products (Page: 0, Limit: 4)
+[2023-10-05 01:21:30] [DEBUG]: Fetched Products from Cache
