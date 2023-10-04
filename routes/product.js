@@ -284,7 +284,6 @@ router.get("/pin-products", async (req, res) => {
   logger.debug("Request for pinning products");
   try {
     const products = await getPinProducts();
-    console.log("PIN PRODUCTS", products);
     res.json(products);
   } catch (error) {
     logger.error("Error processing server-side request:", error);

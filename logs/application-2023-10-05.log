@@ -3515,3 +3515,738 @@
 [2023-10-05 01:33:59] [DEBUG]: Total number of records: 4
 [2023-10-05 01:33:59] [INFO]: Fetching products based on DataTables request
 [2023-10-05 01:33:59] [INFO]: Fetched products:
+[2023-10-05 01:38:06] [INFO]: Number of CPUs: 12
+[2023-10-05 01:38:06] [INFO]: Connected to database
+[2023-10-05 01:38:07] [INFO]: Number of CPUs: 12
+[2023-10-05 01:38:07] [INFO]: Connected to database
+[2023-10-05 01:38:07] [INFO]: Server is running on port 5001
+[2023-10-05 01:38:07] [INFO]: Connected to Redis
+[2023-10-05 01:38:07] [INFO]: Connected to Redis
+[2023-10-05 01:38:07] [INFO]: Request received on port 5001: GET /click-on-product/1
+[2023-10-05 01:38:07] [DEBUG]: Request for clicking on product
+[2023-10-05 01:38:07] [INFO]: Product clicked successfully
+[2023-10-05 01:38:35] [INFO]: Number of CPUs: 12
+[2023-10-05 01:38:35] [INFO]: Connected to database
+[2023-10-05 01:38:35] [INFO]: Number of CPUs: 12
+[2023-10-05 01:38:36] [INFO]: Connected to database
+[2023-10-05 01:38:36] [INFO]: Server is running on port 5001
+[2023-10-05 01:38:36] [INFO]: Connected to Redis
+[2023-10-05 01:38:36] [INFO]: Connected to Redis
+[2023-10-05 01:39:14] [INFO]: Number of CPUs: 12
+[2023-10-05 01:39:14] [INFO]: Connected to database
+[2023-10-05 01:39:14] [INFO]: Number of CPUs: 12
+[2023-10-05 01:39:14] [INFO]: Connected to database
+[2023-10-05 01:39:14] [INFO]: Server is running on port 5001
+[2023-10-05 01:39:14] [INFO]: Connected to Redis
+[2023-10-05 01:39:14] [INFO]: Connected to Redis
+[2023-10-05 01:39:22] [INFO]: Number of CPUs: 12
+[2023-10-05 01:39:22] [INFO]: Connected to database
+[2023-10-05 01:39:22] [INFO]: Number of CPUs: 12
+[2023-10-05 01:39:23] [INFO]: Connected to database
+[2023-10-05 01:39:23] [INFO]: Server is running on port 5001
+[2023-10-05 01:39:23] [INFO]: Connected to Redis
+[2023-10-05 01:39:23] [INFO]: Connected to Redis
+[2023-10-05 01:39:50] [INFO]: Number of CPUs: 12
+[2023-10-05 01:39:50] [INFO]: Connected to database
+[2023-10-05 01:39:51] [INFO]: Number of CPUs: 12
+[2023-10-05 01:39:52] [INFO]: Connected to database
+[2023-10-05 01:39:52] [INFO]: Server is running on port 5002
+[2023-10-05 01:39:52] [INFO]: Connected to Redis
+[2023-10-05 01:39:52] [INFO]: Connected to Redis
+[2023-10-05 01:39:51] [INFO]: Number of CPUs: 12
+[2023-10-05 01:39:52] [INFO]: Connected to database
+[2023-10-05 01:39:52] [INFO]: Server is running on port 5003
+[2023-10-05 01:39:52] [INFO]: Connected to Redis
+[2023-10-05 01:39:52] [INFO]: Connected to Redis
+[2023-10-05 01:39:51] [INFO]: Number of CPUs: 12
+[2023-10-05 01:39:52] [INFO]: Connected to database
+[2023-10-05 01:39:52] [INFO]: Server is running on port 5007
+[2023-10-05 01:39:51] [INFO]: Number of CPUs: 12
+[2023-10-05 01:39:52] [INFO]: Connected to database
+[2023-10-05 01:39:52] [INFO]: Connected to Redis
+[2023-10-05 01:39:52] [INFO]: Connected to Redis
+[2023-10-05 01:39:52] [INFO]: Server is running on port 5004
+[2023-10-05 01:39:52] [INFO]: Connected to Redis
+[2023-10-05 01:39:52] [INFO]: Connected to Redis
+[2023-10-05 01:39:51] [INFO]: Number of CPUs: 12
+[2023-10-05 01:39:52] [INFO]: Connected to database
+[2023-10-05 01:39:52] [INFO]: Server is running on port 5001
+[2023-10-05 01:39:52] [INFO]: Connected to Redis
+[2023-10-05 01:39:52] [INFO]: Connected to Redis
+[2023-10-05 01:39:52] [INFO]: Request received on port 5001: GET /
+[2023-10-05 01:39:51] [INFO]: Number of CPUs: 12
+[2023-10-05 01:39:52] [INFO]: Connected to database
+[2023-10-05 01:39:52] [DEBUG]: Request for Index Page
+[2023-10-05 01:39:52] [INFO]: Server is running on port 5005
+[2023-10-05 01:39:52] [INFO]: Connected to Redis
+[2023-10-05 01:39:52] [INFO]: Connected to Redis
+[2023-10-05 01:39:51] [INFO]: Number of CPUs: 12
+[2023-10-05 01:39:52] [INFO]: Connected to database
+[2023-10-05 01:39:52] [INFO]: Server is running on port 5011
+[2023-10-05 01:39:52] [INFO]: Connected to Redis
+[2023-10-05 01:39:52] [INFO]: Connected to Redis
+[2023-10-05 01:39:51] [INFO]: Number of CPUs: 12
+[2023-10-05 01:39:52] [INFO]: Connected to database
+[2023-10-05 01:39:51] [INFO]: Number of CPUs: 12
+[2023-10-05 01:39:52] [INFO]: Connected to database
+[2023-10-05 01:39:51] [INFO]: Number of CPUs: 12
+[2023-10-05 01:39:52] [INFO]: Connected to database
+[2023-10-05 01:39:52] [INFO]: Server is running on port 5012
+[2023-10-05 01:39:52] [INFO]: Connected to Redis
+[2023-10-05 01:39:52] [INFO]: Connected to Redis
+[2023-10-05 01:39:51] [INFO]: Number of CPUs: 12
+[2023-10-05 01:39:52] [INFO]: Connected to database
+[2023-10-05 01:39:52] [INFO]: Server is running on port 5006
+[2023-10-05 01:39:52] [INFO]: Connected to Redis
+[2023-10-05 01:39:52] [INFO]: Connected to Redis
+[2023-10-05 01:39:52] [INFO]: Server is running on port 5008
+[2023-10-05 01:39:52] [INFO]: Connected to Redis
+[2023-10-05 01:39:52] [INFO]: Connected to Redis
+[2023-10-05 01:39:51] [INFO]: Number of CPUs: 12
+[2023-10-05 01:39:52] [INFO]: Connected to database
+[2023-10-05 01:39:52] [INFO]: Server is running on port 5009
+[2023-10-05 01:39:52] [INFO]: Connected to Redis
+[2023-10-05 01:39:52] [INFO]: Connected to Redis
+[2023-10-05 01:39:52] [INFO]: Server is running on port 5010
+[2023-10-05 01:39:52] [INFO]: Connected to Redis
+[2023-10-05 01:39:52] [INFO]: Connected to Redis
+[2023-10-05 01:39:52] [INFO]: Request received on port 5001: GET /pin-products
+[2023-10-05 01:39:52] [DEBUG]: Request for pinning products
+[2023-10-05 01:39:52] [DEBUG]: Fetching pin products
+[2023-10-05 01:39:52] [INFO]: Request received on port 5001: GET /products?page=0
+[2023-10-05 01:39:52] [DEBUG]: Request for fetching all products from cache
+[2023-10-05 01:39:52] [DEBUG]: Fetching total number of records
+[2023-10-05 01:39:52] [DEBUG]: Total number of records: 4
+[2023-10-05 01:39:52] [DEBUG]: Fetching all products (Page: 0, Limit: 4)
+[2023-10-05 01:39:52] [DEBUG]: Fetched Products from Cache
+[2023-10-05 01:39:58] [INFO]: Request received on port 5001: GET /favicon.ico
+[2023-10-05 01:40:06] [INFO]: Request received on port 5001: GET /click-on-product/1
+[2023-10-05 01:40:06] [DEBUG]: Request for clicking on product
+[2023-10-05 01:40:06] [INFO]: Product clicked successfully
+[2023-10-05 01:40:20] [INFO]: Number of CPUs: 12
+[2023-10-05 01:40:21] [INFO]: Connected to database
+[2023-10-05 01:40:21] [INFO]: Number of CPUs: 12
+[2023-10-05 01:40:23] [INFO]: Connected to database
+[2023-10-05 01:40:21] [INFO]: Number of CPUs: 12
+[2023-10-05 01:40:23] [INFO]: Connected to database
+[2023-10-05 01:40:23] [INFO]: Server is running on port 5005
+[2023-10-05 01:40:23] [INFO]: Connected to Redis
+[2023-10-05 01:40:23] [INFO]: Connected to Redis
+[2023-10-05 01:40:23] [INFO]: Server is running on port 5002
+[2023-10-05 01:40:23] [INFO]: Connected to Redis
+[2023-10-05 01:40:23] [INFO]: Connected to Redis
+[2023-10-05 01:40:22] [INFO]: Number of CPUs: 12
+[2023-10-05 01:40:23] [INFO]: Connected to database
+[2023-10-05 01:40:23] [INFO]: Server is running on port 5001
+[2023-10-05 01:40:23] [INFO]: Connected to Redis
+[2023-10-05 01:40:23] [INFO]: Connected to Redis
+[2023-10-05 01:40:22] [INFO]: Number of CPUs: 12
+[2023-10-05 01:40:23] [INFO]: Connected to database
+[2023-10-05 01:40:22] [INFO]: Number of CPUs: 12
+[2023-10-05 01:40:23] [INFO]: Connected to database
+[2023-10-05 01:40:23] [INFO]: Server is running on port 5008
+[2023-10-05 01:40:23] [INFO]: Connected to Redis
+[2023-10-05 01:40:23] [INFO]: Connected to Redis
+[2023-10-05 01:40:23] [INFO]: Server is running on port 5006
+[2023-10-05 01:40:23] [INFO]: Connected to Redis
+[2023-10-05 01:40:23] [INFO]: Connected to Redis
+[2023-10-05 01:40:22] [INFO]: Number of CPUs: 12
+[2023-10-05 01:40:23] [INFO]: Connected to database
+[2023-10-05 01:40:23] [INFO]: Server is running on port 5004
+[2023-10-05 01:40:23] [INFO]: Connected to Redis
+[2023-10-05 01:40:23] [INFO]: Connected to Redis
+[2023-10-05 01:40:22] [INFO]: Number of CPUs: 12
+[2023-10-05 01:40:23] [INFO]: Connected to database
+[2023-10-05 01:40:22] [INFO]: Number of CPUs: 12
+[2023-10-05 01:40:23] [INFO]: Connected to database
+[2023-10-05 01:40:23] [INFO]: Server is running on port 5003
+[2023-10-05 01:40:23] [INFO]: Server is running on port 5009
+[2023-10-05 01:40:23] [INFO]: Connected to Redis
+[2023-10-05 01:40:23] [INFO]: Connected to Redis
+[2023-10-05 01:40:23] [INFO]: Connected to Redis
+[2023-10-05 01:40:23] [INFO]: Connected to Redis
+[2023-10-05 01:40:22] [INFO]: Number of CPUs: 12
+[2023-10-05 01:40:23] [INFO]: Connected to database
+[2023-10-05 01:40:23] [INFO]: Server is running on port 5011
+[2023-10-05 01:40:23] [INFO]: Connected to Redis
+[2023-10-05 01:40:23] [INFO]: Connected to Redis
+[2023-10-05 01:40:22] [INFO]: Number of CPUs: 12
+[2023-10-05 01:40:23] [INFO]: Connected to database
+[2023-10-05 01:40:22] [INFO]: Number of CPUs: 12
+[2023-10-05 01:40:23] [INFO]: Connected to database
+[2023-10-05 01:40:22] [INFO]: Number of CPUs: 12
+[2023-10-05 01:40:23] [INFO]: Connected to database
+[2023-10-05 01:40:23] [INFO]: Server is running on port 5007
+[2023-10-05 01:40:23] [INFO]: Connected to Redis
+[2023-10-05 01:40:23] [INFO]: Connected to Redis
+[2023-10-05 01:40:23] [INFO]: Server is running on port 5010
+[2023-10-05 01:40:23] [INFO]: Connected to Redis
+[2023-10-05 01:40:23] [INFO]: Connected to Redis
+[2023-10-05 01:40:23] [INFO]: Server is running on port 5012
+[2023-10-05 01:40:23] [INFO]: Connected to Redis
+[2023-10-05 01:40:23] [INFO]: Connected to Redis
+[2023-10-05 01:40:43] [INFO]: Request received on port 5001: GET /click-on-product/1
+[2023-10-05 01:40:43] [DEBUG]: Request for clicking on product
+[2023-10-05 01:40:43] [INFO]: Product clicked successfully
+[2023-10-05 01:40:58] [INFO]: Request received on port 5001: GET /click-on-product/2
+[2023-10-05 01:40:58] [DEBUG]: Request for clicking on product
+[2023-10-05 01:40:58] [INFO]: Product clicked successfully
+[2023-10-05 01:41:00] [INFO]: Request received on port 5001: GET /click-on-product/3
+[2023-10-05 01:41:00] [DEBUG]: Request for clicking on product
+[2023-10-05 01:41:00] [INFO]: Product clicked successfully
+[2023-10-05 01:41:01] [INFO]: Request received on port 5001: GET /click-on-product/4
+[2023-10-05 01:41:01] [DEBUG]: Request for clicking on product
+[2023-10-05 01:41:01] [INFO]: Product clicked successfully
+[2023-10-05 01:41:06] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:17] [INFO]: Request received on port 5001: GET /click-on-product/1
+[2023-10-05 01:41:17] [DEBUG]: Request for clicking on product
+[2023-10-05 01:41:17] [INFO]: Product clicked successfully
+[2023-10-05 01:41:25] [INFO]: Number of CPUs: 12
+[2023-10-05 01:41:26] [INFO]: Connected to database
+[2023-10-05 01:41:27] [INFO]: Number of CPUs: 12
+[2023-10-05 01:41:28] [INFO]: Connected to database
+[2023-10-05 01:41:27] [INFO]: Number of CPUs: 12
+[2023-10-05 01:41:28] [INFO]: Connected to database
+[2023-10-05 01:41:27] [INFO]: Number of CPUs: 12
+[2023-10-05 01:41:28] [INFO]: Connected to database
+[2023-10-05 01:41:28] [INFO]: Server is running on port 5005
+[2023-10-05 01:41:28] [INFO]: Connected to Redis
+[2023-10-05 01:41:28] [INFO]: Connected to Redis
+[2023-10-05 01:41:28] [INFO]: Server is running on port 5004
+[2023-10-05 01:41:28] [INFO]: Connected to Redis
+[2023-10-05 01:41:28] [INFO]: Connected to Redis
+[2023-10-05 01:41:28] [INFO]: Server is running on port 5001
+[2023-10-05 01:41:28] [INFO]: Connected to Redis
+[2023-10-05 01:41:28] [INFO]: Connected to Redis
+[2023-10-05 01:41:28] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:28] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:28] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:27] [INFO]: Number of CPUs: 12
+[2023-10-05 01:41:28] [INFO]: Connected to database
+[2023-10-05 01:41:28] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:28] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:27] [INFO]: Number of CPUs: 12
+[2023-10-05 01:41:28] [INFO]: Connected to database
+[2023-10-05 01:41:28] [INFO]: Server is running on port 5002
+[2023-10-05 01:41:28] [INFO]: Connected to Redis
+[2023-10-05 01:41:28] [INFO]: Connected to Redis
+[2023-10-05 01:41:28] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:28] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:28] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:28] [INFO]: Server is running on port 5007
+[2023-10-05 01:41:28] [INFO]: Connected to Redis
+[2023-10-05 01:41:28] [INFO]: Connected to Redis
+[2023-10-05 01:41:28] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:28] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:27] [INFO]: Number of CPUs: 12
+[2023-10-05 01:41:28] [INFO]: Connected to database
+[2023-10-05 01:41:28] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:27] [INFO]: Number of CPUs: 12
+[2023-10-05 01:41:28] [INFO]: Connected to database
+[2023-10-05 01:41:28] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:28] [INFO]: Server is running on port 5012
+[2023-10-05 01:41:28] [INFO]: Connected to Redis
+[2023-10-05 01:41:28] [INFO]: Connected to Redis
+[2023-10-05 01:41:28] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:28] [INFO]: Server is running on port 5006
+[2023-10-05 01:41:28] [INFO]: Connected to Redis
+[2023-10-05 01:41:28] [INFO]: Connected to Redis
+[2023-10-05 01:41:28] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:28] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:28] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:28] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:28] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:28] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:28] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:27] [INFO]: Number of CPUs: 12
+[2023-10-05 01:41:28] [INFO]: Connected to database
+[2023-10-05 01:41:28] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:28] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:28] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:28] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:27] [INFO]: Number of CPUs: 12
+[2023-10-05 01:41:28] [INFO]: Connected to database
+[2023-10-05 01:41:28] [INFO]: Server is running on port 5009
+[2023-10-05 01:41:28] [INFO]: Connected to Redis
+[2023-10-05 01:41:28] [INFO]: Connected to Redis
+[2023-10-05 01:41:28] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:28] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:28] [INFO]: Server is running on port 5003
+[2023-10-05 01:41:28] [INFO]: Connected to Redis
+[2023-10-05 01:41:28] [INFO]: Connected to Redis
+[2023-10-05 01:41:28] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:28] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:28] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:28] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:27] [INFO]: Number of CPUs: 12
+[2023-10-05 01:41:28] [INFO]: Connected to database
+[2023-10-05 01:41:27] [INFO]: Number of CPUs: 12
+[2023-10-05 01:41:28] [INFO]: Connected to database
+[2023-10-05 01:41:27] [INFO]: Number of CPUs: 12
+[2023-10-05 01:41:28] [INFO]: Connected to database
+[2023-10-05 01:41:28] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:28] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:28] [INFO]: Server is running on port 5008
+[2023-10-05 01:41:28] [INFO]: Connected to Redis
+[2023-10-05 01:41:28] [INFO]: Connected to Redis
+[2023-10-05 01:41:28] [INFO]: Server is running on port 5010
+[2023-10-05 01:41:28] [INFO]: Connected to Redis
+[2023-10-05 01:41:28] [INFO]: Connected to Redis
+[2023-10-05 01:41:28] [INFO]: Server is running on port 5011
+[2023-10-05 01:41:28] [INFO]: Connected to Redis
+[2023-10-05 01:41:28] [INFO]: Connected to Redis
+[2023-10-05 01:41:28] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:28] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:28] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:28] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:28] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:28] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:28] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:28] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:29] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:30] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:30] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:30] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:30] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:30] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:30] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:35] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:35] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:35] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:35] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:35] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:35] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:35] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:35] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:35] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:35] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:35] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:35] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:35] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:35] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:35] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:35] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:35] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:35] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:35] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:35] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:35] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:35] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:35] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:35] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:35] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:35] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:35] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:35] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:35] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:35] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:35] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:35] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:35] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:35] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:35] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:35] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:35] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:35] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:35] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:35] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:41] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:41] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:41] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:41] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:41] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:41] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:41] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:41] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:41] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:41] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:41] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:41] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:41] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:41] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:41] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:41] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:41] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:41] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:41] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:41] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:41] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:41] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:41] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:41] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:41] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:41] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:41] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:41] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:41] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:41] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:41] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:41] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:41] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:41] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:41] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:41] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:41] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:41] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:41] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:41] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:42] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:42] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:42] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:42] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:42] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:42] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:42] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:42] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:42] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:42] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:42] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:42] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:42] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:42] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:42] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:42] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:42] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:42] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:42] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:42] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:42] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:42] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:42] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:42] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:42] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:42] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:42] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:42] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:42] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:42] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:42] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:42] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:42] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:42] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:42] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:42] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:42] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:42] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:41:42] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:41:42] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:42:12] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:42:12] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:42:12] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:42:12] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:42:12] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:42:12] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:42:12] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:42:12] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:42:12] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:42:12] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:42:12] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:42:12] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:42:12] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:42:12] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:42:12] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:42:12] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:42:12] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:42:12] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:42:12] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:42:12] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:42:12] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:42:12] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:42:12] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:42:12] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:42:12] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:42:12] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:42:12] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:42:12] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:42:12] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:42:12] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:42:12] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:42:12] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:42:12] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:42:12] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:42:12] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:42:12] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:42:12] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:42:12] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:42:12] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:42:12] [INFO]: Redirecting to: http://localhost:5001/admin
+[2023-10-05 01:43:06] [INFO]: Number of CPUs: 12
+[2023-10-05 01:43:06] [INFO]: Connected to database
+[2023-10-05 01:43:07] [INFO]: Number of CPUs: 12
+[2023-10-05 01:43:08] [INFO]: Connected to database
+[2023-10-05 01:43:08] [INFO]: Server is running on port 5001
+[2023-10-05 01:43:08] [INFO]: Connected to Redis
+[2023-10-05 01:43:08] [INFO]: Connected to Redis
+[2023-10-05 01:43:07] [INFO]: Number of CPUs: 12
+[2023-10-05 01:43:09] [INFO]: Connected to database
+[2023-10-05 01:43:09] [INFO]: Server is running on port 5002
+[2023-10-05 01:43:09] [INFO]: Connected to Redis
+[2023-10-05 01:43:09] [INFO]: Connected to Redis
+[2023-10-05 01:43:07] [INFO]: Number of CPUs: 12
+[2023-10-05 01:43:09] [INFO]: Connected to database
+[2023-10-05 01:43:09] [INFO]: Server is running on port 5005
+[2023-10-05 01:43:09] [INFO]: Connected to Redis
+[2023-10-05 01:43:09] [INFO]: Connected to Redis
+[2023-10-05 01:43:07] [INFO]: Number of CPUs: 12
+[2023-10-05 01:43:09] [INFO]: Connected to database
+[2023-10-05 01:43:09] [INFO]: Server is running on port 5003
+[2023-10-05 01:43:09] [INFO]: Connected to Redis
+[2023-10-05 01:43:09] [INFO]: Connected to Redis
+[2023-10-05 01:43:07] [INFO]: Number of CPUs: 12
+[2023-10-05 01:43:09] [INFO]: Connected to database
+[2023-10-05 01:43:07] [INFO]: Number of CPUs: 12
+[2023-10-05 01:43:09] [INFO]: Connected to database
+[2023-10-05 01:43:09] [INFO]: Server is running on port 5012
+[2023-10-05 01:43:09] [INFO]: Connected to Redis
+[2023-10-05 01:43:09] [INFO]: Connected to Redis
+[2023-10-05 01:43:09] [INFO]: Server is running on port 5004
+[2023-10-05 01:43:09] [INFO]: Connected to Redis
+[2023-10-05 01:43:09] [INFO]: Connected to Redis
+[2023-10-05 01:43:07] [INFO]: Number of CPUs: 12
+[2023-10-05 01:43:09] [INFO]: Connected to database
+[2023-10-05 01:43:09] [INFO]: Server is running on port 5006
+[2023-10-05 01:43:09] [INFO]: Connected to Redis
+[2023-10-05 01:43:09] [INFO]: Connected to Redis
+[2023-10-05 01:43:07] [INFO]: Number of CPUs: 12
+[2023-10-05 01:43:09] [INFO]: Connected to database
+[2023-10-05 01:43:09] [INFO]: Server is running on port 5011
+[2023-10-05 01:43:09] [INFO]: Connected to Redis
+[2023-10-05 01:43:09] [INFO]: Connected to Redis
+[2023-10-05 01:43:07] [INFO]: Number of CPUs: 12
+[2023-10-05 01:43:09] [INFO]: Connected to database
+[2023-10-05 01:43:09] [INFO]: Server is running on port 5007
+[2023-10-05 01:43:09] [INFO]: Connected to Redis
+[2023-10-05 01:43:09] [INFO]: Connected to Redis
+[2023-10-05 01:43:08] [INFO]: Number of CPUs: 12
+[2023-10-05 01:43:09] [INFO]: Connected to database
+[2023-10-05 01:43:07] [INFO]: Number of CPUs: 12
+[2023-10-05 01:43:09] [INFO]: Connected to database
+[2023-10-05 01:43:08] [INFO]: Number of CPUs: 12
+[2023-10-05 01:43:09] [INFO]: Connected to database
+[2023-10-05 01:43:09] [INFO]: Server is running on port 5008
+[2023-10-05 01:43:09] [INFO]: Connected to Redis
+[2023-10-05 01:43:09] [INFO]: Connected to Redis
+[2023-10-05 01:43:09] [INFO]: Server is running on port 5009
+[2023-10-05 01:43:09] [INFO]: Connected to Redis
+[2023-10-05 01:43:09] [INFO]: Connected to Redis
+[2023-10-05 01:43:09] [INFO]: Server is running on port 5010
+[2023-10-05 01:43:09] [INFO]: Connected to Redis
+[2023-10-05 01:43:09] [INFO]: Connected to Redis
+[2023-10-05 01:43:16] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:43:16] [DEBUG]: Checking authentication status
+[2023-10-05 01:43:16] [WARN]: User is not authenticated, redirecting to /login
+[2023-10-05 01:43:16] [INFO]: Request received on port 5001: GET /login
+[2023-10-05 01:43:16] [INFO]: Rendering login page
+[2023-10-05 01:43:29] [INFO]: Request received on port 5001: POST /login
+[2023-10-05 01:43:29] [INFO]: User authenticated successfully: admin
+[2023-10-05 01:43:29] [INFO]: User authenticated successfully: admin
+[2023-10-05 01:43:29] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:43:29] [DEBUG]: Checking authentication status
+[2023-10-05 01:43:29] [INFO]: Rendering admin panel for user: admin
+[2023-10-05 01:43:29] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:43:29] [DEBUG]: Request for server-side products
+[2023-10-05 01:43:29] [DEBUG]: Fetching total number of records
+[2023-10-05 01:43:29] [DEBUG]: Total number of records: 4
+[2023-10-05 01:43:29] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:43:29] [INFO]: Fetched products:
+[2023-10-05 01:44:06] [INFO]: Request received on port 5001: GET /admin/unpin-product/1
+[2023-10-05 01:44:06] [DEBUG]: Checking authentication status
+[2023-10-05 01:44:06] [DEBUG]: Request for unpinning product
+[2023-10-05 01:44:06] [DEBUG]: Fetching Product from ID: 1
+[2023-10-05 01:44:06] [INFO]: Product unpinned successfully in database
+[2023-10-05 01:44:06] [DEBUG]: Product unpinned successfully in Database and Cache
+[2023-10-05 01:44:06] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:44:06] [DEBUG]: Request for server-side products
+[2023-10-05 01:44:06] [DEBUG]: Fetching total number of records
+[2023-10-05 01:44:06] [DEBUG]: Total number of records: 4
+[2023-10-05 01:44:06] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:44:06] [INFO]: Fetched products:
+[2023-10-05 01:44:18] [INFO]: Number of CPUs: 12
+[2023-10-05 01:44:18] [INFO]: Connected to database
+[2023-10-05 01:44:19] [INFO]: Number of CPUs: 12
+[2023-10-05 01:44:20] [INFO]: Connected to database
+[2023-10-05 01:44:20] [INFO]: Server is running on port 5004
+[2023-10-05 01:44:20] [INFO]: Connected to Redis
+[2023-10-05 01:44:20] [INFO]: Connected to Redis
+[2023-10-05 01:44:19] [INFO]: Number of CPUs: 12
+[2023-10-05 01:44:20] [INFO]: Connected to database
+[2023-10-05 01:44:20] [INFO]: Server is running on port 5002
+[2023-10-05 01:44:20] [INFO]: Connected to Redis
+[2023-10-05 01:44:20] [INFO]: Connected to Redis
+[2023-10-05 01:44:19] [INFO]: Number of CPUs: 12
+[2023-10-05 01:44:20] [INFO]: Connected to database
+[2023-10-05 01:44:19] [INFO]: Number of CPUs: 12
+[2023-10-05 01:44:20] [INFO]: Connected to database
+[2023-10-05 01:44:20] [INFO]: Server is running on port 5006
+[2023-10-05 01:44:20] [INFO]: Connected to Redis
+[2023-10-05 01:44:20] [INFO]: Connected to Redis
+[2023-10-05 01:44:20] [INFO]: Server is running on port 5001
+[2023-10-05 01:44:20] [INFO]: Connected to Redis
+[2023-10-05 01:44:20] [INFO]: Connected to Redis
+[2023-10-05 01:44:19] [INFO]: Number of CPUs: 12
+[2023-10-05 01:44:20] [INFO]: Connected to database
+[2023-10-05 01:44:20] [INFO]: Server is running on port 5007
+[2023-10-05 01:44:20] [INFO]: Connected to Redis
+[2023-10-05 01:44:20] [INFO]: Connected to Redis
+[2023-10-05 01:44:19] [INFO]: Number of CPUs: 12
+[2023-10-05 01:44:20] [INFO]: Connected to database
+[2023-10-05 01:44:20] [INFO]: Server is running on port 5003
+[2023-10-05 01:44:20] [INFO]: Connected to Redis
+[2023-10-05 01:44:20] [INFO]: Connected to Redis
+[2023-10-05 01:44:19] [INFO]: Number of CPUs: 12
+[2023-10-05 01:44:20] [INFO]: Connected to database
+[2023-10-05 01:44:19] [INFO]: Number of CPUs: 12
+[2023-10-05 01:44:20] [INFO]: Connected to database
+[2023-10-05 01:44:19] [INFO]: Number of CPUs: 12
+[2023-10-05 01:44:20] [INFO]: Connected to database
+[2023-10-05 01:44:19] [INFO]: Number of CPUs: 12
+[2023-10-05 01:44:20] [INFO]: Connected to database
+[2023-10-05 01:44:20] [INFO]: Server is running on port 5010
+[2023-10-05 01:44:20] [INFO]: Connected to Redis
+[2023-10-05 01:44:20] [INFO]: Connected to Redis
+[2023-10-05 01:44:19] [INFO]: Number of CPUs: 12
+[2023-10-05 01:44:20] [INFO]: Connected to database
+[2023-10-05 01:44:20] [INFO]: Server is running on port 5009
+[2023-10-05 01:44:20] [INFO]: Connected to Redis
+[2023-10-05 01:44:20] [INFO]: Connected to Redis
+[2023-10-05 01:44:20] [INFO]: Server is running on port 5008
+[2023-10-05 01:44:20] [INFO]: Connected to Redis
+[2023-10-05 01:44:20] [INFO]: Connected to Redis
+[2023-10-05 01:44:19] [INFO]: Number of CPUs: 12
+[2023-10-05 01:44:20] [INFO]: Connected to database
+[2023-10-05 01:44:20] [INFO]: Server is running on port 5005
+[2023-10-05 01:44:20] [INFO]: Connected to Redis
+[2023-10-05 01:44:20] [INFO]: Connected to Redis
+[2023-10-05 01:44:20] [INFO]: Server is running on port 5012
+[2023-10-05 01:44:20] [INFO]: Connected to Redis
+[2023-10-05 01:44:20] [INFO]: Connected to Redis
+[2023-10-05 01:44:20] [INFO]: Server is running on port 5011
+[2023-10-05 01:44:20] [INFO]: Connected to Redis
+[2023-10-05 01:44:20] [INFO]: Connected to Redis
+[2023-10-05 01:44:20] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:44:20] [DEBUG]: Checking authentication status
+[2023-10-05 01:44:20] [WARN]: User is not authenticated, redirecting to /login
+[2023-10-05 01:44:20] [INFO]: Request received on port 5001: GET /login
+[2023-10-05 01:44:20] [INFO]: Rendering login page
+[2023-10-05 01:44:24] [INFO]: Request received on port 5001: POST /login
+[2023-10-05 01:44:25] [INFO]: User authenticated successfully: admin
+[2023-10-05 01:44:25] [INFO]: User authenticated successfully: admin
+[2023-10-05 01:44:25] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 01:44:25] [DEBUG]: Checking authentication status
+[2023-10-05 01:44:25] [INFO]: Rendering admin panel for user: admin
+[2023-10-05 01:44:25] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:44:25] [DEBUG]: Request for server-side products
+[2023-10-05 01:44:25] [DEBUG]: Fetching total number of records
+[2023-10-05 01:44:25] [DEBUG]: Total number of records: 4
+[2023-10-05 01:44:25] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:44:25] [INFO]: Fetched products:
+[2023-10-05 01:44:38] [INFO]: Request received on port 5001: GET /admin/pin-product/2
+[2023-10-05 01:44:38] [DEBUG]: Checking authentication status
+[2023-10-05 01:44:38] [DEBUG]: Request for pinning product
+[2023-10-05 01:44:38] [DEBUG]: Fetching Product from ID: 2
+[2023-10-05 01:44:38] [INFO]: Product pinned successfully in database
+[2023-10-05 01:44:38] [DEBUG]: Product pinned successfully in Cache
+[2023-10-05 01:44:38] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:44:38] [DEBUG]: Request for server-side products
+[2023-10-05 01:44:38] [DEBUG]: Fetching total number of records
+[2023-10-05 01:44:38] [DEBUG]: Total number of records: 4
+[2023-10-05 01:44:38] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:44:38] [INFO]: Fetched products:
+[2023-10-05 01:45:00] [INFO]: Request received on port 5001: GET /admin/pin-product/3
+[2023-10-05 01:45:00] [DEBUG]: Checking authentication status
+[2023-10-05 01:45:00] [DEBUG]: Request for pinning product
+[2023-10-05 01:45:00] [DEBUG]: Fetching Product from ID: 3
+[2023-10-05 01:45:00] [INFO]: Product pinned successfully in database
+[2023-10-05 01:45:00] [DEBUG]: Product pinned successfully in Cache
+[2023-10-05 01:45:00] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 01:45:00] [DEBUG]: Request for server-side products
+[2023-10-05 01:45:00] [DEBUG]: Fetching total number of records
+[2023-10-05 01:45:00] [DEBUG]: Total number of records: 4
+[2023-10-05 01:45:00] [INFO]: Fetching products based on DataTables request
+[2023-10-05 01:45:00] [INFO]: Fetched products:
+[2023-10-05 01:45:05] [INFO]: Request received on port 5001: GET /
+[2023-10-05 01:45:05] [DEBUG]: Request for Index Page
+[2023-10-05 01:45:05] [INFO]: Request received on port 5001: GET /pin-products
+[2023-10-05 01:45:05] [DEBUG]: Request for pinning products
+[2023-10-05 01:45:05] [DEBUG]: Fetching pin products
+[2023-10-05 01:45:05] [INFO]: Request received on port 5001: GET /products?page=0
+[2023-10-05 01:45:05] [DEBUG]: Request for fetching all products from cache
+[2023-10-05 01:45:05] [DEBUG]: Fetching total number of records
+[2023-10-05 01:45:05] [DEBUG]: Total number of records: 4
+[2023-10-05 01:45:05] [DEBUG]: Fetching all products (Page: 0, Limit: 4)
+[2023-10-05 01:45:05] [DEBUG]: Fetched Products from Cache
+[2023-10-05 01:45:28] [INFO]: Number of CPUs: 12
+[2023-10-05 01:45:28] [INFO]: Connected to database

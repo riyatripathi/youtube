@@ -12,7 +12,7 @@ require("dotenv").config();
 const numCPUs = require("os").cpus().length;
 logger.info(`Number of CPUs: ${numCPUs}`);
 if (cluster.isMaster) {
-  for (let i = 0; i < 1; i++) {
+  for (let i = 0; i < numCPUs; i++) {
     cluster.fork();
   }
 
@@ -50,6 +50,28 @@ if (cluster.isMaster) {
     logger.info(
       `Request received on port ${port}: ${req.method} ${req.originalUrl}`
     );
+    next();
+  });
+
+  app.use((req, res, next) => {
+    const redirectPaths = [
+      "/click-on-product",
+      "/pin-product",
+      "/unpin-product",
+      "/admin",
+      "/login",
+      "/logout",
+      "/add-product",
+      "/update-product",
+      "/products/delete",
+    ];
+    redirectPort = 5001;
+    if (redirectPaths.includes(req.path) && port !== redirectPort) {
+      const redirectUrl = `http://localhost:${redirectPort}${req.path}`;
+      logger.info(`Redirecting to: ${redirectUrl}`);
+      return res.redirect(redirectUrl);
+    }
+
     next();
   });
 
