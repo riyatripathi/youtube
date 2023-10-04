@@ -5,6 +5,7 @@ const db = require("./../database/db");
 const upload = require("../config/multer");
 const logger = require("../logger");
 const redis = require("redis");
+const { cache } = require("ejs");
 const client = redis.createClient();
 client.on("error", (err) => {
   logger.error("Redis Error:", err);
@@ -88,14 +89,12 @@ async function getCachedProducts(start, length) {
 
 function getAllProducts(start, length) {
   query = `SELECT * FROM products LIMIT ? OFFSET ?`;
-  console.log(query);
   return new Promise((resolve, reject) => {
     db.all(query, [length, start], (err, rows) => {
       if (err) {
         logger.error("Error fetching products:", err);
         reject(err);
       }
-      console.log(rows);
       resolve(rows);
     });
   });
@@ -234,25 +233,6 @@ router.post("/search-products", async (req, res) => {
       res.json([products]);
     }
   }
-  // client.get(cacheKey, async (err, cachedProduct) => {
-  //   if (err) {
-  //     logger.error("Error fetching product from cache:", err);
-  //   }
-
-  //   if (cachedProduct) {
-  //     logger.info("Product found in cache");
-  //     res.json(JSON.parse(cachedProduct));
-  //   } else {
-  //     const product = await getProductById(searchQuery);
-  //     if (!product) {
-  //       return res.status(404).json({ error: "Product not found" });
-  //     }
-
-  //     client.setex(cacheKey, 3600, JSON.stringify(product)); // cache for 1 hour
-  //     console.log(product);
-  //     res.json(product);
-  //   }
-  // });
 });
 
 router.post("/server-side-products", async (req, res) => {
@@ -285,6 +265,26 @@ router.post("/server-side-products", async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 });
+
+router.get("/pin-products", async (req, res) => {
+  logger.debug("Request for pinning products");
+  try {
+    const products = await getPinProducts();
+    console.log("PIN PRODUCTS", products);
+    res.json(products);
+  } catch (error) {
+    logger.error("Error processing server-side request:", error);
+    res.status(500).json({ error: "Server error" });
+  }
+});
+
+async function getPinProducts() {
+  logger.debug("Fetching pin products");
+  // fetch pin products from redis whose key is pin_products
+  cacheKey = `pin_products`;
+  let products = await client.get(cacheKey);
+  return JSON.parse(products);
+}
 
 function getProductById(productId) {
   logger.debug(`Fetching Product from ID: ${productId}`);

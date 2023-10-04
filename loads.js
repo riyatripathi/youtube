@@ -2,9 +2,20 @@ import http from "k6/http";
 import { sleep, check } from "k6";
 import { Rate } from "k6/metrics";
 
+// export let options = {
+//   stages: [
+//     { duration: "1m", target: "1000", rps: "100" }, // Reset
+//     { duration: "2m", target: "2000", rps: "200" }, // Reset
+//     { duration: "1m", target: "3000", rps: "300" }, // Reset
+//     { duration: "1m", target: "4000", rps: "400" }, // Reset
+//     { duration: "10m", target: "5000", rps: "550" }, // Reset
+//   ],
+// };
+
 export let options = {
   stages: [
-    { duration: "1m", target: "6000", rps: "100" }, // Reset
+    { duration: "1m", target: "100", rps: "100" }, // Reset
+    { duration: "1m", target: "1000", rps: "1000" }, // Reset
   ],
 };
 

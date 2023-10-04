@@ -19,7 +19,7 @@ const transport = new DailyRotateFile({
 
 // Create the Winston logger
 const logger = createLogger({
-  level: process.env.LOGLEVEL || "info",
+  level: process.env.LOGLEVEL || "debug",
   format: format.combine(
     format.timestamp({ format: "YYYY-MM-DD HH:mm:ss" }),
     format.printf(({ timestamp, level, message }) => {

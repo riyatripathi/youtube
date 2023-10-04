@@ -22,6 +22,14 @@
       href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css"
     />
 
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
     <!-- Add jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -206,6 +214,7 @@
             <th>Drive Image ID</th>
             <th>Affiliate Link</th>
             <th>Youtube Link</th>
+            <th>PIN-TO-TOP</th>
             <th>Edit</th>
             <th>Delete</th>
           </tr>
@@ -222,6 +231,7 @@
 
       // Initialize DataTable
       $(document).ready(() => {
+
         productTable = $("#productTable").DataTable({
           // Enable server-side processing
           processing: true,
@@ -232,28 +242,55 @@
             type: "POST",
           },
           columns: [
-            { data: "product_id" },
+            { data: null,
+              render: function (data, type, row) {
+                return parseInt(data.product_id);
+              }
+            },
             { data: "product_name" },
             { data: "product_description" },
             { data: "product_link" }, // image link / drive image id
-            { data: "affiliate_link" },
-            { data: "youtube_link" },
+            // { data: "affiliate_link" },
+            {
+              data: null,
+              render: function (data,type,row){
+                return `<a href="${data.affiliate_link}" target="_blank" title="${data.affiliate_link}">Link</a>`;
+              }
+            },
+            { data: null,
+              render: function (data, type, row) {
+                return `<a href="${data.youtube_link}" target="_blank" title="${data.youtube_link}">Link</a>`;
+              }
+            },
+            {
+              data: null,
+              render: function (data,type,row){
+                pinData = `<button class="btn btn-light" onclick="unPinProduct(${data.product_id})"><i class="fa-solid fa-thumbtack" style="font-size: 20px;color: #70066e; transform:rotate(40deg)"></i></button>`;
+                unPinData = `<button class="btn btn-light" onclick="pinProduct(${data.product_id})"><i class="fa-solid fa-thumbtack" style="font-size: 20px;color: #C35523;"></i></button>`;
+                if(parseInt(data.pin)){
+                  return pinData;
+                } else {
+                  return unPinData;
+                }
+              }
+            },
             {
               data: null,
               render: function (data, type, row) {
-                console.log(data);
-                return `<button class="edit-product edit-button" id="e${data.product_id}" data-product-id="${data.product_id}">Edit</button>`;
+                return `<button class="edit-product edit-button btn btn-success" id="e${data.product_id}" data-product-id="${data.product_id}">Edit</button>`;
               },
             },
             {
               data: null,
               render: function (data, type, row) {
-                return `<button class="delete-product delete-button" id="d${data.product_id}" data-product-id="${data.product_id}">Delete</button>`;
+                return `<button class="delete-product delete-button btn btn-danger" id="d${data.product_id}" data-product-id="${data.product_id}">Delete</button>`;
               },
-            },
+            }
           ],
         });
 
+        
+        
         // Handle "Edit" button click
         $("#productTable tbody").on("click", "button.edit-product", (e) => {
           const productId = e.target.attributes.id.value;
@@ -354,6 +391,28 @@
           }
         });
       });
+
+      function pinProduct(id) {
+          $.ajax({
+            url: `/admin/pin-product/${id}`,
+            method: "GET",
+            dataType: "json",
+            success: (data) => {
+              productTable.ajax.reload();
+            },
+          });
+        }
+
+        function unPinProduct(id) {
+          $.ajax({
+            url: `/admin/unpin-product/${id}`,
+            method: "GET",
+            dataType: "json",
+            success: (data) => {
+              productTable.ajax.reload();
+            },
+          });
+        }
     </script>
   </body>
 </html>
