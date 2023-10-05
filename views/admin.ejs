@@ -257,7 +257,11 @@
             },
             { data: "product_name" },
             { data: "product_description" },
-            { data: "product_link" }, // image link / drive image id
+            { data: null,
+              render: function (data,type,row){
+                return `<a href="/images/${data.product_link}" target="_blank">View Image</a>`;
+              }
+            }, // image link / drive image id
             // { data: "affiliate_link" },
             {
               data: null,

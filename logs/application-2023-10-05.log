@@ -15401,3 +15401,64 @@
 [2023-10-05 05:26:45] [DEBUG]: Fetching total number of records
 [2023-10-05 05:26:45] [DEBUG]: Total number of records: 0
 [2023-10-05 05:26:45] [DEBUG]: Fetching all products (Page: 0, Limit: 4)
+[2023-10-05 05:39:24] [INFO]: Request received on port 5001: GET /
+[2023-10-05 05:39:24] [DEBUG]: Request for Index Page
+[2023-10-05 05:39:24] [INFO]: Request received on port 5001: GET /pin-products
+[2023-10-05 05:39:24] [DEBUG]: Request for pinning products
+[2023-10-05 05:39:24] [DEBUG]: Fetching pin products
+[2023-10-05 05:39:24] [INFO]: Request received on port 5001: GET /products?page=0
+[2023-10-05 05:39:24] [DEBUG]: Request for fetching all products from cache
+[2023-10-05 05:39:24] [DEBUG]: Fetching total number of records
+[2023-10-05 05:39:24] [DEBUG]: Total number of records: 0
+[2023-10-05 05:39:24] [DEBUG]: Fetching all products (Page: 0, Limit: 4)
+[2023-10-05 05:39:26] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 05:39:26] [DEBUG]: Checking authentication status
+[2023-10-05 05:39:26] [INFO]: Rendering admin panel for user: admin
+[2023-10-05 05:39:27] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 05:39:27] [DEBUG]: Request for server-side products
+[2023-10-05 05:39:27] [DEBUG]: Fetching total number of records
+[2023-10-05 05:39:27] [DEBUG]: Total number of records: 0
+[2023-10-05 05:39:27] [INFO]: Fetching products based on DataTables request
+[2023-10-05 05:39:27] [INFO]: Fetched products:
+[2023-10-05 05:39:45] [INFO]: Request received on port 5001: POST /add-product
+[2023-10-05 05:39:45] [DEBUG]: Request for adding product
+[2023-10-05 05:39:45] [INFO]: Product added successfully:
+[2023-10-05 05:39:45] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 05:39:45] [DEBUG]: Request for server-side products
+[2023-10-05 05:39:45] [DEBUG]: Fetching total number of records
+[2023-10-05 05:39:45] [DEBUG]: Total number of records: 1
+[2023-10-05 05:39:45] [INFO]: Fetching products based on DataTables request
+[2023-10-05 05:39:45] [INFO]: Fetched products:
+[2023-10-05 05:39:45] [INFO]: Request received on port 5001: GET /undefined
+[2023-10-05 05:39:55] [INFO]: Request received on port 5001: GET /
+[2023-10-05 05:39:55] [DEBUG]: Request for Index Page
+[2023-10-05 05:39:55] [INFO]: Request received on port 5001: GET /pin-products
+[2023-10-05 05:39:55] [DEBUG]: Request for pinning products
+[2023-10-05 05:39:55] [DEBUG]: Fetching pin products
+[2023-10-05 05:39:55] [INFO]: Request received on port 5001: GET /products?page=0
+[2023-10-05 05:39:55] [DEBUG]: Request for fetching all products from cache
+[2023-10-05 05:39:55] [DEBUG]: Fetching total number of records
+[2023-10-05 05:39:55] [DEBUG]: Total number of records: 1
+[2023-10-05 05:39:55] [DEBUG]: Fetching all products (Page: 0, Limit: 4)
+[2023-10-05 05:40:06] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 05:40:06] [DEBUG]: Checking authentication status
+[2023-10-05 05:40:06] [INFO]: Rendering admin panel for user: admin
+[2023-10-05 05:40:06] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 05:40:06] [DEBUG]: Request for server-side products
+[2023-10-05 05:40:06] [DEBUG]: Fetching total number of records
+[2023-10-05 05:40:06] [DEBUG]: Total number of records: 1
+[2023-10-05 05:40:06] [INFO]: Fetching products based on DataTables request
+[2023-10-05 05:40:06] [INFO]: Fetched products:
+[2023-10-05 05:40:06] [INFO]: Request received on port 5001: GET /images/undefined
+[2023-10-05 05:40:08] [INFO]: Request received on port 5001: GET /admin
+[2023-10-05 05:40:08] [DEBUG]: Checking authentication status
+[2023-10-05 05:40:08] [INFO]: Rendering admin panel for user: admin
+[2023-10-05 05:40:08] [INFO]: Request received on port 5001: POST /server-side-products
+[2023-10-05 05:40:08] [DEBUG]: Request for server-side products
+[2023-10-05 05:40:08] [DEBUG]: Fetching total number of records
+[2023-10-05 05:40:08] [DEBUG]: Total number of records: 1
+[2023-10-05 05:40:08] [INFO]: Fetching products based on DataTables request
+[2023-10-05 05:40:08] [INFO]: Fetched products:
+[2023-10-05 05:40:08] [INFO]: Request received on port 5001: GET /images/undefined
+[2023-10-05 05:40:14] [INFO]: Number of CPUs: 12
+[2023-10-05 05:40:14] [INFO]: Connected to database
