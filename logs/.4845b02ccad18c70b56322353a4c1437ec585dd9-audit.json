@@ -6,14 +6,39 @@
     "auditLog": "/root/youtube/logs/.4845b02ccad18c70b56322353a4c1437ec585dd9-audit.json",
     "files": [
         {
-            "date": 1696228466821,
-            "name": "/root/youtube/logs/application-2023-10-02.log",
-            "hash": "87f9b80be1986b2504f872993470c4836b76cceead3e7ddee44a4a8173402ecd"
-        },
-        {
             "date": 1696274045893,
             "name": "/root/youtube/logs/application-2023-10-03.log",
             "hash": "25733b166d35954bd5000cb1d74d30d388e99569dd6fa8221e1721706f3601a9"
+        },
+        {
+            "date": 1696464765832,
+            "name": "/root/youtube/logs/application-2023-10-05.log",
+            "hash": "b8f1914b60934158e4f7cd5d538ff9c744ed6695037ba19cb4e5420a365fe2de"
+        },
+        {
+            "date": 1696530679109,
+            "name": "/root/youtube/logs/application-2023-10-06.log",
+            "hash": "747fd32a4d53def13818a131e4743a2eb09ee7a28e175b88e1fcbbdb6148188d"
+        },
+        {
+            "date": 1696617812960,
+            "name": "/root/youtube/logs/application-2023-10-07.log",
+            "hash": "836ad3f38d3fde9afc2c2ee6db86c7e53d20d54306fcae5f49cf7965351b8474"
+        },
+        {
+            "date": 1696703414261,
+            "name": "/root/youtube/logs/application-2023-10-08.log",
+            "hash": "db2e9a708ef3effbfb58a245c43d924e5b1e191b7ac874648b50232695f8aed9"
+        },
+        {
+            "date": 1696789804013,
+            "name": "/root/youtube/logs/application-2023-10-09.log",
+            "hash": "745df12bd612325340e1392342ef47973bee19a87486d0467a07bd2205636878"
+        },
+        {
+            "date": 1696876200004,
+            "name": "/root/youtube/logs/application-2023-10-10.log",
+            "hash": "428b8cfaaaae296a5e9115e98f4d9caff4f4c37131989600d40e582af5ed218e"
         }
     ],
     "hashType": "sha256"
