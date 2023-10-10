@@ -1,0 +1,6 @@
+0 2 * * * /path/to/log_cleanup.sh
+# Run the backup script at 8:00 AM
+0 8 * * * /path/to/backup_script.sh
+
+# Run the backup script at 8:00 PM
+0 20 * * * /path/to/backup_script.sh
